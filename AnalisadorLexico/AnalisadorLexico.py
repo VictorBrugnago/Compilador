@@ -9,6 +9,8 @@ transition_dict = defaultdict(list)
 line_finish_state = 0
 index = 0
 word = 'startCodeE'
+csv_result = 'result.csv'
+buffer_character = ''
 
 is_Text = False
 
@@ -16,7 +18,10 @@ is_Text = False
 def transition(state, char):
     try:
         for line in token_file:
+            print('State: ', state)
+            print('Char: ', char)
             if state + ', ' + char in line:
+                print('Return: ', line.split(', ')[2].rstrip())
                 return line.split(', ')[2].rstrip()
         # return transition_dict[state, char]
     except KeyError:
@@ -29,6 +34,17 @@ def variable(token_buffer):
             return True
         else:
             return False
+
+
+def write_result_csv(token, lexeme, position):
+    """
+    :param token:
+    :param lexeme:
+    :param position: position of the first letter of the word -> Line:column
+    """
+    with open('csv_test.csv', 'a+') as csv_result:
+        csv_result_writer = csv.writer(csv_result, delimiter=',', dialect='excel', lineterminator='\n')
+        csv_result_writer.writerow([token, lexeme, position])
 
 
 # Reading the config file
@@ -75,18 +91,32 @@ state = initial_state
 while index < len(word):
     character = str(word[index])
 
-    if character == '"' and is_Text == False
+    if character == '"' and is_Text is False:
         is_Text = True
-    elif character == '"' and is_Text == True:
+    elif character == '"' and is_Text is True:
         is_Text = False
         if state == 'q60':
             state = 'q61'
 
-    if is_Text == True:
+    if is_Text is True:
         pass
     else:
         state = transition(state, character)
+        buffer_character = buffer_character + character  # Concatenate each char to create the complete word
+        print('Buffer: ', buffer_character)
 
+        if transition(state, character) is False:  # if the char doesn't have state
+            if state in finish_state_dict.keys():  # if the actual state is a finish state
+                write_result_csv(buffer_character, state, '0:0')
+                state = 'q0'
+                buffer_character = ''
+            elif variable(buffer_character) is True:
+                state = 'q63'
+                buffer_character = ''
+            else:
+                print('Caractere {} não esperado'.format(character))
+                state = 'q0'
+                buffer_character = ''
 
 # state = initial_state
 # while index < len(word):
