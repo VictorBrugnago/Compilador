@@ -1,11 +1,9 @@
 import csv
-from collections import defaultdict
-
+import os
 error = False
 config_list = []
 token_list = []
 finish_state_dict = {}
-transition_dict = defaultdict(list)
 line_finish_state = 0
 index = 0
 line_counter = 0
@@ -17,17 +15,21 @@ is_Text = False
 
 
 def transition(states, char):
-    try:
-        for line in token_file:
-            if states is None:
-                error = True
-            elif states + ', ' + char in line:
-                print('Return: ', line.split(', ')[2].rstrip())
-                return line.split(', ')[2].rstrip()
-        return False
-        # return transition_dict[state, char]
-    except KeyError:
-        return False
+    for line in token_file:
+        if states + ', ' + char in line:
+            return line.split(', ')[2].rstrip()
+    return 'error'
+    # try:
+    #     for line in token_file:
+    #         if states is None:
+    #             error = True
+    #         elif states + ', ' + char in line:
+    #             print('Return: ', line.split(', ')[2].rstrip())
+    #             return line.split(', ')[2].rstrip()
+    #     return False
+    #     # return transition_dict[state, char]
+    # except KeyError:
+    #     return False
 
 
 def variable(token_buffer):
@@ -47,9 +49,16 @@ def write_result_csv(token, lexeme, position):
     :param lexeme:
     :param position: position of the first letter of the word -> Line:column
     """
-    with open('csv_test.csv', 'w+') as csv_results:
-        csv_result_writer = csv.writer(csv_results, delimiter=',', dialect='excel', lineterminator='\n')
-        csv_result_writer.writerow([token, lexeme, position])
+
+    if os.path.isfile('csv_test.csv') is False:
+        with open('csv_test.csv', 'a+') as csv_results:
+            csv_result_writer = csv.writer(csv_results, delimiter=',', dialect='excel', lineterminator='\n')
+            csv_result_writer.writerow(['TOKEN', 'LEXEME', 'POSITION'])
+            csv_result_writer.writerow([token, lexeme, position])
+    else:
+        with open('csv_test.csv', 'a+') as csv_results:
+            csv_result_writer = csv.writer(csv_results, delimiter=',', dialect='excel', lineterminator='\n')
+            csv_result_writer.writerow([token, lexeme, position])
 
 
 # Reading the config file
@@ -108,8 +117,9 @@ for line in source_code:
 
     while column_counter < len(line):
         character = line[column_counter]
+        column_counter += 1
         # buffer_character = buffer_character + character  # Concatenate each char to create the complete word
-        print('Character: {}  | Column: {}  |  Line: {}'.format(character, column_counter, line_counter))
+        print('\nCharacter: {}  | Column: {}  |  Line: {}'.format(character, column_counter, line_counter))
 
         if character == '"' and is_Text is False:
             is_Text = True
@@ -125,41 +135,54 @@ for line in source_code:
         else:
             if character != ' ':
                 print('Entrou no ELSE...')
-                print('Actual State: ', state)
+                print('Actual State (Before transition): ', state)
                 state = transition(state, character)
                 buffer_character = buffer_character + character  # Concatenate each char to create the complete word
                 print('Buffer: ', buffer_character)
+                print('Actual State (After transition): ', state)
 
                 if column_counter < len(line):
-                    if transition(state, character) is False:  # if the char doesn't have state
+                    print('Actual State (After transition): ', state)
+                    if transition(state, line[column_counter]) == 'error':  # if the char doesn't have state
                         print('Entrou no primeiro IF')
+                        print('State to test: ', state)
                         if state in finish_state_dict.keys():  # if the actual state is a finish state
                             print('Entrou no state IF')
                             write_result_csv(buffer_character, finish_state_dict.get(state),
-                                             str(column_counter) + ':' + str(line_counter))
+                                             str(line_counter) + ':' + str(column_counter))
                             state = initial_state
                             buffer_character = ''
                         elif variable(buffer_character) is True:
                             print('entrou no variable if')
-                            write_result_csv(buffer_character, finish_state_dict.get(state),
-                                             str(column_counter) + ':' + str(line_counter))
                             state = 'q63'
                             buffer_character = ''
                             column_counter = new_column_word - 1
+                            write_result_csv(buffer_character, finish_state_dict.get('q63'),
+                                             str(line_counter) + ':' + str(column_counter))
                         else:
                             print('Caractere {} não esperado'.format(character))
                             state = initial_state
                             buffer_character = ''
-                if column_counter == len(line) and buffer_character == len(line):
-                    if variable(buffer_character) is False:
-                        print('Caractere {} não esperado  | {}:{}'.format(character, new_column_word, line_counter))
-                    else:
+                else:
+                    if state in finish_state_dict.keys():
                         write_result_csv(buffer_character, finish_state_dict.get(state),
-                                         str(column_counter) + ':' + str(line_counter))
+                                         str(line_counter) + ':' + str(new_column_word - 1))
                         state = initial_state
                         buffer_character = ''
+                    elif state == 'error':
+                        if variable(buffer_character) is False:
+                            print('Caractere {} não esperado'.format(character))
 
-        column_counter += 1
+            if column_counter == len(line) and buffer_character == len(line):
+                if variable(buffer_character) is False:
+                    print('Caractere {} não esperado  | {}:{}'.format(character, new_column_word, line_counter))
+                else:
+                    write_result_csv(buffer_character, finish_state_dict.get(state),
+                                     str(line_counter) + ':' + str(new_column_word - 1))
+                    state = initial_state
+                    buffer_character = ''
+
+
 
 # state = initial_state
 # while index < len(word):
