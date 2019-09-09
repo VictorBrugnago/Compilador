@@ -1,0 +1,15 @@
+startCodee {
+    int num;
+    int fatorial;
+
+    outputKey("Entre com um numero: ");
+    inputKey(num);
+
+    do {
+        fatorial << fatorial * num;
+        num << num - 1;
+    until(num < 1);
+
+    outputKey("O fatorial eh: ");
+    outputKey(fatorial);
+}endCode

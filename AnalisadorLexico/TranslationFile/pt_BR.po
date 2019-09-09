@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2019-09-09 16:21-0400\n"
+"PO-Revision-Date: 2019-09-09 17:30-0400\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 2.2.3\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: pt_BR\n"
+
+#: AnalisadorLexico.py:34
+msgid ""
+"\n"
+"(transition def) Test Transition --> State: {}  |  Character: {}"
+msgstr ""
+"\n"
+"(transition def) Teste Transição --> Estado: {}  |  Caractere: {}"
+
+#: AnalisadorLexico.py:37
+msgid "(transition def) Next State: %s"
+msgstr "(transition def) Próximo Estado: %s"
+
+#: AnalisadorLexico.py:43
+msgid ""
+"\n"
+"(variable def) Test Variable --> Buffer: "
+msgstr ""
+"\n"
+"(variable def) Teste Variável --> Buffer: "
+
+#: AnalisadorLexico.py:55
+msgid "Lexical Error"
+msgstr "Erro Léxico"
+
+#: AnalisadorLexico.py:56
+msgid "Character \"{}\" unexpected  -->  Line: {} | Column: {}"
+msgstr "Caractere \"{}\" não esperado --> Linha: {} | Coluna: {}"
+
+#: AnalisadorLexico.py:61
+msgid "Nonexistent file"
+msgstr "Arquivo não existente"
+
+#: AnalisadorLexico.py:62
+msgid "File \"{}\" Not found!"
+msgstr "Arquivo \"{}\" não encontrado!"
+
+#: AnalisadorLexico.py:65
+msgid "Incompatible Python version"
+msgstr "Versão Incompatível do Python"
+
+#: AnalisadorLexico.py:66
+msgid ""
+"This file requires version 3.6 or higher. Version detected in the system: {}"
+msgstr ""
+"Este arquivo requer a versão 3.6 ou superior. Versão detectada no sistema: "
+"{}"
+
+#: AnalisadorLexico.py:149
+msgid ""
+"\n"
+"Character: {}  | Column: {}  |  Line: {}  |  Actual State (Before "
+"transition): {}"
+msgstr ""
+"\n"
+"Caractere : {}  |  Coluna: {}  |  |Linha: {}  |  Estado Atual (Antes da "
+"transição): {}"
+
+#: AnalisadorLexico.py:154
+msgid "Starting String..."
+msgstr "Iniciando String..."
+
+#: AnalisadorLexico.py:157
+msgid "Ending String..."
+msgstr "Finalizando String..."
+
+#: AnalisadorLexico.py:167 AnalisadorLexico.py:186
+msgid "Character: {}  |  Actual State (After transition): {}"
+msgstr "Caractere: {}  |  Estado Atual (Após transição): {}"
+
+#: AnalisadorLexico.py:227
+msgid ""
+"\n"
+"Code parsed!"
+msgstr ""
+"\n"
+"Código Analisado!"
+
+#: AnalisadorLexico.py:230
+msgid "List of detected Tokens\n"
+msgstr "Listagem dos Tokens Detectados\n"

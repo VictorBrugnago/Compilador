@@ -1,10 +1,13 @@
 import csv
 import sys
 import logging
+import colorama
+import gettext
+from colorama import Fore
 
-# Define colors
-RED = '\033[0;31m'
-RESET = '\033[00m'
+
+# Set colorama library init
+colorama.init(autoreset=True)
 
 # Lists
 config_list = []
@@ -14,59 +17,56 @@ token_result_list = ['TOKEN, LEXEME, LINE, COLUMN']
 finish_state_dict = {}
 
 # Strings
-csv_result = 'result.csv'
 buffer_character = ''
 source_code_name = ''
 
 # Counters
 new_column_word = 0
 line_counter = 0
+_ = lambda s: s
 
 # Flags
-is_Text = False
 lt_flag = False
-ltf_flag = False
+is_Text = False
+langBR = False
+langUS = False
 
 
 def transition(states, char):
-    # print('\nTest Transition --> State: {}  |  Character: {}'.format(states, char))
+    logging.debug(_('\n(transition def) Test Transition --> State: {}  |  Character: {}').format(states, char))
     for line_token in token_file:
         if states + ', ' + char in line_token:
+            logging.debug(_('(transition def) Next State: %s'), line_token.split(', ')[2].rstrip())
             return line_token.split(', ')[2].rstrip()
     return 'error'
 
 
 def variable(token_buffer):
-    # print('\nTest Variable --> Buffer: ', token_buffer)
+    logging.debug(_('\n(variable def) Test Variable --> Buffer: '), token_buffer)
     for char in token_buffer:
-        # print('Char to test: ', char)
         if transition('q63', char) == 'error':
+            logging.debug('\n(variable def) Return: False')
             return False
         else:
+            logging.debug('\n(variable def) Return: True')
             return True
-
-
-def write_result_csv(tokens_list):
-    with open('csv_test.csv', 'a+') as csv_results:
-        csv_result_writer = csv.writer(csv_results, delimiter=',', dialect='excel', lineterminator='\n')
-        csv_result_writer.writerow(tokens_list)
 
 
 def error_informer(level, **exits):
     if level == 'EL':
-        print('\n' + RED + 'Erro Léxico')
-        print('Caractere \"{}\" não esperado  -->  Linha: {} | Coluna: {}'.
-              format(character, str(line_counter), str(new_column_word)) + RESET)
+        print('\n' + Fore.RED + _('Lexical Error'))
+        print(Fore.RED + _('Character \"{}\" unexpected  -->  Line: {} | Column: {}').
+              format(character, str(line_counter), str(new_column_word)))
         if exits is True:
             sys.exit()
     elif level == 'FLX':
-        print('\n' + RED + 'Arquivo Inexistente')
-        print('Arquivo \"{}\" não encontrado!'.format(str(parameters[0])) + RESET)
+        print('\n' + Fore.RED + _('Nonexistent file'))
+        print(Fore.RED + _('File \"{}\" Not found!').format(str(parameters[0])))
         sys.exit()
     elif level == 'PYV':
-        print('\n' + RED + 'Versão do Python Incompatível')
-        print('Este arquivo necessita da versão 3.6 ou superior.Versão detectada no sistema: {}'
-              .format(sys.version) + RESET)
+        print('\n' + Fore.RED + _('Incompatible Python version'))
+        print(Fore.RED + _('This file requires version 3.6 or higher. Version detected in the system: {}')
+              .format(sys.version))
         sys.exit()
 
 
@@ -91,7 +91,6 @@ else:
         print('Exemplo: \n  python3 AnalisadorLexico.py [NOME-DO-ARQUIVO].foo -lt -ltf')
         print('\n\nParâmetros disponíveis:')
         print('  -lt\tGera uma listagem dos tokens detectados, o resultado é mostrado no terminal')
-        print('  -ltf\tGera uma listagem dos tokens detectados, o resultado é armazenado em um arquivo .csv')
         print('  -v\t\tExibe uma saída detalhada do script')
         print('  -BR ou -US\tEscolhe a linguagem das saídas. -BR -> Português  | -US -> English')
         sys.exit()
@@ -100,8 +99,11 @@ else:
         for param in parameters[1:]:
             if param == '-lt':
                 lt_flag = True
-            elif param == '-ltf':
-                ltf_flag = True
+            elif param == '-BR':
+                BR = gettext.translation('pt_BR', localedir='TranslationFile', languages=['pt'])
+                BR.install()
+            elif param == '-US':
+                langUS = True
             elif param == '-v':
                 logging.basicConfig(format='%(message)s', level=logging.DEBUG)
     elif not str(parameters[0]).endswith('.foo'):
@@ -147,15 +149,15 @@ for line in source_code:
     while column_counter < len(line):
         character = line[column_counter]
         column_counter += 1
-        logging.debug('\nCharacter: {}  | Column: {}  |  Line: {}  |  Actual State (Before transition): {}'
+        logging.debug(_('\nCharacter: {}  | Column: {}  |  Line: {}  |  Actual State (Before transition): {}')
                       .format(character, column_counter, line_counter, state))
 
         if character == '"' and is_Text is False:
             is_Text = True
-            logging.debug('Starting String...')
+            logging.debug(_('Starting String...'))
         elif character == '"' and is_Text is True:
             is_Text = False
-            logging.debug('Ending String...')
+            logging.debug(_('Ending String...'))
             if state == 'q60':
                 state = 'q61'
 
@@ -165,7 +167,7 @@ for line in source_code:
             last_state = state
             state = transition(state, character)
             buffer_character = buffer_character + character
-            logging.debug('Character: {}  |  Actual State (After transition): {}'.format(character, state))
+            logging.debug(_('Character: {}  |  Actual State (After transition): {}').format(character, state))
             logging.debug('Buffer String: %s', buffer_character)
 
             if state == 'error':
@@ -184,7 +186,7 @@ for line in source_code:
             if character != ' ':
                 state = transition(state, character)
                 buffer_character = buffer_character + character  # Concatenate each char to create the complete word
-                logging.debug('Character: {}  |  Actual State (After transition): {}'.format(character, state))
+                logging.debug(_('Character: {}  |  Actual State (After transition): {}').format(character, state))
                 logging.debug('Buffer: %s', buffer_character)
 
                 if column_counter < len(line):
@@ -225,14 +227,11 @@ for line in source_code:
                     state = initial_state
                     buffer_character = ''
 
-print('\nCodigo Analisado!')
+print(_('\nCode parsed!'))
 
 if lt_flag:
-    print('Listagem dos Tokens Detectados\n')
+    print(_('List of detected Tokens\n'))
     for i in token_result_list:
         print(i.split(',')[0].center(24), i.split(',')[1].center(24), i.split(',')[2].center(8), i.split(',')[3])
-if ltf_flag:
-    print(token_result_list)
-    write_result_csv(token_result_list)
 
 sys.exit()
