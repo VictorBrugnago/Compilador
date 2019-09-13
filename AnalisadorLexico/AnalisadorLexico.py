@@ -9,6 +9,7 @@ from colorama import Fore
 # Set colorama library init
 colorama.init(autoreset=True)
 
+
 # Lists
 config_list = []
 token_result_list = ['TOKEN, LEXEME, LINE, COLUMN']
@@ -23,13 +24,11 @@ source_code_name = ''
 # Counters
 new_column_word = 0
 line_counter = 0
-_ = lambda s: s
 
 # Flags
 lt_flag = False
 is_Text = False
 langBR = False
-langUS = False
 
 
 def transition(states, char):
@@ -42,7 +41,7 @@ def transition(states, char):
 
 
 def variable(token_buffer):
-    logging.debug(_('\n(variable def) Test Variable --> Buffer: '), token_buffer)
+    logging.debug(_('\n(variable def) Test Variable --> Buffer: %s'), token_buffer)
     for char in token_buffer:
         if transition('q63', char) == 'error':
             logging.debug('\n(variable def) Return: False')
@@ -52,47 +51,30 @@ def variable(token_buffer):
             return True
 
 
-def error_informer(level, **exits):
-    if level == 'EL':
-        print('\n' + Fore.RED + _('Lexical Error'))
-        print(Fore.RED + _('Character \"{}\" unexpected  -->  Line: {} | Column: {}').
-              format(character, str(line_counter), str(new_column_word)))
-        if exits is True:
-            sys.exit()
-    elif level == 'FLX':
-        print('\n' + Fore.RED + _('Nonexistent file'))
-        print(Fore.RED + _('File \"{}\" Not found!').format(str(parameters[0])))
-        sys.exit()
-    elif level == 'PYV':
-        print('\n' + Fore.RED + _('Incompatible Python version'))
-        print(Fore.RED + _('This file requires version 3.6 or higher. Version detected in the system: {}')
-              .format(sys.version))
-        sys.exit()
-
-
-if sys.version <= '3.5.0':
-    error_informer('PYV')
+if langBR is False:
+    _ = lambda s: s
 
 # Parameters
 parameters = sys.argv[1:]
 
 # Checking Parameters
 if not parameters:
-    print('Nenhum parâmetro detectado!')
-    print('Digite -> python3 AnalisadorLexico.py [nome-do-arquivo].foo [parametros]')
-    print('Para ajuda, digite -> python3 AnalisadorLexico.py -h')
+    print('No parameters detected!')
+    print('Type -> python3 AnalisadorLexico.py [filename].foo [parameters]')
+    print('For help, type -> python3 AnalisadorLexico.py -h')
     sys.exit()
 else:
     if parameters[0] == '-h':
-        print('Uso: \n  python3 AnalisadorLexico.py [NOME-DO-ARQUIVO].foo [PARÂMETROS]')
-        print('\nO NOME DO ARQUIVO deve sempre ser ANTES dos parâmetros!!')
-        print('Os PARÂMETROS são opcionais!')
-        print('\nÉ possível executar com UM ou MAIS parâmetros, desde que sejam separados por ESPAÇO')
-        print('Exemplo: \n  python3 AnalisadorLexico.py [NOME-DO-ARQUIVO].foo -lt -ltf')
-        print('\n\nParâmetros disponíveis:')
-        print('  -lt\tGera uma listagem dos tokens detectados, o resultado é mostrado no terminal')
-        print('  -v\t\tExibe uma saída detalhada do script')
-        print('  -BR ou -US\tEscolhe a linguagem das saídas. -BR -> Português  | -US -> English')
+        print('Use: \n  python3 AnalisadorLexico.py [FILENAME].foo [PARAMETERS]')
+        print('\nThe FILENAME should always be BEFORE the parameters!!')
+        print('PARAMETERS are optional!')
+        print('\nYou can run with ONE or MORE parameters, as long as they are separated by SPACE')
+        print('Example: \n  python3 AnalisadorLexico.py [FILENAME].foo -lt -BR')
+        print('\n\nAvailable parameters:')
+        print('  -lt\tGenerates a listing of the detected tokens, the result is shown in the terminal')
+        print('  -v\tDisplays a detailed output of the script')
+        print('-BR \tIt chooses the language of the outputs for Brazilian Portuguese, by default is English. -BR -> '
+              'Brazilian Portuguese')
         sys.exit()
     elif str(parameters[0]).endswith('.foo'):
         source_code_name = parameters[0]
@@ -100,14 +82,34 @@ else:
             if param == '-lt':
                 lt_flag = True
             elif param == '-BR':
-                BR = gettext.translation('pt_BR', localedir='TranslationFile', languages=['pt'])
-                BR.install()
-            elif param == '-US':
-                langUS = True
+                langBR = True
+                br = gettext.translation('base', localedir='locales', languages=['pt'])
+                br.install()
+                _ = br.gettext
             elif param == '-v':
                 logging.basicConfig(format='%(message)s', level=logging.DEBUG)
     elif not str(parameters[0]).endswith('.foo'):
-        error_informer('FLX')
+        print('\n' + Fore.RED + _('Nonexistent file'))
+        print(Fore.RED + _('File \"{}\" Not found!').format(str(parameters[0])))
+        sys.exit()
+
+
+def error_informer(level, **exits):
+    if level == 'EL':
+        print('\n' + Fore.RED + _('Lexicon Error'))
+        print(Fore.RED + _('Character \"{}\" unexpected  -->  Line: {} | Column: {}').
+              format(character, str(line_counter), str(new_column_word)))
+        if exits is True:
+            sys.exit()
+    elif level == 'PYV':
+        print('\n' + Fore.RED + _('Incompatible Python version'))
+        print(Fore.RED + _('This file requires version 3.6 or higher. Version detected in the system: {}')
+              .format(sys.version))
+        sys.exit()
+
+
+if sys.version <= '3.7.0':
+    error_informer('PYV')
 
 # Reading the config file
 with open('FinishStates.config', newline='') as config:
