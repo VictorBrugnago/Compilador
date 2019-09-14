@@ -108,7 +108,7 @@ def error_informer(level, **exits):
         sys.exit()
 
 
-if sys.version <= '3.7.0':
+if sys.version <= '3.6.0':
     error_informer('PYV')
 
 # Reading the config file
@@ -154,17 +154,23 @@ for line in source_code:
         logging.debug(_('\nCharacter: {}  | Column: {}  |  Line: {}  |  Actual State (Before transition): {}')
                       .format(character, column_counter, line_counter, state))
 
+        # Checking if is start of String
         if character == '"' and is_Text is False:
             is_Text = True
             logging.debug(_('Starting String...'))
+
+        # Checking if is end of String
         elif character == '"' and is_Text is True:
             is_Text = False
             logging.debug(_('Ending String...'))
             if state == 'q60':
                 state = 'q61'
 
+        # Start counting the columns from the beginning of the word
         if state is initial_state:
             new_column_word = column_counter
+
+        # Testing for String
         if is_Text is True:
             last_state = state
             state = transition(state, character)
@@ -184,6 +190,8 @@ for line in source_code:
                                              str(line_counter) + ',' + str(new_column_word))
                     state = initial_state
                     buffer_character = ''
+
+        # In case it is not a String
         else:
             if character != ' ':
                 state = transition(state, character)
