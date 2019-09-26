@@ -67,9 +67,8 @@ def error_informer(level, char_error, line_error, column_error, **exits):
 
 def lexical_analyser(source_code_name, **lex_param):
 
-    if params.values() == '-val':
-        print('Test -val')
-    #logging.basicConfig(format='%(message)s', level=logging.DEBUG)
+    print('Keys: ', lex_param.keys())
+    print('Values: ', lex_param.values())
 
     with open(source_code_name, 'r', encoding='utf-8') as code_file:
         source_code = code_file.readlines()
@@ -78,7 +77,6 @@ def lexical_analyser(source_code_name, **lex_param):
 
     new_column_word = 0
     line_counter = 0
-    logging.info()
 
     for line_code in source_code:
         state = initial_state

@@ -49,14 +49,15 @@ else:
             elif param == '-vc':
                 logging.basicConfig(format='%(message)s', level=logging.DEBUG)
             elif param == '-val':
+                val_flag = True
 
     elif not str(parameters[0]).endswith('.foo'):
-        print('\n' + Fore.RED + _('Nonexistent file'))
-        print(Fore.RED + _('File \"{}\" Not found!').format(str(parameters[0])))
+        print('\n' + Fore.RED + 'Nonexistent file')
+        print(Fore.RED + 'File \"{}\" Not found!'.format(str(parameters[0])))
         sys.exit()
 
 print('Lexical')
-result = lexical_analyser(source_code_name, lex_param=[val_flag])
+result = lexical_analyser(source_code_name, val=val_flag, ls=lt_flag)
 
 for i in result:
     print(i.split(',')[0].center(24), i.split(',')[1].center(24), i.split(',')[2].center(8), i.split(',')[3])
