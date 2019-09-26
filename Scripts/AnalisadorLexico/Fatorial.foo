@@ -1,4 +1,4 @@
-startCodee {
+startCode {
     int num;
     int fatorial;
 
