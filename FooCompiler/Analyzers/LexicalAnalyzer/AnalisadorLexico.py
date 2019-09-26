@@ -40,13 +40,13 @@ def transition(states, char):
     logging.debug('\n(transition def) Test Transition --> State: {}  |  Character: {}'.format(states, char))
     for line_token in token_file:
         if states + ', ' + char in line_token:
-            logging.debug('(transition def) Next State: ', line_token.split(', ')[2].rstrip())
+            logging.debug('(transition def) Next State: %s', line_token.split(', ')[2].rstrip())
             return line_token.split(', ')[2].rstrip()
     return 'error'
 
 
 def variable(token_buffer):
-    logging.debug('\n(variable def) Test Variable --> Buffer: ', token_buffer)
+    logging.debug('\n(variable def) Test Variable --> Buffer: %s', token_buffer)
     for char in token_buffer:
         if transition('q63', char) == 'error':
             logging.debug('\n(variable def) Return: False')
@@ -137,7 +137,7 @@ def lexical_analyser(source_code_name, **lex_param):
                     state = transition(state, character)
                     buffer_character = buffer_character + character  # Concatenate each char to create the complete word
                     logging.debug('Character: {}  |  Actual State (After transition): {}'.format(character, state))
-                    logging.debug('Buffer: ', buffer_character)
+                    logging.debug('Buffer: %s', buffer_character)
 
                     if column_counter < len(line_code):
                         if transition(state, line_code[column_counter]) == 'error':  # if the char doesn't have state
