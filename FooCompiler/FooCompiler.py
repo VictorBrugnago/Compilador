@@ -8,6 +8,7 @@ import sys
 source_code_name = ''
 
 val_flag = False
+lt_flag = False
 
 # Set colorama library init
 colorama.init(autoreset=True)
