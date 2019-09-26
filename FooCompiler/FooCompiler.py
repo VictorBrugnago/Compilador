@@ -57,8 +57,11 @@ else:
         print(Fore.RED + 'File \"{}\" Not found!'.format(str(parameters[0])))
         sys.exit()
 
-print('Lexical')
-result = lexical_analyser(source_code_name, val=val_flag, ls=lt_flag)
+print('Performing lexical analysis...')
+result = lexical_analyser(source_code_name, val=val_flag)
+print('DONE!')
 
-for i in result:
-    print(i.split(',')[0].center(24), i.split(',')[1].center(24), i.split(',')[2].center(8), i.split(',')[3])
+if lt_flag is True:
+    print("List of detected Tokens\n")
+    for i in result:
+        print(i.split(',')[0].center(24), i.split(',')[1].center(24), i.split(',')[2].center(8), i.split(',')[3])
