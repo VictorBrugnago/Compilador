@@ -1,0 +1,2235 @@
+<html>
+  <head>
+    <title>Tabela de Análise LL(1)</title>
+    
+  </head>
+  <body>
+    <table border="1" cellspacing="0">
+      <tr align="center">
+        <td bgcolor="black">
+          <font color="white"><b>&#160;</b></font>
+        </td>
+        <td bgcolor="black">
+          <font color="white"><b>$</b></font>
+        </td>
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>char</b></font>
+        </td>
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>integer</b></font>
+        </td>
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>Str</b></font>
+        </td>
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>startCode</b></font>
+        </td>
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>endCode</b></font>
+        </td>
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>inputKey</b></font>
+        </td>
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>outputKey</b></font>
+        </td>
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>if</b></font>
+        </td>
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>else</b></font>
+        </td>
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>do</b></font>
+        </td>
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>until</b></font>
+        </td>
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>int</b></font>
+        </td>
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>tk_abre_parenteses</b></font>
+        </td>
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>tk_fecha_parenteses</b></font>
+        </td>
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>tk_abre_bloco</b></font>
+        </td>
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>tk_fecha_bloco</b></font>
+        </td>
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>tk_abre_aspas</b></font>
+        </td>
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>tk_fecha_aspas</b></font>
+        </td>
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>tk_final</b></font>
+        </td>
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>tk_atrib</b></font>
+        </td>
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>tk_igual</b></font>
+        </td>
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>tk_soma</b></font>
+        </td>
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>tk_subtracao</b></font>
+        </td>
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>tk_multiplicacao</b></font>
+        </td>
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>tk_divisao</b></font>
+        </td>
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>tk_maior_que</b></font>
+        </td>
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>tk_menor_que</b></font>
+        </td>
+      </tr>
+      <tr align="center">
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>&lt;PROGRAM&gt;</b></font>
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          0
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+      </tr>
+      <tr align="center">
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>&lt;VARIABLE_LIST&gt;</b></font>
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          2
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          2
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          2
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          2
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          2
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          1
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          2
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+      </tr>
+      <tr align="center">
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>&lt;VARIABLE&gt;</b></font>
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          3
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+      </tr>
+      <tr align="center">
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>&lt;ATTRIB&gt;</b></font>
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          4
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+      </tr>
+      <tr align="center">
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>&lt;TYPE_VARIABLE&gt;</b></font>
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          5
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+      </tr>
+      <tr align="center">
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>&lt;SENTENCE&gt;</b></font>
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          6
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          7
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          8
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+      </tr>
+      <tr align="center">
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>&lt;COMMAND_LIST&gt;</b></font>
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          9
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          9
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          9
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          9
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          9
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          10
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          10
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+      </tr>
+      <tr align="center">
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>&lt;COMMAND&gt;</b></font>
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          14
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          11
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          12
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          13
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          15
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+      </tr>
+      <tr align="center">
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>&lt;INPUT_CMD&gt;</b></font>
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          16
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+      </tr>
+      <tr align="center">
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>&lt;OUTPUT_CMD&gt;</b></font>
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          17
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+      </tr>
+      <tr align="center">
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>&lt;CONDITIONAL_CMD&gt;</b></font>
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          18
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+      </tr>
+      <tr align="center">
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>&lt;MATH_CMD&gt;</b></font>
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          19
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+      </tr>
+      <tr align="center">
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>&lt;LOOP_CMD&gt;</b></font>
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          20
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+      </tr>
+      <tr align="center">
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>&lt;IF&gt;</b></font>
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          21
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+      </tr>
+      <tr align="center">
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>&lt;ELSE&gt;</b></font>
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          22
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          23
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+      </tr>
+      <tr align="center">
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>&lt;DO_LOOP&gt;</b></font>
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          24
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+      </tr>
+      <tr align="center">
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>&lt;ARITHMETIC&gt;</b></font>
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          41
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          42
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          42
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          37
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          38
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          39
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          40
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+      </tr>
+      <tr align="center">
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>&lt;ID_ARITHMETIC&gt;</b></font>
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          32
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          31
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          35
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          36
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          33
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          34
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+      </tr>
+      <tr align="center">
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>&lt;LOGIC&gt;</b></font>
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          30
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          30
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          29
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          27
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          28
+        </td>
+      </tr>
+      <tr align="center">
+        <td nowrap="nowrap" bgcolor="black">
+          <font color="white"><b>&lt;ID_LOGIC&gt;</b></font>
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          25
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          26
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+        <td width="40" bgcolor="#F5F5F5">
+          -
+        </td>
+      </tr>
+    </table>
+    <br>
+    
+
+    <table border="0">
+      <tr>
+        <td align="right" nowrap="nowrap">
+          0&#160;-&#160;
+        </td>
+        <td>
+          &lt;PROGRAM&gt; ::= startCode tk_abre_bloco &lt;VARIABLE_LIST&gt; &lt;COMMAND_LIST&gt; 
+          tk_fecha_bloco endCode
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          1&#160;-&#160;
+        </td>
+        <td>
+          &lt;VARIABLE_LIST&gt; ::= &lt;VARIABLE&gt; &lt;VARIABLE_LIST&gt;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          2&#160;-&#160;
+        </td>
+        <td>
+          &lt;VARIABLE_LIST&gt; ::= &#238;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          3&#160;-&#160;
+        </td>
+        <td>
+          &lt;VARIABLE&gt; ::= &lt;TYPE_VARIABLE&gt; &lt;ATTRIB&gt; tk_final
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          4&#160;-&#160;
+        </td>
+        <td>
+          &lt;ATTRIB&gt; ::= char &lt;LOGIC&gt;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          5&#160;-&#160;
+        </td>
+        <td>
+          &lt;TYPE_VARIABLE&gt; ::= int
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          6&#160;-&#160;
+        </td>
+        <td>
+          &lt;SENTENCE&gt; ::= char
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          7&#160;-&#160;
+        </td>
+        <td>
+          &lt;SENTENCE&gt; ::= integer
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          8&#160;-&#160;
+        </td>
+        <td>
+          &lt;SENTENCE&gt; ::= Str
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          9&#160;-&#160;
+        </td>
+        <td>
+          &lt;COMMAND_LIST&gt; ::= &lt;COMMAND&gt; &lt;COMMAND_LIST&gt;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          10&#160;-&#160;
+        </td>
+        <td>
+          &lt;COMMAND_LIST&gt; ::= &#238;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          11&#160;-&#160;
+        </td>
+        <td>
+          &lt;COMMAND&gt; ::= &lt;INPUT_CMD&gt;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          12&#160;-&#160;
+        </td>
+        <td>
+          &lt;COMMAND&gt; ::= &lt;OUTPUT_CMD&gt;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          13&#160;-&#160;
+        </td>
+        <td>
+          &lt;COMMAND&gt; ::= &lt;CONDITIONAL_CMD&gt;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          14&#160;-&#160;
+        </td>
+        <td>
+          &lt;COMMAND&gt; ::= &lt;MATH_CMD&gt;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          15&#160;-&#160;
+        </td>
+        <td>
+          &lt;COMMAND&gt; ::= &lt;LOOP_CMD&gt;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          16&#160;-&#160;
+        </td>
+        <td>
+          &lt;INPUT_CMD&gt; ::= inputKey tk_abre_parenteses char tk_fecha_parenteses 
+          tk_final
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          17&#160;-&#160;
+        </td>
+        <td>
+          &lt;OUTPUT_CMD&gt; ::= outputKey tk_abre_parenteses &lt;SENTENCE&gt; 
+          tk_fecha_parenteses tk_final
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          18&#160;-&#160;
+        </td>
+        <td>
+          &lt;CONDITIONAL_CMD&gt; ::= &lt;IF&gt; &lt;ELSE&gt; tk_final
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          19&#160;-&#160;
+        </td>
+        <td>
+          &lt;MATH_CMD&gt; ::= char tk_atrib &lt;ID_ARITHMETIC&gt; tk_final
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          20&#160;-&#160;
+        </td>
+        <td>
+          &lt;LOOP_CMD&gt; ::= &lt;DO_LOOP&gt;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          21&#160;-&#160;
+        </td>
+        <td>
+          &lt;IF&gt; ::= if tk_abre_parenteses &lt;ID_LOGIC&gt; tk_fecha_parenteses 
+          tk_abre_bloco &lt;COMMAND_LIST&gt; tk_fecha_bloco
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          22&#160;-&#160;
+        </td>
+        <td>
+          &lt;ELSE&gt; ::= else tk_abre_bloco &lt;COMMAND_LIST&gt; tk_fecha_bloco
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          23&#160;-&#160;
+        </td>
+        <td>
+          &lt;ELSE&gt; ::= &#238;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          24&#160;-&#160;
+        </td>
+        <td>
+          &lt;DO_LOOP&gt; ::= do tk_abre_bloco &lt;COMMAND_LIST&gt; until 
+          tk_abre_parenteses &lt;ID_LOGIC&gt; tk_fecha_parenteses tk_final
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          25&#160;-&#160;
+        </td>
+        <td>
+          &lt;ID_LOGIC&gt; ::= char &lt;LOGIC&gt;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          26&#160;-&#160;
+        </td>
+        <td>
+          &lt;ID_LOGIC&gt; ::= integer &lt;LOGIC&gt;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          27&#160;-&#160;
+        </td>
+        <td>
+          &lt;LOGIC&gt; ::= tk_maior_que &lt;ID_LOGIC&gt;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          28&#160;-&#160;
+        </td>
+        <td>
+          &lt;LOGIC&gt; ::= tk_menor_que &lt;ID_LOGIC&gt;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          29&#160;-&#160;
+        </td>
+        <td>
+          &lt;LOGIC&gt; ::= tk_igual &lt;ID_LOGIC&gt;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          30&#160;-&#160;
+        </td>
+        <td>
+          &lt;LOGIC&gt; ::= &#238;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          31&#160;-&#160;
+        </td>
+        <td>
+          &lt;ID_ARITHMETIC&gt; ::= integer &lt;ARITHMETIC&gt;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          32&#160;-&#160;
+        </td>
+        <td>
+          &lt;ID_ARITHMETIC&gt; ::= char &lt;ARITHMETIC&gt;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          33&#160;-&#160;
+        </td>
+        <td>
+          &lt;ID_ARITHMETIC&gt; ::= tk_subtracao &lt;ID_ARITHMETIC&gt;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          34&#160;-&#160;
+        </td>
+        <td>
+          &lt;ID_ARITHMETIC&gt; ::= tk_maior_que &lt;ID_ARITHMETIC&gt;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          35&#160;-&#160;
+        </td>
+        <td>
+          &lt;ID_ARITHMETIC&gt; ::= tk_abre_parenteses &lt;ID_ARITHMETIC&gt; 
+          tk_fecha_parenteses &lt;ARITHMETIC&gt;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          36&#160;-&#160;
+        </td>
+        <td>
+          &lt;ID_ARITHMETIC&gt; ::= tk_final
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          37&#160;-&#160;
+        </td>
+        <td>
+          &lt;ARITHMETIC&gt; ::= tk_soma &lt;ID_ARITHMETIC&gt;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          38&#160;-&#160;
+        </td>
+        <td>
+          &lt;ARITHMETIC&gt; ::= tk_subtracao &lt;ID_ARITHMETIC&gt;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          39&#160;-&#160;
+        </td>
+        <td>
+          &lt;ARITHMETIC&gt; ::= tk_multiplicacao &lt;ID_ARITHMETIC&gt;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          40&#160;-&#160;
+        </td>
+        <td>
+          &lt;ARITHMETIC&gt; ::= tk_divisao &lt;ID_ARITHMETIC&gt;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          41&#160;-&#160;
+        </td>
+        <td>
+          &lt;ARITHMETIC&gt; ::= tk_abre_parenteses &lt;ID_ARITHMETIC&gt; 
+          tk_fecha_parenteses &lt;ARITHMETIC&gt;
+        </td>
+      </tr>
+      <tr>
+        <td align="right" nowrap="nowrap">
+          42&#160;-&#160;
+        </td>
+        <td>
+          &lt;ARITHMETIC&gt; ::= &#238;
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
