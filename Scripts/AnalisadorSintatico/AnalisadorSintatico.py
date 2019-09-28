@@ -10,17 +10,19 @@ colorama.init(autoreset=True)
 
 # Lists
 syntactic_result_list = []
+reserved_words_list=[]
 productions_list = []
 syntactic_list = []
 tokens_list = []
 
 # Dicts
 syntactic_state_dict = {}
+reserved_words_dict = {}
 grammar_state_dict = {}
 
 # Queue & Stack
-queue = []
 stack = deque()
+queue = []
 
 # Count
 location_error = 0
@@ -58,7 +60,7 @@ def transition(non_terminal_word, terminal_word):
     logging.debug('\n(transition def) Test Transition --> Non Terminal: {}  |  Terminal: {}'.
           format(non_terminal_word, terminal_word))
     if (non_terminal_word, terminal_word) in syntactic_state_dict:
-        logging.debug('(transition def) Grammar id: ', syntactic_state_dict[non_terminal_word, terminal_word])
+        logging.debug('(transition def) Grammar id: %s', syntactic_state_dict[non_terminal_word, terminal_word])
         return syntactic_state_dict[non_terminal_word, terminal_word]
     else:
         return 'error'
@@ -76,7 +78,13 @@ with open('Syntactic_Table.config', newline='') as config:
     for line in buff_reader_config:
         syntactic_list.append(line)
 
-# Loading Production Rules
+# Reading the Reserved Words file
+with open('Reserved_Words.config', newline='', encoding='utf-8') as config:
+    buff_reader_config = csv.reader(config, delimiter=',', skipinitialspace=True)
+    for line in buff_reader_config:
+        reserved_words_list.append(line)
+
+# Loading Production Rules dict
 for line_productions in range(len(productions_list)):
     config_id_grammar = productions_list[line_productions][0]
     config_grammar = productions_list[line_productions][1:]
@@ -88,6 +96,12 @@ for line_syntactic in range(len(syntactic_list)):
     config_terminal = syntactic_list[line_syntactic][1]
     config_id_grammar = syntactic_list[line_syntactic][2]
     syntactic_state_dict[config_final_nonterminal, config_terminal] = config_id_grammar
+
+# Loading Reserved Words dict
+for line_reserved_words in range(len(reserved_words_list)):
+    config_token = reserved_words_list[line_reserved_words][0]
+    config_lexeme = reserved_words_list[line_reserved_words][1:]
+    reserved_words_dict[config_token] = config_lexeme
 
 # Open list of Tokens and inserting '$' at the beginning of the list
 with open('TokensResultLexical.txt', 'r', encoding='utf-8', newline='') as token_file:
@@ -109,24 +123,27 @@ stack.append('<PROGRAM>')
 while queue and stack:
     logging.debug('\nUnstacking...')
     non_terminal_symb = stack[-1]
-    logging.debug('NonTerminal symbol on top of stack: ', non_terminal_symb)
+    logging.debug('NonTerminal symbol on top of stack: %s', non_terminal_symb)
+    logging.debug('queue[0]: %s', queue[0])
 
     if non_terminal_symb.isupper():
         logging.debug('\nDequeuing...')
         terminal_symb = queue[0]
-        logging.debug('Terminal symbol queued: ', terminal_symb)
+        logging.debug('Terminal symbol queued: %s', terminal_symb)
 
         grammar = transition(non_terminal_symb, terminal_symb)  # Testing
         if grammar == 'error':
-            print(Fore.RED + 'SyntaxError: invalid syntax \'{}\' in line {}'.format(
+            print(Fore.RED + 'SyntaxError: unexpected \'{}\', expecting \'{}\' on line {} column {}'.format(
                 tokens_list[location_error].split(', ')[1],
-                tokens_list[location_error].split(', ')[2]
+                ''.join(reserved_words_dict.get(non_terminal_symb)),
+                tokens_list[location_error].split(', ')[2],
+                tokens_list[location_error].split(', ')[3]
             ))
             sys.exit()
         stack.pop()
 
-        logging.debug('\nGrammar id: ', grammar)
-        logging.debug('Grammar: ', grammar_state_dict.get(grammar))
+        logging.debug('\nGrammar id: %s', grammar)
+        logging.debug('Grammar: %s', grammar_state_dict.get(grammar))
         syntactic_result_list.append(non_terminal_symb + ' -> ' + ' '.join(grammar_state_dict.get(grammar)))
 
         grammar_count = len(grammar_state_dict.get(grammar)) - 1
@@ -139,6 +156,14 @@ while queue and stack:
         del queue[0]
         location_error += 1
         stack.pop()
+    elif stack[-1] != queue[0]:
+        print(Fore.RED + 'SyntaxError: unexpected \'{}\', expecting \'{}\' on line {} column {}'.format(
+            tokens_list[location_error].split(', ')[1],
+            ''.join(reserved_words_dict.get(non_terminal_symb)),
+            tokens_list[location_error].split(', ')[2],
+            tokens_list[location_error].split(', ')[3]
+        ))
+        sys.exit()
 
 if not queue and not stack:
     print('\nSyntactic Analyzer completed!')
