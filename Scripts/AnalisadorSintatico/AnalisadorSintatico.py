@@ -1,6 +1,7 @@
 from collections import deque
 from colorama import Fore
 import colorama
+import logging
 import csv
 import sys
 
@@ -8,9 +9,10 @@ import sys
 colorama.init(autoreset=True)
 
 # Lists
-syntactic_list = []
+syntactic_result_list = []
 productions_list = []
-lista_tokens = []
+syntactic_list = []
+tokens_list = []
 
 # Dicts
 syntactic_state_dict = {}
@@ -23,12 +25,40 @@ stack = deque()
 # Count
 location_error = 0
 
+# Flags
+lp_flag = False
+
+# Parameters
+parameters = sys.argv[1:]
+
+# Checking Parameters
+if not parameters:
+    pass
+else:
+    for params in parameters[0:]:
+        if params == '-h':
+            print('Use: \n  python3 AnalisadorSintatico.py [PARAMETERS]')
+            print('PARAMETERS are optional!')
+            print('\nYou can run with ONE or MORE parameters, as long as they are separated by SPACE')
+            print('Example: \n  python3 AnalisadorSintatico.py -lp -BR')
+            print('\n\nAvailable parameters:')
+            print('  -lp\tGenerates a listing of the detected productions , the result is shown in the terminal')
+            print('  -v\tDisplays a detailed output of the script')
+            print('  -BR \tIt chooses the language of the outputs for Brazilian Portuguese, by default is English. -BR '
+                  '-> '
+                  'Brazilian Portuguese')
+            sys.exit()
+        if params == '-lp':
+            lp_flag = True
+        if params == '-v':
+            logging.basicConfig(format='%(message)s', level=logging.DEBUG)
+
 
 def transition(non_terminal_word, terminal_word):
-    print('\n(transition def) Test Transition --> Non Terminal: {}  |  Terminal: {}'.
+    logging.debug('\n(transition def) Test Transition --> Non Terminal: {}  |  Terminal: {}'.
           format(non_terminal_word, terminal_word))
     if (non_terminal_word, terminal_word) in syntactic_state_dict:
-        print('(transition def) Grammar id: ', syntactic_state_dict[non_terminal_word, terminal_word])
+        logging.debug('(transition def) Grammar id: ', syntactic_state_dict[non_terminal_word, terminal_word])
         return syntactic_state_dict[non_terminal_word, terminal_word]
     else:
         return 'error'
@@ -77,14 +107,14 @@ stack.append('$')
 stack.append('<PROGRAM>')
 
 while queue and stack:
-    print('\nUnstacking...')
+    logging.debug('\nUnstacking...')
     non_terminal_symb = stack[-1]
-    print('NonTerminal symbol on top of stack: ', non_terminal_symb)
+    logging.debug('NonTerminal symbol on top of stack: ', non_terminal_symb)
 
     if non_terminal_symb.isupper():
-        print('\nDequeuing...')
+        logging.debug('\nDequeuing...')
         terminal_symb = queue[0]
-        print('Terminal symbol queued: ', terminal_symb)
+        logging.debug('Terminal symbol queued: ', terminal_symb)
 
         grammar = transition(non_terminal_symb, terminal_symb)  # Testing
         if grammar == 'error':
@@ -95,8 +125,9 @@ while queue and stack:
             sys.exit()
         stack.pop()
 
-        print('\nGrammar id: ', grammar)
-        print('Grammar: ', grammar_state_dict.get(grammar))
+        logging.debug('\nGrammar id: ', grammar)
+        logging.debug('Grammar: ', grammar_state_dict.get(grammar))
+        syntactic_result_list.append(non_terminal_symb + ' -> ' + ' '.join(grammar_state_dict.get(grammar)))
 
         grammar_count = len(grammar_state_dict.get(grammar)) - 1
         while grammar_count >= 0:
@@ -104,13 +135,18 @@ while queue and stack:
                 stack.append(grammar_state_dict.get(grammar)[grammar_count])
             grammar_count -= 1
     elif stack[-1] == queue[0]:
-        print('Sentence recognized: {} -> {}'.format(non_terminal_symb, queue[0]))
+        logging.debug('Sentence recognized: {} -> {}'.format(non_terminal_symb, queue[0]))
         del queue[0]
         location_error += 1
         stack.pop()
 
 if not queue and not stack:
-    print('\n\nSyntactic Analyzer completed!')
+    print('\nSyntactic Analyzer completed!')
+
+    if lp_flag is True:
+        print('\nList of productions:')
+        for i in syntactic_result_list:
+            print(i)
 else:
     print("Error --> Stack or Queue are not empty")
     sys.exit()
