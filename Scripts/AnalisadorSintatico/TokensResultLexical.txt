@@ -20,13 +20,13 @@ tk_final, ;, 6, 18
 do, do, 8, 5
 tk_abre_bloco, {, 8, 8
 char, fatorial, 9, 9
-tk_attrib, <<, 9, 18
+tk_atrib, <<, 9, 18
 char, fatorial, 9, 21
 tk_multiplicacao, *, 9, 30
 char, num, 9, 32
 tk_final, ;, 9, 35
 char, num, 10, 9
-tk_attrib, <<, 10, 13
+tk_atrib, <<, 10, 13
 char, num, 10, 16
 tk_subtracao, -, 10, 20
 integer, 1, 10, 22
