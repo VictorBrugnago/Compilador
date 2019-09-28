@@ -10,7 +10,7 @@ colorama.init(autoreset=True)
 
 # Lists
 syntactic_result_list = []
-reserved_words_list=[]
+reserved_words_list = []
 productions_list = []
 syntactic_list = []
 tokens_list = []
@@ -58,7 +58,7 @@ else:
 
 def transition(non_terminal_word, terminal_word):
     logging.debug('\n(transition def) Test Transition --> Non Terminal: {}  |  Terminal: {}'.
-          format(non_terminal_word, terminal_word))
+                  format(non_terminal_word, terminal_word))
     if (non_terminal_word, terminal_word) in syntactic_state_dict:
         logging.debug('(transition def) Grammar id: %s', syntactic_state_dict[non_terminal_word, terminal_word])
         return syntactic_state_dict[non_terminal_word, terminal_word]
