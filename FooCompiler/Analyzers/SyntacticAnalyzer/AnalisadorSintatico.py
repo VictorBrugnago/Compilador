@@ -28,12 +28,9 @@ queue = []
 # Setting up logger
 syntactic_logger = logging.getLogger(__name__)
 syntactic_logger.setLevel(logging.DEBUG)
-file_handler = logging.FileHandler('syntactic.log')
-file_handler.setFormatter(logging.Formatter('%(message)s'))
 handler = logging.StreamHandler()
 handler.setFormatter(logging.Formatter('%(message)s'))
 syntactic_logger.addHandler(handler)
-syntactic_logger.addHandler(file_handler)
 syntactic_logger.disabled = True
 
 
@@ -89,6 +86,9 @@ for line_reserved_words in range(len(reserved_words_list)):
 def syntactic_analyzer(token_list, **syn_param):
 
     if syn_param.get('vsa') is True:
+        file_handler = logging.FileHandler('syntactic.log')
+        file_handler.setFormatter(logging.Formatter('%(message)s'))
+        syntactic_logger.addHandler(file_handler)
         syntactic_logger.disabled = False
 
     del token_list[0]

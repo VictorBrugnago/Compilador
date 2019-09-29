@@ -15,12 +15,9 @@ finish_state_dict = {}
 # Setting up logger
 lexical_logger = logging.getLogger(__name__)
 lexical_logger.setLevel(logging.DEBUG)
-file_handler = logging.FileHandler('lexical.log')
-file_handler.setFormatter(logging.Formatter('%(message)s'))
 handler = logging.StreamHandler()
 handler.setFormatter(logging.Formatter('%(message)s'))
 lexical_logger.addHandler(handler)
-lexical_logger.addHandler(file_handler)
 lexical_logger.disabled = True
 
 # Reading the config file
@@ -81,8 +78,10 @@ def error_informer(level, char_error, line_error, column_error, **exits):
 def lexical_analyser(source_code_name, **lex_param):
 
     if lex_param.get('vla') is True:
+        file_handler = logging.FileHandler('lexical.log')
+        file_handler.setFormatter(logging.Formatter('%(message)s'))
+        lexical_logger.addHandler(file_handler)
         lexical_logger.disabled = False
-        # logging.basicConfig(format='%(message)s', level=logging.DEBUG)
 
     with open(source_code_name, 'r', encoding='utf-8') as code_file:
         source_code = code_file.readlines()
