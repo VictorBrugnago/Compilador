@@ -12,6 +12,17 @@ colorama.init(autoreset=True)
 config_list = []
 finish_state_dict = {}
 
+# Setting up logger
+lexical_logger = logging.getLogger(__name__)
+lexical_logger.setLevel(logging.DEBUG)
+file_handler = logging.FileHandler('lexical.log')
+file_handler.setFormatter(logging.Formatter('%(message)s'))
+handler = logging.StreamHandler()
+handler.setFormatter(logging.Formatter('%(message)s'))
+lexical_logger.addHandler(handler)
+lexical_logger.addHandler(file_handler)
+lexical_logger.disabled = True
+
 # Reading the config file
 with open(os.path.join(os.path.dirname(__file__), 'FinishStates.config'), newline='') as config:
     buff_reader_config = csv.reader(config, delimiter=',', skipinitialspace=True)
@@ -37,22 +48,22 @@ for line_finish_state in range(3, len(config_list)):
 
 
 def transition(states, char):
-    logging.debug('\n(transition def) Test Transition --> State: {}  |  Character: {}'.format(states, char))
+    lexical_logger.debug('\n(transition def) Test Transition --> State: {}  |  Character: {}'.format(states, char))
     for line_token in token_file:
         if states + ', ' + char in line_token:
-            logging.debug('(transition def) Next State: %s', line_token.split(', ')[2].rstrip())
+            lexical_logger.debug('(transition def) Next State: %s', line_token.split(', ')[2].rstrip())
             return line_token.split(', ')[2].rstrip()
     return 'error'
 
 
 def variable(token_buffer):
-    logging.debug('\n(variable def) Test Variable --> Buffer: %s', token_buffer)
+    lexical_logger.debug('\n(variable def) Test Variable --> Buffer: %s', token_buffer)
     for char in token_buffer:
         if transition('q63', char) == 'error':
-            logging.debug('\n(variable def) Return: False')
+            lexical_logger.debug('\n(variable def) Return: False')
             return False
         else:
-            logging.debug('\n(variable def) Return: True')
+            lexical_logger.debug('\n(variable def) Return: True')
             return True
 
 
@@ -67,8 +78,9 @@ def error_informer(level, char_error, line_error, column_error, **exits):
 
 def lexical_analyser(source_code_name, **lex_param):
 
-    if lex_param.get('val') is True:
-        logging.basicConfig(format='%(message)s', level=logging.DEBUG)
+    if lex_param.get('vla') is True:
+        lexical_logger.disabled = False
+        # logging.basicConfig(format='%(message)s', level=logging.DEBUG)
 
     with open(source_code_name, 'r', encoding='utf-8') as code_file:
         source_code = code_file.readlines()
@@ -91,18 +103,18 @@ def lexical_analyser(source_code_name, **lex_param):
         while column_counter < len(line_code):
             character = line_code[column_counter]
             column_counter += 1
-            logging.debug('\nCharacter: {}  | Column: {}  |  Line: {}  |  Actual State (Before transition): {}'
+            lexical_logger.debug('\nCharacter: {}  | Column: {}  |  Line: {}  |  Actual State (Before transition): {}'
                           .format(character, column_counter, line_counter, state))
 
             # Checking if is start of String
             if character == '"' and is_text is False:
                 is_text = True
-                logging.debug('Starting String...')
+                lexical_logger.debug('Starting String...')
 
             # Checking if is end of String
             elif character == '"' and is_text is True:
                 is_text = False
-                logging.debug('Ending String...')
+                lexical_logger.debug('Ending String...')
                 if state == 'q60':
                     state = 'q61'
 
@@ -115,8 +127,8 @@ def lexical_analyser(source_code_name, **lex_param):
                 last_state = state
                 state = transition(state, character)
                 buffer_character = buffer_character + character
-                logging.debug('Character: {}  |  Actual State (After transition): {}'.format(character, state))
-                logging.debug('Buffer String: %s', buffer_character)
+                lexical_logger.debug('Character: {}  |  Actual State (After transition): {}'.format(character, state))
+                lexical_logger.debug('Buffer String: %s', buffer_character)
 
                 if state == 'error':
                     error_informer('EL', character, str(line_counter), str(new_column_word), exits=False)
@@ -136,8 +148,8 @@ def lexical_analyser(source_code_name, **lex_param):
                 if character != ' ':
                     state = transition(state, character)
                     buffer_character = buffer_character + character  # Concatenate each char to create the complete word
-                    logging.debug('Character: {}  |  Actual State (After transition): {}'.format(character, state))
-                    logging.debug('Buffer: %s', buffer_character)
+                    lexical_logger.debug('Character: {}  |  Actual State (After transition): {}'.format(character, state))
+                    lexical_logger.debug('Buffer: %s', buffer_character)
 
                     if column_counter < len(line_code):
                         if transition(state, line_code[column_counter]) == 'error':  # if the char doesn't have state
@@ -178,9 +190,3 @@ def lexical_analyser(source_code_name, **lex_param):
                         buffer_character = ''
 
     return token_result_list
-
-
-# a = lexical_analyser('C:/Users/Victor Brugnago/PycharmProjects/Compilador/FooCompiler/Fatorial.foo')
-# print('List of detected Tokens\n')
-# for i in a:
-#     print(i.split(',')[0].center(24), i.split(',')[1].center(24), i.split(',')[2].center(8), i.split(',')[3])
