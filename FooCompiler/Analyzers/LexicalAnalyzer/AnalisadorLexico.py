@@ -72,6 +72,8 @@ def error_informer(level, char_error, line_error, column_error, **exits):
         print('\n' + Fore.RED + 'Lexicon Error')
         print(Fore.RED + 'Character \"{}\" unexpected  -->  Line: {} | Column: {}'.
               format(char_error, str(line_error), str(column_error)))
+        lexical_logger.error('Lexicon Error, Character \"{}\" unexpected  -->  Line: {} | Column: {}'.
+                             format(char_error, str(line_error), str(column_error)))
         if exits is True:
             sys.exit()
 
@@ -103,8 +105,8 @@ def lexical_analyser(source_code_name, **lex_param):
         while column_counter < len(line_code):
             character = line_code[column_counter]
             column_counter += 1
-            lexical_logger.debug('\nCharacter: {}  | Column: {}  |  Line: {}  |  Actual State (Before transition): {}'
-                          .format(character, column_counter, line_counter, state))
+            lexical_logger.debug('\nCharacter: {}  | Column: {}  |  Line: {}  |  Actual State (Before transition): {}'.
+                                 format(character, column_counter, line_counter, state))
 
             # Checking if is start of String
             if character == '"' and is_text is False:
@@ -148,7 +150,8 @@ def lexical_analyser(source_code_name, **lex_param):
                 if character != ' ':
                     state = transition(state, character)
                     buffer_character = buffer_character + character  # Concatenate each char to create the complete word
-                    lexical_logger.debug('Character: {}  |  Actual State (After transition): {}'.format(character, state))
+                    lexical_logger.debug('Character: {}  |  Actual State (After transition): {}'.
+                                         format(character, state))
                     lexical_logger.debug('Buffer: %s', buffer_character)
 
                     if column_counter < len(line_code):

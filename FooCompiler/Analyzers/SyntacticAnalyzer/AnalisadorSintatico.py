@@ -39,9 +39,10 @@ syntactic_logger.disabled = True
 
 def transition(non_terminal_word, terminal_word):
     syntactic_logger.debug('\n(transition def) Test Transition --> Non Terminal: {}  |  Terminal: {}'.
-                  format(non_terminal_word, terminal_word))
+                           format(non_terminal_word, terminal_word))
     if (non_terminal_word, terminal_word) in syntactic_state_dict:
-        syntactic_logger.debug('(transition def) Grammar id: %s', syntactic_state_dict[non_terminal_word, terminal_word])
+        syntactic_logger.debug('(transition def) Grammar id: %s',
+                               syntactic_state_dict[non_terminal_word, terminal_word])
         return syntactic_state_dict[non_terminal_word, terminal_word]
     else:
         return 'error'
@@ -121,6 +122,12 @@ def syntactic_analyzer(token_list, **syn_param):
                     token_list[location_error].split(',')[2],
                     token_list[location_error].split(',')[3]
                 ))
+                syntactic_logger.error('SyntaxError: unexpected \'{}\', expecting \'{}\' on line {} column {}'.format(
+                    token_list[location_error].split(',')[1],
+                    ''.join(reserved_words_dict.get(non_terminal_symb)),
+                    token_list[location_error].split(',')[2],
+                    token_list[location_error].split(',')[3]
+                ))
                 sys.exit()
             stack.pop()
 
@@ -145,6 +152,12 @@ def syntactic_analyzer(token_list, **syn_param):
                 token_list[location_error].split(',')[2],
                 token_list[location_error].split(',')[3]
             ))
+            syntactic_logger.error('SyntaxError: unexpected \'{}\', expecting \'{}\' on line {} column {}'.format(
+                token_list[location_error].split(',')[1],
+                ''.join(reserved_words_dict.get(non_terminal_symb)),
+                token_list[location_error].split(',')[2],
+                token_list[location_error].split(',')[3]
+            ))
             sys.exit()
 
     if not queue and not stack:
@@ -152,5 +165,5 @@ def syntactic_analyzer(token_list, **syn_param):
         return syntactic_result_list
     else:
         print(Fore.RED + 'Error --> Stack or Queue are not empty')
+        syntactic_logger.error('Error --> Stack or Queue are not empty')
         sys.exit()
-
