@@ -1,0 +1,1814 @@
+
+Character: s  | Column: 1  |  Line: 1  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: s
+(transition def) Next State: q1
+Character: s  |  Actual State (After transition): q1
+Buffer: s
+
+(transition def) Test Transition --> State: q1  |  Character: t
+(transition def) Next State: q2
+
+Character: t  | Column: 2  |  Line: 1  |  Actual State (Before transition): q1
+
+(transition def) Test Transition --> State: q1  |  Character: t
+(transition def) Next State: q2
+Character: t  |  Actual State (After transition): q2
+Buffer: st
+
+(transition def) Test Transition --> State: q2  |  Character: a
+(transition def) Next State: q3
+
+Character: a  | Column: 3  |  Line: 1  |  Actual State (Before transition): q2
+
+(transition def) Test Transition --> State: q2  |  Character: a
+(transition def) Next State: q3
+Character: a  |  Actual State (After transition): q3
+Buffer: sta
+
+(transition def) Test Transition --> State: q3  |  Character: r
+(transition def) Next State: q4
+
+Character: r  | Column: 4  |  Line: 1  |  Actual State (Before transition): q3
+
+(transition def) Test Transition --> State: q3  |  Character: r
+(transition def) Next State: q4
+Character: r  |  Actual State (After transition): q4
+Buffer: star
+
+(transition def) Test Transition --> State: q4  |  Character: t
+(transition def) Next State: q5
+
+Character: t  | Column: 5  |  Line: 1  |  Actual State (Before transition): q4
+
+(transition def) Test Transition --> State: q4  |  Character: t
+(transition def) Next State: q5
+Character: t  |  Actual State (After transition): q5
+Buffer: start
+
+(transition def) Test Transition --> State: q5  |  Character: C
+(transition def) Next State: q6
+
+Character: C  | Column: 6  |  Line: 1  |  Actual State (Before transition): q5
+
+(transition def) Test Transition --> State: q5  |  Character: C
+(transition def) Next State: q6
+Character: C  |  Actual State (After transition): q6
+Buffer: startC
+
+(transition def) Test Transition --> State: q6  |  Character: o
+(transition def) Next State: q7
+
+Character: o  | Column: 7  |  Line: 1  |  Actual State (Before transition): q6
+
+(transition def) Test Transition --> State: q6  |  Character: o
+(transition def) Next State: q7
+Character: o  |  Actual State (After transition): q7
+Buffer: startCo
+
+(transition def) Test Transition --> State: q7  |  Character: d
+(transition def) Next State: q8
+
+Character: d  | Column: 8  |  Line: 1  |  Actual State (Before transition): q7
+
+(transition def) Test Transition --> State: q7  |  Character: d
+(transition def) Next State: q8
+Character: d  |  Actual State (After transition): q8
+Buffer: startCod
+
+(transition def) Test Transition --> State: q8  |  Character: e
+(transition def) Next State: q9
+
+Character: e  | Column: 9  |  Line: 1  |  Actual State (Before transition): q8
+
+(transition def) Test Transition --> State: q8  |  Character: e
+(transition def) Next State: q9
+Character: e  |  Actual State (After transition): q9
+Buffer: startCode
+
+(transition def) Test Transition --> State: q9  |  Character:  
+
+Character:    | Column: 10  |  Line: 1  |  Actual State (Before transition): q0
+
+Character: {  | Column: 11  |  Line: 1  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: {
+(transition def) Next State: q48
+Character: {  |  Actual State (After transition): q48
+Buffer: {
+
+(variable def) Test Variable --> Buffer: 
+
+Character:    | Column: 1  |  Line: 2  |  Actual State (Before transition): q0
+
+Character:    | Column: 2  |  Line: 2  |  Actual State (Before transition): q0
+
+Character:    | Column: 3  |  Line: 2  |  Actual State (Before transition): q0
+
+Character:    | Column: 4  |  Line: 2  |  Actual State (Before transition): q0
+
+Character: i  | Column: 5  |  Line: 2  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: i
+(transition def) Next State: q17
+Character: i  |  Actual State (After transition): q17
+Buffer: i
+
+(transition def) Test Transition --> State: q17  |  Character: n
+(transition def) Next State: q18
+
+Character: n  | Column: 6  |  Line: 2  |  Actual State (Before transition): q17
+
+(transition def) Test Transition --> State: q17  |  Character: n
+(transition def) Next State: q18
+Character: n  |  Actual State (After transition): q18
+Buffer: in
+
+(transition def) Test Transition --> State: q18  |  Character: t
+(transition def) Next State: q38
+
+Character: t  | Column: 7  |  Line: 2  |  Actual State (Before transition): q18
+
+(transition def) Test Transition --> State: q18  |  Character: t
+(transition def) Next State: q38
+Character: t  |  Actual State (After transition): q38
+Buffer: int
+
+(transition def) Test Transition --> State: q38  |  Character:  
+
+Character:    | Column: 8  |  Line: 2  |  Actual State (Before transition): q0
+
+Character: n  | Column: 9  |  Line: 2  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: n
+(transition def) Next State: q63
+Character: n  |  Actual State (After transition): q63
+Buffer: n
+
+(transition def) Test Transition --> State: q63  |  Character: u
+(transition def) Next State: q63
+
+Character: u  | Column: 10  |  Line: 2  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: u
+(transition def) Next State: q63
+Character: u  |  Actual State (After transition): q63
+Buffer: nu
+
+(transition def) Test Transition --> State: q63  |  Character: m
+(transition def) Next State: q63
+
+Character: m  | Column: 11  |  Line: 2  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: m
+(transition def) Next State: q63
+Character: m  |  Actual State (After transition): q63
+Buffer: num
+
+(transition def) Test Transition --> State: q63  |  Character: ;
+
+Character: ;  | Column: 12  |  Line: 2  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: ;
+(transition def) Next State: q50
+Character: ;  |  Actual State (After transition): q50
+Buffer: ;
+
+(variable def) Test Variable --> Buffer: 
+
+Character:    | Column: 1  |  Line: 3  |  Actual State (Before transition): q0
+
+Character:    | Column: 2  |  Line: 3  |  Actual State (Before transition): q0
+
+Character:    | Column: 3  |  Line: 3  |  Actual State (Before transition): q0
+
+Character:    | Column: 4  |  Line: 3  |  Actual State (Before transition): q0
+
+Character: i  | Column: 5  |  Line: 3  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: i
+(transition def) Next State: q17
+Character: i  |  Actual State (After transition): q17
+Buffer: i
+
+(transition def) Test Transition --> State: q17  |  Character: n
+(transition def) Next State: q18
+
+Character: n  | Column: 6  |  Line: 3  |  Actual State (Before transition): q17
+
+(transition def) Test Transition --> State: q17  |  Character: n
+(transition def) Next State: q18
+Character: n  |  Actual State (After transition): q18
+Buffer: in
+
+(transition def) Test Transition --> State: q18  |  Character: t
+(transition def) Next State: q38
+
+Character: t  | Column: 7  |  Line: 3  |  Actual State (Before transition): q18
+
+(transition def) Test Transition --> State: q18  |  Character: t
+(transition def) Next State: q38
+Character: t  |  Actual State (After transition): q38
+Buffer: int
+
+(transition def) Test Transition --> State: q38  |  Character:  
+
+Character:    | Column: 8  |  Line: 3  |  Actual State (Before transition): q0
+
+Character: f  | Column: 9  |  Line: 3  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: f
+(transition def) Next State: q63
+Character: f  |  Actual State (After transition): q63
+Buffer: f
+
+(transition def) Test Transition --> State: q63  |  Character: a
+(transition def) Next State: q63
+
+Character: a  | Column: 10  |  Line: 3  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: a
+(transition def) Next State: q63
+Character: a  |  Actual State (After transition): q63
+Buffer: fa
+
+(transition def) Test Transition --> State: q63  |  Character: t
+(transition def) Next State: q63
+
+Character: t  | Column: 11  |  Line: 3  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: t
+(transition def) Next State: q63
+Character: t  |  Actual State (After transition): q63
+Buffer: fat
+
+(transition def) Test Transition --> State: q63  |  Character: o
+(transition def) Next State: q63
+
+Character: o  | Column: 12  |  Line: 3  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: o
+(transition def) Next State: q63
+Character: o  |  Actual State (After transition): q63
+Buffer: fato
+
+(transition def) Test Transition --> State: q63  |  Character: r
+(transition def) Next State: q63
+
+Character: r  | Column: 13  |  Line: 3  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: r
+(transition def) Next State: q63
+Character: r  |  Actual State (After transition): q63
+Buffer: fator
+
+(transition def) Test Transition --> State: q63  |  Character: i
+(transition def) Next State: q63
+
+Character: i  | Column: 14  |  Line: 3  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: i
+(transition def) Next State: q63
+Character: i  |  Actual State (After transition): q63
+Buffer: fatori
+
+(transition def) Test Transition --> State: q63  |  Character: a
+(transition def) Next State: q63
+
+Character: a  | Column: 15  |  Line: 3  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: a
+(transition def) Next State: q63
+Character: a  |  Actual State (After transition): q63
+Buffer: fatoria
+
+(transition def) Test Transition --> State: q63  |  Character: l
+(transition def) Next State: q63
+
+Character: l  | Column: 16  |  Line: 3  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: l
+(transition def) Next State: q63
+Character: l  |  Actual State (After transition): q63
+Buffer: fatorial
+
+(transition def) Test Transition --> State: q63  |  Character: ;
+
+Character: ;  | Column: 17  |  Line: 3  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: ;
+(transition def) Next State: q50
+Character: ;  |  Actual State (After transition): q50
+Buffer: ;
+
+(variable def) Test Variable --> Buffer: 
+
+Character:    | Column: 1  |  Line: 5  |  Actual State (Before transition): q0
+
+Character:    | Column: 2  |  Line: 5  |  Actual State (Before transition): q0
+
+Character:    | Column: 3  |  Line: 5  |  Actual State (Before transition): q0
+
+Character:    | Column: 4  |  Line: 5  |  Actual State (Before transition): q0
+
+Character: o  | Column: 5  |  Line: 5  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: o
+(transition def) Next State: q25
+Character: o  |  Actual State (After transition): q25
+Buffer: o
+
+(transition def) Test Transition --> State: q25  |  Character: u
+(transition def) Next State: q26
+
+Character: u  | Column: 6  |  Line: 5  |  Actual State (Before transition): q25
+
+(transition def) Test Transition --> State: q25  |  Character: u
+(transition def) Next State: q26
+Character: u  |  Actual State (After transition): q26
+Buffer: ou
+
+(transition def) Test Transition --> State: q26  |  Character: t
+(transition def) Next State: q27
+
+Character: t  | Column: 7  |  Line: 5  |  Actual State (Before transition): q26
+
+(transition def) Test Transition --> State: q26  |  Character: t
+(transition def) Next State: q27
+Character: t  |  Actual State (After transition): q27
+Buffer: out
+
+(transition def) Test Transition --> State: q27  |  Character: p
+(transition def) Next State: q28
+
+Character: p  | Column: 8  |  Line: 5  |  Actual State (Before transition): q27
+
+(transition def) Test Transition --> State: q27  |  Character: p
+(transition def) Next State: q28
+Character: p  |  Actual State (After transition): q28
+Buffer: outp
+
+(transition def) Test Transition --> State: q28  |  Character: u
+(transition def) Next State: q29
+
+Character: u  | Column: 9  |  Line: 5  |  Actual State (Before transition): q28
+
+(transition def) Test Transition --> State: q28  |  Character: u
+(transition def) Next State: q29
+Character: u  |  Actual State (After transition): q29
+Buffer: outpu
+
+(transition def) Test Transition --> State: q29  |  Character: t
+(transition def) Next State: q30
+
+Character: t  | Column: 10  |  Line: 5  |  Actual State (Before transition): q29
+
+(transition def) Test Transition --> State: q29  |  Character: t
+(transition def) Next State: q30
+Character: t  |  Actual State (After transition): q30
+Buffer: output
+
+(transition def) Test Transition --> State: q30  |  Character: K
+(transition def) Next State: q31
+
+Character: K  | Column: 11  |  Line: 5  |  Actual State (Before transition): q30
+
+(transition def) Test Transition --> State: q30  |  Character: K
+(transition def) Next State: q31
+Character: K  |  Actual State (After transition): q31
+Buffer: outputK
+
+(transition def) Test Transition --> State: q31  |  Character: e
+(transition def) Next State: q32
+
+Character: e  | Column: 12  |  Line: 5  |  Actual State (Before transition): q31
+
+(transition def) Test Transition --> State: q31  |  Character: e
+(transition def) Next State: q32
+Character: e  |  Actual State (After transition): q32
+Buffer: outputKe
+
+(transition def) Test Transition --> State: q32  |  Character: y
+(transition def) Next State: q33
+
+Character: y  | Column: 13  |  Line: 5  |  Actual State (Before transition): q32
+
+(transition def) Test Transition --> State: q32  |  Character: y
+(transition def) Next State: q33
+Character: y  |  Actual State (After transition): q33
+Buffer: outputKey
+
+(transition def) Test Transition --> State: q33  |  Character: (
+
+Character: (  | Column: 14  |  Line: 5  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: (
+(transition def) Next State: q46
+Character: (  |  Actual State (After transition): q46
+Buffer: (
+
+(transition def) Test Transition --> State: q46  |  Character: "
+
+Character: "  | Column: 15  |  Line: 5  |  Actual State (Before transition): q0
+Starting String...
+
+(transition def) Test Transition --> State: q0  |  Character: "
+(transition def) Next State: q60
+Character: "  |  Actual State (After transition): q60
+Buffer String: "
+
+Character: E  | Column: 16  |  Line: 5  |  Actual State (Before transition): q60
+
+(transition def) Test Transition --> State: q60  |  Character: E
+(transition def) Next State: q61
+Character: E  |  Actual State (After transition): q61
+Buffer String: "E
+
+Character: n  | Column: 17  |  Line: 5  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character: n
+(transition def) Next State: q61
+Character: n  |  Actual State (After transition): q61
+Buffer String: "En
+
+Character: t  | Column: 18  |  Line: 5  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character: t
+(transition def) Next State: q61
+Character: t  |  Actual State (After transition): q61
+Buffer String: "Ent
+
+Character: r  | Column: 19  |  Line: 5  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character: r
+(transition def) Next State: q61
+Character: r  |  Actual State (After transition): q61
+Buffer String: "Entr
+
+Character: e  | Column: 20  |  Line: 5  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character: e
+(transition def) Next State: q61
+Character: e  |  Actual State (After transition): q61
+Buffer String: "Entre
+
+Character:    | Column: 21  |  Line: 5  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character:  
+(transition def) Next State: q61
+Character:    |  Actual State (After transition): q61
+Buffer String: "Entre 
+
+Character: c  | Column: 22  |  Line: 5  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character: c
+(transition def) Next State: q61
+Character: c  |  Actual State (After transition): q61
+Buffer String: "Entre c
+
+Character: o  | Column: 23  |  Line: 5  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character: o
+(transition def) Next State: q61
+Character: o  |  Actual State (After transition): q61
+Buffer String: "Entre co
+
+Character: m  | Column: 24  |  Line: 5  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character: m
+(transition def) Next State: q61
+Character: m  |  Actual State (After transition): q61
+Buffer String: "Entre com
+
+Character:    | Column: 25  |  Line: 5  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character:  
+(transition def) Next State: q61
+Character:    |  Actual State (After transition): q61
+Buffer String: "Entre com 
+
+Character: u  | Column: 26  |  Line: 5  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character: u
+(transition def) Next State: q61
+Character: u  |  Actual State (After transition): q61
+Buffer String: "Entre com u
+
+Character: m  | Column: 27  |  Line: 5  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character: m
+(transition def) Next State: q61
+Character: m  |  Actual State (After transition): q61
+Buffer String: "Entre com um
+
+Character:    | Column: 28  |  Line: 5  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character:  
+(transition def) Next State: q61
+Character:    |  Actual State (After transition): q61
+Buffer String: "Entre com um 
+
+Character: n  | Column: 29  |  Line: 5  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character: n
+(transition def) Next State: q61
+Character: n  |  Actual State (After transition): q61
+Buffer String: "Entre com um n
+
+Character: u  | Column: 30  |  Line: 5  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character: u
+(transition def) Next State: q61
+Character: u  |  Actual State (After transition): q61
+Buffer String: "Entre com um nu
+
+Character: m  | Column: 31  |  Line: 5  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character: m
+(transition def) Next State: q61
+Character: m  |  Actual State (After transition): q61
+Buffer String: "Entre com um num
+
+Character: e  | Column: 32  |  Line: 5  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character: e
+(transition def) Next State: q61
+Character: e  |  Actual State (After transition): q61
+Buffer String: "Entre com um nume
+
+Character: r  | Column: 33  |  Line: 5  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character: r
+(transition def) Next State: q61
+Character: r  |  Actual State (After transition): q61
+Buffer String: "Entre com um numer
+
+Character: o  | Column: 34  |  Line: 5  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character: o
+(transition def) Next State: q61
+Character: o  |  Actual State (After transition): q61
+Buffer String: "Entre com um numero
+
+Character: :  | Column: 35  |  Line: 5  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character: :
+(transition def) Next State: q61
+Character: :  |  Actual State (After transition): q61
+Buffer String: "Entre com um numero:
+
+Character:    | Column: 36  |  Line: 5  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character:  
+(transition def) Next State: q61
+Character:    |  Actual State (After transition): q61
+Buffer String: "Entre com um numero: 
+
+Character: "  | Column: 37  |  Line: 5  |  Actual State (Before transition): q61
+Ending String...
+
+(transition def) Test Transition --> State: q61  |  Character: "
+(transition def) Next State: q62
+Character: "  |  Actual State (After transition): q62
+Buffer: "Entre com um numero: "
+
+(transition def) Test Transition --> State: q62  |  Character: )
+
+Character: )  | Column: 38  |  Line: 5  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: )
+(transition def) Next State: q47
+Character: )  |  Actual State (After transition): q47
+Buffer: )
+
+(transition def) Test Transition --> State: q47  |  Character: ;
+
+Character: ;  | Column: 39  |  Line: 5  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: ;
+(transition def) Next State: q50
+Character: ;  |  Actual State (After transition): q50
+Buffer: ;
+
+(variable def) Test Variable --> Buffer: 
+
+Character:    | Column: 1  |  Line: 6  |  Actual State (Before transition): q0
+
+Character:    | Column: 2  |  Line: 6  |  Actual State (Before transition): q0
+
+Character:    | Column: 3  |  Line: 6  |  Actual State (Before transition): q0
+
+Character:    | Column: 4  |  Line: 6  |  Actual State (Before transition): q0
+
+Character: i  | Column: 5  |  Line: 6  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: i
+(transition def) Next State: q17
+Character: i  |  Actual State (After transition): q17
+Buffer: i
+
+(transition def) Test Transition --> State: q17  |  Character: n
+(transition def) Next State: q18
+
+Character: n  | Column: 6  |  Line: 6  |  Actual State (Before transition): q17
+
+(transition def) Test Transition --> State: q17  |  Character: n
+(transition def) Next State: q18
+Character: n  |  Actual State (After transition): q18
+Buffer: in
+
+(transition def) Test Transition --> State: q18  |  Character: p
+(transition def) Next State: q19
+
+Character: p  | Column: 7  |  Line: 6  |  Actual State (Before transition): q18
+
+(transition def) Test Transition --> State: q18  |  Character: p
+(transition def) Next State: q19
+Character: p  |  Actual State (After transition): q19
+Buffer: inp
+
+(transition def) Test Transition --> State: q19  |  Character: u
+(transition def) Next State: q20
+
+Character: u  | Column: 8  |  Line: 6  |  Actual State (Before transition): q19
+
+(transition def) Test Transition --> State: q19  |  Character: u
+(transition def) Next State: q20
+Character: u  |  Actual State (After transition): q20
+Buffer: inpu
+
+(transition def) Test Transition --> State: q20  |  Character: t
+(transition def) Next State: q21
+
+Character: t  | Column: 9  |  Line: 6  |  Actual State (Before transition): q20
+
+(transition def) Test Transition --> State: q20  |  Character: t
+(transition def) Next State: q21
+Character: t  |  Actual State (After transition): q21
+Buffer: input
+
+(transition def) Test Transition --> State: q21  |  Character: K
+(transition def) Next State: q22
+
+Character: K  | Column: 10  |  Line: 6  |  Actual State (Before transition): q21
+
+(transition def) Test Transition --> State: q21  |  Character: K
+(transition def) Next State: q22
+Character: K  |  Actual State (After transition): q22
+Buffer: inputK
+
+(transition def) Test Transition --> State: q22  |  Character: e
+(transition def) Next State: q23
+
+Character: e  | Column: 11  |  Line: 6  |  Actual State (Before transition): q22
+
+(transition def) Test Transition --> State: q22  |  Character: e
+(transition def) Next State: q23
+Character: e  |  Actual State (After transition): q23
+Buffer: inputKe
+
+(transition def) Test Transition --> State: q23  |  Character: y
+(transition def) Next State: q24
+
+Character: y  | Column: 12  |  Line: 6  |  Actual State (Before transition): q23
+
+(transition def) Test Transition --> State: q23  |  Character: y
+(transition def) Next State: q24
+Character: y  |  Actual State (After transition): q24
+Buffer: inputKey
+
+(transition def) Test Transition --> State: q24  |  Character: (
+
+Character: (  | Column: 13  |  Line: 6  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: (
+(transition def) Next State: q46
+Character: (  |  Actual State (After transition): q46
+Buffer: (
+
+(transition def) Test Transition --> State: q46  |  Character: n
+
+Character: n  | Column: 14  |  Line: 6  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: n
+(transition def) Next State: q63
+Character: n  |  Actual State (After transition): q63
+Buffer: n
+
+(transition def) Test Transition --> State: q63  |  Character: u
+(transition def) Next State: q63
+
+Character: u  | Column: 15  |  Line: 6  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: u
+(transition def) Next State: q63
+Character: u  |  Actual State (After transition): q63
+Buffer: nu
+
+(transition def) Test Transition --> State: q63  |  Character: m
+(transition def) Next State: q63
+
+Character: m  | Column: 16  |  Line: 6  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: m
+(transition def) Next State: q63
+Character: m  |  Actual State (After transition): q63
+Buffer: num
+
+(transition def) Test Transition --> State: q63  |  Character: )
+
+Character: )  | Column: 17  |  Line: 6  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: )
+(transition def) Next State: q47
+Character: )  |  Actual State (After transition): q47
+Buffer: )
+
+(transition def) Test Transition --> State: q47  |  Character: ;
+
+Character: ;  | Column: 18  |  Line: 6  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: ;
+(transition def) Next State: q50
+Character: ;  |  Actual State (After transition): q50
+Buffer: ;
+
+(variable def) Test Variable --> Buffer: 
+
+Character:    | Column: 1  |  Line: 8  |  Actual State (Before transition): q0
+
+Character:    | Column: 2  |  Line: 8  |  Actual State (Before transition): q0
+
+Character:    | Column: 3  |  Line: 8  |  Actual State (Before transition): q0
+
+Character:    | Column: 4  |  Line: 8  |  Actual State (Before transition): q0
+
+Character: d  | Column: 5  |  Line: 8  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: d
+(transition def) Next State: q39
+Character: d  |  Actual State (After transition): q39
+Buffer: d
+
+(transition def) Test Transition --> State: q39  |  Character: o
+(transition def) Next State: q40
+
+Character: o  | Column: 6  |  Line: 8  |  Actual State (Before transition): q39
+
+(transition def) Test Transition --> State: q39  |  Character: o
+(transition def) Next State: q40
+Character: o  |  Actual State (After transition): q40
+Buffer: do
+
+(transition def) Test Transition --> State: q40  |  Character:  
+
+Character:    | Column: 7  |  Line: 8  |  Actual State (Before transition): q0
+
+Character: {  | Column: 8  |  Line: 8  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: {
+(transition def) Next State: q48
+Character: {  |  Actual State (After transition): q48
+Buffer: {
+
+(variable def) Test Variable --> Buffer: 
+
+Character:    | Column: 1  |  Line: 9  |  Actual State (Before transition): q0
+
+Character:    | Column: 2  |  Line: 9  |  Actual State (Before transition): q0
+
+Character:    | Column: 3  |  Line: 9  |  Actual State (Before transition): q0
+
+Character:    | Column: 4  |  Line: 9  |  Actual State (Before transition): q0
+
+Character:    | Column: 5  |  Line: 9  |  Actual State (Before transition): q0
+
+Character:    | Column: 6  |  Line: 9  |  Actual State (Before transition): q0
+
+Character:    | Column: 7  |  Line: 9  |  Actual State (Before transition): q0
+
+Character:    | Column: 8  |  Line: 9  |  Actual State (Before transition): q0
+
+Character: f  | Column: 9  |  Line: 9  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: f
+(transition def) Next State: q63
+Character: f  |  Actual State (After transition): q63
+Buffer: f
+
+(transition def) Test Transition --> State: q63  |  Character: a
+(transition def) Next State: q63
+
+Character: a  | Column: 10  |  Line: 9  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: a
+(transition def) Next State: q63
+Character: a  |  Actual State (After transition): q63
+Buffer: fa
+
+(transition def) Test Transition --> State: q63  |  Character: t
+(transition def) Next State: q63
+
+Character: t  | Column: 11  |  Line: 9  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: t
+(transition def) Next State: q63
+Character: t  |  Actual State (After transition): q63
+Buffer: fat
+
+(transition def) Test Transition --> State: q63  |  Character: o
+(transition def) Next State: q63
+
+Character: o  | Column: 12  |  Line: 9  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: o
+(transition def) Next State: q63
+Character: o  |  Actual State (After transition): q63
+Buffer: fato
+
+(transition def) Test Transition --> State: q63  |  Character: r
+(transition def) Next State: q63
+
+Character: r  | Column: 13  |  Line: 9  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: r
+(transition def) Next State: q63
+Character: r  |  Actual State (After transition): q63
+Buffer: fator
+
+(transition def) Test Transition --> State: q63  |  Character: i
+(transition def) Next State: q63
+
+Character: i  | Column: 14  |  Line: 9  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: i
+(transition def) Next State: q63
+Character: i  |  Actual State (After transition): q63
+Buffer: fatori
+
+(transition def) Test Transition --> State: q63  |  Character: a
+(transition def) Next State: q63
+
+Character: a  | Column: 15  |  Line: 9  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: a
+(transition def) Next State: q63
+Character: a  |  Actual State (After transition): q63
+Buffer: fatoria
+
+(transition def) Test Transition --> State: q63  |  Character: l
+(transition def) Next State: q63
+
+Character: l  | Column: 16  |  Line: 9  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: l
+(transition def) Next State: q63
+Character: l  |  Actual State (After transition): q63
+Buffer: fatorial
+
+(transition def) Test Transition --> State: q63  |  Character:  
+
+Character:    | Column: 17  |  Line: 9  |  Actual State (Before transition): q0
+
+Character: <  | Column: 18  |  Line: 9  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: <
+(transition def) Next State: q58
+Character: <  |  Actual State (After transition): q58
+Buffer: <
+
+(transition def) Test Transition --> State: q58  |  Character: <
+(transition def) Next State: q59
+
+Character: <  | Column: 19  |  Line: 9  |  Actual State (Before transition): q58
+
+(transition def) Test Transition --> State: q58  |  Character: <
+(transition def) Next State: q59
+Character: <  |  Actual State (After transition): q59
+Buffer: <<
+
+(transition def) Test Transition --> State: q59  |  Character:  
+
+Character:    | Column: 20  |  Line: 9  |  Actual State (Before transition): q0
+
+Character: f  | Column: 21  |  Line: 9  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: f
+(transition def) Next State: q63
+Character: f  |  Actual State (After transition): q63
+Buffer: f
+
+(transition def) Test Transition --> State: q63  |  Character: a
+(transition def) Next State: q63
+
+Character: a  | Column: 22  |  Line: 9  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: a
+(transition def) Next State: q63
+Character: a  |  Actual State (After transition): q63
+Buffer: fa
+
+(transition def) Test Transition --> State: q63  |  Character: t
+(transition def) Next State: q63
+
+Character: t  | Column: 23  |  Line: 9  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: t
+(transition def) Next State: q63
+Character: t  |  Actual State (After transition): q63
+Buffer: fat
+
+(transition def) Test Transition --> State: q63  |  Character: o
+(transition def) Next State: q63
+
+Character: o  | Column: 24  |  Line: 9  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: o
+(transition def) Next State: q63
+Character: o  |  Actual State (After transition): q63
+Buffer: fato
+
+(transition def) Test Transition --> State: q63  |  Character: r
+(transition def) Next State: q63
+
+Character: r  | Column: 25  |  Line: 9  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: r
+(transition def) Next State: q63
+Character: r  |  Actual State (After transition): q63
+Buffer: fator
+
+(transition def) Test Transition --> State: q63  |  Character: i
+(transition def) Next State: q63
+
+Character: i  | Column: 26  |  Line: 9  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: i
+(transition def) Next State: q63
+Character: i  |  Actual State (After transition): q63
+Buffer: fatori
+
+(transition def) Test Transition --> State: q63  |  Character: a
+(transition def) Next State: q63
+
+Character: a  | Column: 27  |  Line: 9  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: a
+(transition def) Next State: q63
+Character: a  |  Actual State (After transition): q63
+Buffer: fatoria
+
+(transition def) Test Transition --> State: q63  |  Character: l
+(transition def) Next State: q63
+
+Character: l  | Column: 28  |  Line: 9  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: l
+(transition def) Next State: q63
+Character: l  |  Actual State (After transition): q63
+Buffer: fatorial
+
+(transition def) Test Transition --> State: q63  |  Character:  
+
+Character:    | Column: 29  |  Line: 9  |  Actual State (Before transition): q0
+
+Character: *  | Column: 30  |  Line: 9  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: *
+(transition def) Next State: q55
+Character: *  |  Actual State (After transition): q55
+Buffer: *
+
+(transition def) Test Transition --> State: q55  |  Character:  
+
+Character:    | Column: 31  |  Line: 9  |  Actual State (Before transition): q0
+
+Character: n  | Column: 32  |  Line: 9  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: n
+(transition def) Next State: q63
+Character: n  |  Actual State (After transition): q63
+Buffer: n
+
+(transition def) Test Transition --> State: q63  |  Character: u
+(transition def) Next State: q63
+
+Character: u  | Column: 33  |  Line: 9  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: u
+(transition def) Next State: q63
+Character: u  |  Actual State (After transition): q63
+Buffer: nu
+
+(transition def) Test Transition --> State: q63  |  Character: m
+(transition def) Next State: q63
+
+Character: m  | Column: 34  |  Line: 9  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: m
+(transition def) Next State: q63
+Character: m  |  Actual State (After transition): q63
+Buffer: num
+
+(transition def) Test Transition --> State: q63  |  Character: ;
+
+Character: ;  | Column: 35  |  Line: 9  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: ;
+(transition def) Next State: q50
+Character: ;  |  Actual State (After transition): q50
+Buffer: ;
+
+(variable def) Test Variable --> Buffer: 
+
+Character:    | Column: 1  |  Line: 10  |  Actual State (Before transition): q0
+
+Character:    | Column: 2  |  Line: 10  |  Actual State (Before transition): q0
+
+Character:    | Column: 3  |  Line: 10  |  Actual State (Before transition): q0
+
+Character:    | Column: 4  |  Line: 10  |  Actual State (Before transition): q0
+
+Character:    | Column: 5  |  Line: 10  |  Actual State (Before transition): q0
+
+Character:    | Column: 6  |  Line: 10  |  Actual State (Before transition): q0
+
+Character:    | Column: 7  |  Line: 10  |  Actual State (Before transition): q0
+
+Character:    | Column: 8  |  Line: 10  |  Actual State (Before transition): q0
+
+Character: n  | Column: 9  |  Line: 10  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: n
+(transition def) Next State: q63
+Character: n  |  Actual State (After transition): q63
+Buffer: n
+
+(transition def) Test Transition --> State: q63  |  Character: u
+(transition def) Next State: q63
+
+Character: u  | Column: 10  |  Line: 10  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: u
+(transition def) Next State: q63
+Character: u  |  Actual State (After transition): q63
+Buffer: nu
+
+(transition def) Test Transition --> State: q63  |  Character: m
+(transition def) Next State: q63
+
+Character: m  | Column: 11  |  Line: 10  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: m
+(transition def) Next State: q63
+Character: m  |  Actual State (After transition): q63
+Buffer: num
+
+(transition def) Test Transition --> State: q63  |  Character:  
+
+Character:    | Column: 12  |  Line: 10  |  Actual State (Before transition): q0
+
+Character: <  | Column: 13  |  Line: 10  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: <
+(transition def) Next State: q58
+Character: <  |  Actual State (After transition): q58
+Buffer: <
+
+(transition def) Test Transition --> State: q58  |  Character: <
+(transition def) Next State: q59
+
+Character: <  | Column: 14  |  Line: 10  |  Actual State (Before transition): q58
+
+(transition def) Test Transition --> State: q58  |  Character: <
+(transition def) Next State: q59
+Character: <  |  Actual State (After transition): q59
+Buffer: <<
+
+(transition def) Test Transition --> State: q59  |  Character:  
+
+Character:    | Column: 15  |  Line: 10  |  Actual State (Before transition): q0
+
+Character: n  | Column: 16  |  Line: 10  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: n
+(transition def) Next State: q63
+Character: n  |  Actual State (After transition): q63
+Buffer: n
+
+(transition def) Test Transition --> State: q63  |  Character: u
+(transition def) Next State: q63
+
+Character: u  | Column: 17  |  Line: 10  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: u
+(transition def) Next State: q63
+Character: u  |  Actual State (After transition): q63
+Buffer: nu
+
+(transition def) Test Transition --> State: q63  |  Character: m
+(transition def) Next State: q63
+
+Character: m  | Column: 18  |  Line: 10  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: m
+(transition def) Next State: q63
+Character: m  |  Actual State (After transition): q63
+Buffer: num
+
+(transition def) Test Transition --> State: q63  |  Character:  
+
+Character:    | Column: 19  |  Line: 10  |  Actual State (Before transition): q0
+
+Character: -  | Column: 20  |  Line: 10  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: -
+(transition def) Next State: q54
+Character: -  |  Actual State (After transition): q54
+Buffer: -
+
+(transition def) Test Transition --> State: q54  |  Character:  
+
+Character:    | Column: 21  |  Line: 10  |  Actual State (Before transition): q0
+
+Character: 1  | Column: 22  |  Line: 10  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: 1
+(transition def) Next State: q64
+Character: 1  |  Actual State (After transition): q64
+Buffer: 1
+
+(transition def) Test Transition --> State: q64  |  Character: ;
+
+Character: ;  | Column: 23  |  Line: 10  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: ;
+(transition def) Next State: q50
+Character: ;  |  Actual State (After transition): q50
+Buffer: ;
+
+(variable def) Test Variable --> Buffer: 
+
+Character:    | Column: 1  |  Line: 11  |  Actual State (Before transition): q0
+
+Character:    | Column: 2  |  Line: 11  |  Actual State (Before transition): q0
+
+Character:    | Column: 3  |  Line: 11  |  Actual State (Before transition): q0
+
+Character:    | Column: 4  |  Line: 11  |  Actual State (Before transition): q0
+
+Character: u  | Column: 5  |  Line: 11  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: u
+(transition def) Next State: q41
+Character: u  |  Actual State (After transition): q41
+Buffer: u
+
+(transition def) Test Transition --> State: q41  |  Character: n
+(transition def) Next State: q42
+
+Character: n  | Column: 6  |  Line: 11  |  Actual State (Before transition): q41
+
+(transition def) Test Transition --> State: q41  |  Character: n
+(transition def) Next State: q42
+Character: n  |  Actual State (After transition): q42
+Buffer: un
+
+(transition def) Test Transition --> State: q42  |  Character: t
+(transition def) Next State: q43
+
+Character: t  | Column: 7  |  Line: 11  |  Actual State (Before transition): q42
+
+(transition def) Test Transition --> State: q42  |  Character: t
+(transition def) Next State: q43
+Character: t  |  Actual State (After transition): q43
+Buffer: unt
+
+(transition def) Test Transition --> State: q43  |  Character: i
+(transition def) Next State: q44
+
+Character: i  | Column: 8  |  Line: 11  |  Actual State (Before transition): q43
+
+(transition def) Test Transition --> State: q43  |  Character: i
+(transition def) Next State: q44
+Character: i  |  Actual State (After transition): q44
+Buffer: unti
+
+(transition def) Test Transition --> State: q44  |  Character: l
+(transition def) Next State: q45
+
+Character: l  | Column: 9  |  Line: 11  |  Actual State (Before transition): q44
+
+(transition def) Test Transition --> State: q44  |  Character: l
+(transition def) Next State: q45
+Character: l  |  Actual State (After transition): q45
+Buffer: until
+
+(transition def) Test Transition --> State: q45  |  Character: (
+
+Character: (  | Column: 10  |  Line: 11  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: (
+(transition def) Next State: q46
+Character: (  |  Actual State (After transition): q46
+Buffer: (
+
+(transition def) Test Transition --> State: q46  |  Character: n
+
+Character: n  | Column: 11  |  Line: 11  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: n
+(transition def) Next State: q63
+Character: n  |  Actual State (After transition): q63
+Buffer: n
+
+(transition def) Test Transition --> State: q63  |  Character: u
+(transition def) Next State: q63
+
+Character: u  | Column: 12  |  Line: 11  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: u
+(transition def) Next State: q63
+Character: u  |  Actual State (After transition): q63
+Buffer: nu
+
+(transition def) Test Transition --> State: q63  |  Character: m
+(transition def) Next State: q63
+
+Character: m  | Column: 13  |  Line: 11  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: m
+(transition def) Next State: q63
+Character: m  |  Actual State (After transition): q63
+Buffer: num
+
+(transition def) Test Transition --> State: q63  |  Character:  
+
+Character:    | Column: 14  |  Line: 11  |  Actual State (Before transition): q0
+
+Character: <  | Column: 15  |  Line: 11  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: <
+(transition def) Next State: q58
+Character: <  |  Actual State (After transition): q58
+Buffer: <
+
+(transition def) Test Transition --> State: q58  |  Character:  
+
+Character:    | Column: 16  |  Line: 11  |  Actual State (Before transition): q0
+
+Character: 1  | Column: 17  |  Line: 11  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: 1
+(transition def) Next State: q64
+Character: 1  |  Actual State (After transition): q64
+Buffer: 1
+
+(transition def) Test Transition --> State: q64  |  Character: )
+
+Character: )  | Column: 18  |  Line: 11  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: )
+(transition def) Next State: q47
+Character: )  |  Actual State (After transition): q47
+Buffer: )
+
+(transition def) Test Transition --> State: q47  |  Character: ;
+
+Character: ;  | Column: 19  |  Line: 11  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: ;
+(transition def) Next State: q50
+Character: ;  |  Actual State (After transition): q50
+Buffer: ;
+
+(variable def) Test Variable --> Buffer: 
+
+Character:    | Column: 1  |  Line: 13  |  Actual State (Before transition): q0
+
+Character:    | Column: 2  |  Line: 13  |  Actual State (Before transition): q0
+
+Character:    | Column: 3  |  Line: 13  |  Actual State (Before transition): q0
+
+Character:    | Column: 4  |  Line: 13  |  Actual State (Before transition): q0
+
+Character: o  | Column: 5  |  Line: 13  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: o
+(transition def) Next State: q25
+Character: o  |  Actual State (After transition): q25
+Buffer: o
+
+(transition def) Test Transition --> State: q25  |  Character: u
+(transition def) Next State: q26
+
+Character: u  | Column: 6  |  Line: 13  |  Actual State (Before transition): q25
+
+(transition def) Test Transition --> State: q25  |  Character: u
+(transition def) Next State: q26
+Character: u  |  Actual State (After transition): q26
+Buffer: ou
+
+(transition def) Test Transition --> State: q26  |  Character: t
+(transition def) Next State: q27
+
+Character: t  | Column: 7  |  Line: 13  |  Actual State (Before transition): q26
+
+(transition def) Test Transition --> State: q26  |  Character: t
+(transition def) Next State: q27
+Character: t  |  Actual State (After transition): q27
+Buffer: out
+
+(transition def) Test Transition --> State: q27  |  Character: p
+(transition def) Next State: q28
+
+Character: p  | Column: 8  |  Line: 13  |  Actual State (Before transition): q27
+
+(transition def) Test Transition --> State: q27  |  Character: p
+(transition def) Next State: q28
+Character: p  |  Actual State (After transition): q28
+Buffer: outp
+
+(transition def) Test Transition --> State: q28  |  Character: u
+(transition def) Next State: q29
+
+Character: u  | Column: 9  |  Line: 13  |  Actual State (Before transition): q28
+
+(transition def) Test Transition --> State: q28  |  Character: u
+(transition def) Next State: q29
+Character: u  |  Actual State (After transition): q29
+Buffer: outpu
+
+(transition def) Test Transition --> State: q29  |  Character: t
+(transition def) Next State: q30
+
+Character: t  | Column: 10  |  Line: 13  |  Actual State (Before transition): q29
+
+(transition def) Test Transition --> State: q29  |  Character: t
+(transition def) Next State: q30
+Character: t  |  Actual State (After transition): q30
+Buffer: output
+
+(transition def) Test Transition --> State: q30  |  Character: K
+(transition def) Next State: q31
+
+Character: K  | Column: 11  |  Line: 13  |  Actual State (Before transition): q30
+
+(transition def) Test Transition --> State: q30  |  Character: K
+(transition def) Next State: q31
+Character: K  |  Actual State (After transition): q31
+Buffer: outputK
+
+(transition def) Test Transition --> State: q31  |  Character: e
+(transition def) Next State: q32
+
+Character: e  | Column: 12  |  Line: 13  |  Actual State (Before transition): q31
+
+(transition def) Test Transition --> State: q31  |  Character: e
+(transition def) Next State: q32
+Character: e  |  Actual State (After transition): q32
+Buffer: outputKe
+
+(transition def) Test Transition --> State: q32  |  Character: y
+(transition def) Next State: q33
+
+Character: y  | Column: 13  |  Line: 13  |  Actual State (Before transition): q32
+
+(transition def) Test Transition --> State: q32  |  Character: y
+(transition def) Next State: q33
+Character: y  |  Actual State (After transition): q33
+Buffer: outputKey
+
+(transition def) Test Transition --> State: q33  |  Character: (
+
+Character: (  | Column: 14  |  Line: 13  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: (
+(transition def) Next State: q46
+Character: (  |  Actual State (After transition): q46
+Buffer: (
+
+(transition def) Test Transition --> State: q46  |  Character: "
+
+Character: "  | Column: 15  |  Line: 13  |  Actual State (Before transition): q0
+Starting String...
+
+(transition def) Test Transition --> State: q0  |  Character: "
+(transition def) Next State: q60
+Character: "  |  Actual State (After transition): q60
+Buffer String: "
+
+Character: O  | Column: 16  |  Line: 13  |  Actual State (Before transition): q60
+
+(transition def) Test Transition --> State: q60  |  Character: O
+(transition def) Next State: q61
+Character: O  |  Actual State (After transition): q61
+Buffer String: "O
+
+Character:    | Column: 17  |  Line: 13  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character:  
+(transition def) Next State: q61
+Character:    |  Actual State (After transition): q61
+Buffer String: "O 
+
+Character: f  | Column: 18  |  Line: 13  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character: f
+(transition def) Next State: q61
+Character: f  |  Actual State (After transition): q61
+Buffer String: "O f
+
+Character: a  | Column: 19  |  Line: 13  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character: a
+(transition def) Next State: q61
+Character: a  |  Actual State (After transition): q61
+Buffer String: "O fa
+
+Character: t  | Column: 20  |  Line: 13  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character: t
+(transition def) Next State: q61
+Character: t  |  Actual State (After transition): q61
+Buffer String: "O fat
+
+Character: o  | Column: 21  |  Line: 13  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character: o
+(transition def) Next State: q61
+Character: o  |  Actual State (After transition): q61
+Buffer String: "O fato
+
+Character: r  | Column: 22  |  Line: 13  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character: r
+(transition def) Next State: q61
+Character: r  |  Actual State (After transition): q61
+Buffer String: "O fator
+
+Character: i  | Column: 23  |  Line: 13  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character: i
+(transition def) Next State: q61
+Character: i  |  Actual State (After transition): q61
+Buffer String: "O fatori
+
+Character: a  | Column: 24  |  Line: 13  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character: a
+(transition def) Next State: q61
+Character: a  |  Actual State (After transition): q61
+Buffer String: "O fatoria
+
+Character: l  | Column: 25  |  Line: 13  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character: l
+(transition def) Next State: q61
+Character: l  |  Actual State (After transition): q61
+Buffer String: "O fatorial
+
+Character:    | Column: 26  |  Line: 13  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character:  
+(transition def) Next State: q61
+Character:    |  Actual State (After transition): q61
+Buffer String: "O fatorial 
+
+Character: e  | Column: 27  |  Line: 13  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character: e
+(transition def) Next State: q61
+Character: e  |  Actual State (After transition): q61
+Buffer String: "O fatorial e
+
+Character: h  | Column: 28  |  Line: 13  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character: h
+(transition def) Next State: q61
+Character: h  |  Actual State (After transition): q61
+Buffer String: "O fatorial eh
+
+Character: :  | Column: 29  |  Line: 13  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character: :
+(transition def) Next State: q61
+Character: :  |  Actual State (After transition): q61
+Buffer String: "O fatorial eh:
+
+Character:    | Column: 30  |  Line: 13  |  Actual State (Before transition): q61
+
+(transition def) Test Transition --> State: q61  |  Character:  
+(transition def) Next State: q61
+Character:    |  Actual State (After transition): q61
+Buffer String: "O fatorial eh: 
+
+Character: "  | Column: 31  |  Line: 13  |  Actual State (Before transition): q61
+Ending String...
+
+(transition def) Test Transition --> State: q61  |  Character: "
+(transition def) Next State: q62
+Character: "  |  Actual State (After transition): q62
+Buffer: "O fatorial eh: "
+
+(transition def) Test Transition --> State: q62  |  Character: )
+
+Character: )  | Column: 32  |  Line: 13  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: )
+(transition def) Next State: q47
+Character: )  |  Actual State (After transition): q47
+Buffer: )
+
+(transition def) Test Transition --> State: q47  |  Character: ;
+
+Character: ;  | Column: 33  |  Line: 13  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: ;
+(transition def) Next State: q50
+Character: ;  |  Actual State (After transition): q50
+Buffer: ;
+
+(variable def) Test Variable --> Buffer: 
+
+Character:    | Column: 1  |  Line: 14  |  Actual State (Before transition): q0
+
+Character:    | Column: 2  |  Line: 14  |  Actual State (Before transition): q0
+
+Character:    | Column: 3  |  Line: 14  |  Actual State (Before transition): q0
+
+Character:    | Column: 4  |  Line: 14  |  Actual State (Before transition): q0
+
+Character: o  | Column: 5  |  Line: 14  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: o
+(transition def) Next State: q25
+Character: o  |  Actual State (After transition): q25
+Buffer: o
+
+(transition def) Test Transition --> State: q25  |  Character: u
+(transition def) Next State: q26
+
+Character: u  | Column: 6  |  Line: 14  |  Actual State (Before transition): q25
+
+(transition def) Test Transition --> State: q25  |  Character: u
+(transition def) Next State: q26
+Character: u  |  Actual State (After transition): q26
+Buffer: ou
+
+(transition def) Test Transition --> State: q26  |  Character: t
+(transition def) Next State: q27
+
+Character: t  | Column: 7  |  Line: 14  |  Actual State (Before transition): q26
+
+(transition def) Test Transition --> State: q26  |  Character: t
+(transition def) Next State: q27
+Character: t  |  Actual State (After transition): q27
+Buffer: out
+
+(transition def) Test Transition --> State: q27  |  Character: p
+(transition def) Next State: q28
+
+Character: p  | Column: 8  |  Line: 14  |  Actual State (Before transition): q27
+
+(transition def) Test Transition --> State: q27  |  Character: p
+(transition def) Next State: q28
+Character: p  |  Actual State (After transition): q28
+Buffer: outp
+
+(transition def) Test Transition --> State: q28  |  Character: u
+(transition def) Next State: q29
+
+Character: u  | Column: 9  |  Line: 14  |  Actual State (Before transition): q28
+
+(transition def) Test Transition --> State: q28  |  Character: u
+(transition def) Next State: q29
+Character: u  |  Actual State (After transition): q29
+Buffer: outpu
+
+(transition def) Test Transition --> State: q29  |  Character: t
+(transition def) Next State: q30
+
+Character: t  | Column: 10  |  Line: 14  |  Actual State (Before transition): q29
+
+(transition def) Test Transition --> State: q29  |  Character: t
+(transition def) Next State: q30
+Character: t  |  Actual State (After transition): q30
+Buffer: output
+
+(transition def) Test Transition --> State: q30  |  Character: K
+(transition def) Next State: q31
+
+Character: K  | Column: 11  |  Line: 14  |  Actual State (Before transition): q30
+
+(transition def) Test Transition --> State: q30  |  Character: K
+(transition def) Next State: q31
+Character: K  |  Actual State (After transition): q31
+Buffer: outputK
+
+(transition def) Test Transition --> State: q31  |  Character: e
+(transition def) Next State: q32
+
+Character: e  | Column: 12  |  Line: 14  |  Actual State (Before transition): q31
+
+(transition def) Test Transition --> State: q31  |  Character: e
+(transition def) Next State: q32
+Character: e  |  Actual State (After transition): q32
+Buffer: outputKe
+
+(transition def) Test Transition --> State: q32  |  Character: y
+(transition def) Next State: q33
+
+Character: y  | Column: 13  |  Line: 14  |  Actual State (Before transition): q32
+
+(transition def) Test Transition --> State: q32  |  Character: y
+(transition def) Next State: q33
+Character: y  |  Actual State (After transition): q33
+Buffer: outputKey
+
+(transition def) Test Transition --> State: q33  |  Character: (
+
+Character: (  | Column: 14  |  Line: 14  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: (
+(transition def) Next State: q46
+Character: (  |  Actual State (After transition): q46
+Buffer: (
+
+(transition def) Test Transition --> State: q46  |  Character: f
+
+Character: f  | Column: 15  |  Line: 14  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: f
+(transition def) Next State: q63
+Character: f  |  Actual State (After transition): q63
+Buffer: f
+
+(transition def) Test Transition --> State: q63  |  Character: a
+(transition def) Next State: q63
+
+Character: a  | Column: 16  |  Line: 14  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: a
+(transition def) Next State: q63
+Character: a  |  Actual State (After transition): q63
+Buffer: fa
+
+(transition def) Test Transition --> State: q63  |  Character: t
+(transition def) Next State: q63
+
+Character: t  | Column: 17  |  Line: 14  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: t
+(transition def) Next State: q63
+Character: t  |  Actual State (After transition): q63
+Buffer: fat
+
+(transition def) Test Transition --> State: q63  |  Character: o
+(transition def) Next State: q63
+
+Character: o  | Column: 18  |  Line: 14  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: o
+(transition def) Next State: q63
+Character: o  |  Actual State (After transition): q63
+Buffer: fato
+
+(transition def) Test Transition --> State: q63  |  Character: r
+(transition def) Next State: q63
+
+Character: r  | Column: 19  |  Line: 14  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: r
+(transition def) Next State: q63
+Character: r  |  Actual State (After transition): q63
+Buffer: fator
+
+(transition def) Test Transition --> State: q63  |  Character: i
+(transition def) Next State: q63
+
+Character: i  | Column: 20  |  Line: 14  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: i
+(transition def) Next State: q63
+Character: i  |  Actual State (After transition): q63
+Buffer: fatori
+
+(transition def) Test Transition --> State: q63  |  Character: a
+(transition def) Next State: q63
+
+Character: a  | Column: 21  |  Line: 14  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: a
+(transition def) Next State: q63
+Character: a  |  Actual State (After transition): q63
+Buffer: fatoria
+
+(transition def) Test Transition --> State: q63  |  Character: l
+(transition def) Next State: q63
+
+Character: l  | Column: 22  |  Line: 14  |  Actual State (Before transition): q63
+
+(transition def) Test Transition --> State: q63  |  Character: l
+(transition def) Next State: q63
+Character: l  |  Actual State (After transition): q63
+Buffer: fatorial
+
+(transition def) Test Transition --> State: q63  |  Character: )
+
+Character: )  | Column: 23  |  Line: 14  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: )
+(transition def) Next State: q47
+Character: )  |  Actual State (After transition): q47
+Buffer: )
+
+(transition def) Test Transition --> State: q47  |  Character: ;
+
+Character: ;  | Column: 24  |  Line: 14  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: ;
+(transition def) Next State: q50
+Character: ;  |  Actual State (After transition): q50
+Buffer: ;
+
+(variable def) Test Variable --> Buffer: 
+
+Character: }  | Column: 1  |  Line: 15  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: }
+(transition def) Next State: q49
+Character: }  |  Actual State (After transition): q49
+Buffer: }
+
+(transition def) Test Transition --> State: q49  |  Character: e
+
+Character: e  | Column: 2  |  Line: 15  |  Actual State (Before transition): q0
+
+(transition def) Test Transition --> State: q0  |  Character: e
+(transition def) Next State: q10
+Character: e  |  Actual State (After transition): q10
+Buffer: e
+
+(transition def) Test Transition --> State: q10  |  Character: n
+(transition def) Next State: q11
+
+Character: n  | Column: 3  |  Line: 15  |  Actual State (Before transition): q10
+
+(transition def) Test Transition --> State: q10  |  Character: n
+(transition def) Next State: q11
+Character: n  |  Actual State (After transition): q11
+Buffer: en
+
+(transition def) Test Transition --> State: q11  |  Character: d
+(transition def) Next State: q12
+
+Character: d  | Column: 4  |  Line: 15  |  Actual State (Before transition): q11
+
+(transition def) Test Transition --> State: q11  |  Character: d
+(transition def) Next State: q12
+Character: d  |  Actual State (After transition): q12
+Buffer: end
+
+(transition def) Test Transition --> State: q12  |  Character: C
+(transition def) Next State: q13
+
+Character: C  | Column: 5  |  Line: 15  |  Actual State (Before transition): q12
+
+(transition def) Test Transition --> State: q12  |  Character: C
+(transition def) Next State: q13
+Character: C  |  Actual State (After transition): q13
+Buffer: endC
+
+(transition def) Test Transition --> State: q13  |  Character: o
+(transition def) Next State: q14
+
+Character: o  | Column: 6  |  Line: 15  |  Actual State (Before transition): q13
+
+(transition def) Test Transition --> State: q13  |  Character: o
+(transition def) Next State: q14
+Character: o  |  Actual State (After transition): q14
+Buffer: endCo
+
+(transition def) Test Transition --> State: q14  |  Character: d
+(transition def) Next State: q15
+
+Character: d  | Column: 7  |  Line: 15  |  Actual State (Before transition): q14
+
+(transition def) Test Transition --> State: q14  |  Character: d
+(transition def) Next State: q15
+Character: d  |  Actual State (After transition): q15
+Buffer: endCod
+
+(transition def) Test Transition --> State: q15  |  Character: e
+(transition def) Next State: q16
+
+Character: e  | Column: 8  |  Line: 15  |  Actual State (Before transition): q15
+
+(transition def) Test Transition --> State: q15  |  Character: e
+(transition def) Next State: q16
+Character: e  |  Actual State (After transition): q16
+Buffer: endCode
+
+(variable def) Test Variable --> Buffer: 
+DONE!

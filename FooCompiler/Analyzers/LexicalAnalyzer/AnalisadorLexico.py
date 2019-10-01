@@ -77,8 +77,8 @@ def error_informer(level, char_error, line_error, column_error, **exits):
 
 def lexical_analyser(source_code_name, **lex_param):
 
-    if lex_param.get('vla') is True:
-        file_handler = logging.FileHandler('lexical.log')
+    if lex_param.get('vlex') is True or lex_param.get('vall') is True:
+        file_handler = logging.FileHandler('logs/lexical.log', 'w+')
         file_handler.setFormatter(logging.Formatter('%(message)s'))
         lexical_logger.addHandler(file_handler)
         lexical_logger.disabled = False
@@ -190,5 +190,6 @@ def lexical_analyser(source_code_name, **lex_param):
                                                  str(line_counter) + ',' + str(new_column_word))
                         state = initial_state
                         buffer_character = ''
-
+    print('DONE!')
+    lexical_logger.debug('DONE!')
     return token_result_list
