@@ -118,13 +118,13 @@ def syntactic_analyzer(token_list, **syn_param):
             if grammar == 'error':
                 print(Fore.RED + 'SyntaxError: unexpected \'{}\', expecting \'{}\' on line {} column {}'.format(
                     token_list[location_error].split(',')[1],
-                    ''.join(reserved_words_dict.get(non_terminal_symb)),
+                    reserved_words_dict.get(non_terminal_symb),
                     token_list[location_error].split(',')[2],
                     token_list[location_error].split(',')[3]
                 ))
                 syntactic_logger.error('SyntaxError: unexpected \'{}\', expecting \'{}\' on line {} column {}'.format(
                     token_list[location_error].split(',')[1],
-                    ''.join(reserved_words_dict.get(non_terminal_symb)),
+                    reserved_words_dict.get(non_terminal_symb),
                     token_list[location_error].split(',')[2],
                     token_list[location_error].split(',')[3]
                 ))
@@ -148,13 +148,13 @@ def syntactic_analyzer(token_list, **syn_param):
         elif stack[-1] != queue[0]:
             print(Fore.RED + 'SyntaxError: unexpected \'{}\', expecting \'{}\' on line {} column {}'.format(
                 token_list[location_error].split(',')[1],
-                ''.join(reserved_words_dict.get(non_terminal_symb)),
+                reserved_words_dict.get(non_terminal_symb),
                 token_list[location_error].split(',')[2],
                 token_list[location_error].split(',')[3]
             ))
             syntactic_logger.error('SyntaxError: unexpected \'{}\', expecting \'{}\' on line {} column {}'.format(
                 token_list[location_error].split(',')[1],
-                ''.join(reserved_words_dict.get(non_terminal_symb)),
+                reserved_words_dict.get(non_terminal_symb),
                 token_list[location_error].split(',')[2],
                 token_list[location_error].split(',')[3]
             ))
