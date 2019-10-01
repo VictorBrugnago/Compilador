@@ -58,7 +58,7 @@ tk_menor_que        : "<"
 // Variaveis
 <VARIABLE_LIST>
 <VARIABLE>
-<ATTRIB>
+<ATRIB>
 <TYPE_VARIABLE>
 
 // Sentenca Output e Input
@@ -94,8 +94,8 @@ tk_menor_que        : "<"
 
 // Variavel
 <VARIABLE_LIST>  ::= <VARIABLE> <VARIABLE_LIST> | î;
-<VARIABLE>        ::= <TYPE_VARIABLE> <ATTRIB> tk_final;
-<ATTRIB>          ::= char <LOGIC>;
+<VARIABLE>        ::= <TYPE_VARIABLE> <ATRIB> tk_final;
+<ATRIB>          ::= char <LOGIC>;
 <TYPE_VARIABLE>  ::= int;
 
 // Sentenca Output e Inpup
