@@ -1,5 +1,6 @@
 from Analyzers.LexicalAnalyzer.AnalisadorLexico import lexical_analyser
 from Analyzers.SyntacticAnalyzer.AnalisadorSintatico import syntactic_analyzer
+from Analyzers.SemanticAnalyzer.AnalisadorSemantico import semantic_analyzer
 from colorama import Fore
 import argparse
 import colorama
@@ -10,6 +11,7 @@ source_code_name = ''
 
 vla_flag = False
 vsa_flag = False
+vsma_flag = False
 lt_flag = False
 ls_flag = False
 
@@ -37,6 +39,7 @@ else:
         print('  -tudo\tDisplays a detailed output of the compiler')
         print('  -vla\tDisplays a detailed output of the lexicon analyzer')
         print('  -vsa\tDisplays a detailed output of the syntactic analyzer')
+        print('  -vsma\tDisplays a detailed output of the syntactic analyzer')
         print('  -BR \tIt chooses the language of the outputs for Brazilian Portuguese, by default is English. -BR -> '
               'Brazilian Portuguese')
         sys.exit()
@@ -51,10 +54,13 @@ else:
                 logging.basicConfig(format='%(message)s', level=logging.DEBUG)
                 vla_flag = True
                 vsa_flag = True
+                vsma_flag = True
             elif param == '-vla':
                 vla_flag = True
             elif param == '-vsa':
                 vsa_flag = True
+            elif param == '-vsma':
+                vsma_flag = True
             elif param == '-BR':
                 langBR = True
                 # br = gettext.translation('base', localedir='locales', languages=['pt'])
@@ -76,6 +82,9 @@ if lt_flag is True:
 
 print('\nPerforming syntactic analysis...')
 result_syntactic = syntactic_analyzer(result_lexicon, vsa=vsa_flag)
+
+print('\nperforming semantic analysis...')
+result_semantic = semantic_analyzer(result_lexicon, vsma=vsma_flag)
 
 if ls_flag is True:
     for i in result_syntactic:
