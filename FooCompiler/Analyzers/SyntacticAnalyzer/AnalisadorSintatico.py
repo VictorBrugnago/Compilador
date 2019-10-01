@@ -85,8 +85,8 @@ for line_reserved_words in range(len(reserved_words_list)):
 
 def syntactic_analyzer(token_list, **syn_param):
 
-    if syn_param.get('vsa') is True:
-        file_handler = logging.FileHandler('syntactic.log')
+    if syn_param.get('vsyn') is True or syn_param.get('vall') is True:
+        file_handler = logging.FileHandler('logs/syntactic.log', 'w+')
         file_handler.setFormatter(logging.Formatter('%(message)s'))
         syntactic_logger.addHandler(file_handler)
         syntactic_logger.disabled = False
@@ -116,6 +116,18 @@ def syntactic_analyzer(token_list, **syn_param):
 
             grammar = transition(non_terminal_symb, terminal_symb)  # Testing
             if grammar == 'error':
+                if reserved_words_dict.get(non_terminal_symb) is None:
+                    print(Fore.RED + 'SyntaxError: unexpected \'{}\', invalid character on line {} column {}'.format(
+                        token_list[location_error].split(',')[1],
+                        token_list[location_error].split(',')[2],
+                        token_list[location_error].split(',')[3]
+                    ))
+                    syntactic_logger.error('SyntaxError: unexpected \'{}\', invalid character on line {} column {}'.
+                                           format(token_list[location_error - 1].split(',')[1],
+                                                  token_list[location_error].split(',')[2],
+                                                  token_list[location_error].split(',')[3]
+                                                  ))
+                    sys.exit()
                 print(Fore.RED + 'SyntaxError: unexpected \'{}\', expecting \'{}\' on line {} column {}'.format(
                     token_list[location_error].split(',')[1],
                     reserved_words_dict.get(non_terminal_symb),
