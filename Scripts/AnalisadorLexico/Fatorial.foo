@@ -1,5 +1,5 @@
 startCode {
-    int num << a;
+    int num;
     int fatorial;
 
     outputKey("Entre com um numero: ");
