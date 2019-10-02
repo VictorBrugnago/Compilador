@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-10-02 02:48-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=cp1252\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#:
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\LexicalAnalyzer\AnalisadorLexico.py:51
+msgid ""
+"\n"
+"(transition def) Test Transition --> State: {}  |  Character: {}"
+msgstr ""
+
+#:
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\LexicalAnalyzer\AnalisadorLexico.py:54
+msgid "(transition def) Next State: %s"
+msgstr ""
+
+#:
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\LexicalAnalyzer\AnalisadorLexico.py:59
+msgid ""
+"\n"
+"(variable def) Test Variable --> Buffer: %s"
+msgstr ""
+
+#:
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\LexicalAnalyzer\AnalisadorLexico.py:70
+msgid "Lexicon Error"
+msgstr ""
+
+#:
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\LexicalAnalyzer\AnalisadorLexico.py:71
+msgid "Character \"{}\" unexpected  -->  Line: {} | Column: {}"
+msgstr ""
+
+#:
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\LexicalAnalyzer\AnalisadorLexico.py:73
+msgid "Lexicon Error, Character \"{}\" unexpected  -->  Line: {} | Column: {}"
+msgstr ""
+
+#:
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\LexicalAnalyzer\AnalisadorLexico.py:113
+msgid ""
+"\n"
+"Character: {}  | Column: {}  |  Line: {}  |  Actual State (Before transition): {}"
+msgstr ""
+
+#:
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\LexicalAnalyzer\AnalisadorLexico.py:119
+msgid "Starting String..."
+msgstr ""
+
+#:
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\LexicalAnalyzer\AnalisadorLexico.py:124
+msgid "Ending String..."
+msgstr ""
+
+#:
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\LexicalAnalyzer\AnalisadorLexico.py:137
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\LexicalAnalyzer\AnalisadorLexico.py:159
+msgid "Character: {}  |  Actual State (After transition): {}"
+msgstr ""
+
+#:
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\LexicalAnalyzer\AnalisadorLexico.py:201
+msgid "DONE!"
+msgstr ""
+

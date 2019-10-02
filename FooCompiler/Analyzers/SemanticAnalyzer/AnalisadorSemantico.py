@@ -1,5 +1,6 @@
 from colorama import Fore
 import colorama
+import gettext
 import logging
 import sys
 
@@ -34,16 +35,16 @@ def semantic_analyzer(token_list_param, **sem_param):
 
             if kwargs.get('atrib') is True:
                 if token_read != 'integer':
-                    print(Fore.RED + 'TypeError: \'{}\' must be integer, not {} on line {} column {}'.
+                    print(Fore.RED + _('TypeError: \'{}\' must be integer, not {} on line {} column {}').
                           format(kwargs.get('var'), token_read, line_value_error, column_value_error))
-                    semantic_logger.error(Fore.RED + 'TypeError: \'{}\' must be integer, not {} on line {} column {}'.
+                    semantic_logger.error(Fore.RED + _('TypeError: \'{}\' must be integer, not {} on line {} column {}').
                                           format(kwargs.get('var'), token_read, line_value_error, column_value_error))
                     sys.exit()
             if lexeme_read == '/' and (next_lexeme_read == '0' or (next_lexeme_read in variables_dict.keys() and
                                                                    variables_dict[next_lexeme_read] == '0')):
-                print(Fore.RED + 'Math Exception: Integer division by zero on line {} column {}'.
+                print(Fore.RED + _('Math Exception: Integer division by zero on line {} column {}').
                       format(line_value_error, column_value_error))
-                semantic_logger.error(Fore.RED + 'Math Exception: Integer division by zero on line {} column {}'.
+                semantic_logger.error(Fore.RED + _('Math Exception: Integer division by zero on line {} column {}').
                                       format(line_value_error, column_value_error))
                 sys.exit()
             if token_read == 'char' and variables_dict[lexeme_read]:
@@ -56,6 +57,14 @@ def semantic_analyzer(token_list_param, **sem_param):
             if i.isalpha():
                 return buffer.rstrip()
         return int(eval(buffer.rstrip()))
+
+    if sem_param.get('lang') is False:
+        _ = lambda s: s
+
+    if sem_param.get('lang') is True:
+        br = gettext.translation('base_semantic', localedir='locales', languages=['pt'])
+        br.install()
+        _ = br.gettext
 
     if sem_param.get('vsem') is True or sem_param.get('vall') is True:
         file_handler = logging.FileHandler('logs/semantic.log', 'w+')
@@ -76,10 +85,10 @@ def semantic_analyzer(token_list_param, **sem_param):
 
         if token == 'char':
             if token_list[token_count - 1].split(',')[0] == 'int':
-                semantic_logger.debug('\nVariable Declaration detected -> {} {}'.
+                semantic_logger.debug(_('\nVariable Declaration detected -> {} {}').
                                       format(token_list[token_count - 1].split(',')[0], lexeme))
 
-                semantic_logger.debug('Checking if is already declared...')
+                semantic_logger.debug(_('Checking if is already declared...'))
                 if lexeme not in variables_dict.keys():
                     if token_list[token_count + 1].split(',')[0] == 'tk_atrib':
                         variables_dict.update({lexeme: str(variable_value(token_count + 2, var=lexeme, atrib=True))})
@@ -87,26 +96,25 @@ def semantic_analyzer(token_list_param, **sem_param):
                     else:
                         variables_dict.update({lexeme: None})
 
-                    semantic_logger.debug('\nVariable \'{}\' declared'.format(lexeme))
+                    semantic_logger.debug(_('\nVariable \'{}\' declared').format(lexeme))
                 else:
-                    print(Fore.RED + '\nValueError: Variable \'{}\' on line {} column {} is already declared!'.
+                    print(Fore.RED + _('\nValueError: Variable \'{}\' on line {} column {} is already declared!').
                           format(lexeme, line_error, column_error))
                     semantic_logger.error(
-                        Fore.RED + '\nValueError: Variable \'{}\' on line {} column {} is already declared!'.
+                        Fore.RED + _('\nValueError: Variable \'{}\' on line {} column {} is already declared!').
                         format(lexeme, line_error, column_error))
                     sys.exit()
 
             elif lexeme in variables_dict.keys():
                 if token_list[token_count + 1].split(',')[0] == 'tk_atrib':
                     variables_dict.update({lexeme: str(variable_value(token_count + 2))})
-                    semantic_logger.debug('Variable \'{}\' has value changed to \'{}\''.
+                    semantic_logger.debug(_('Variable \'{}\' has value changed to \'{}\'').
                                           format(lexeme, variables_dict[lexeme]))
             else:
-                print(Fore.RED + '\nNameError: Variable \'{}\' on line {} column {} is not declared!'.
+                print(Fore.RED + _('\nNameError: Variable \'{}\' on line {} column {} is not declared!').
                       format(lexeme, line_error, column_error))
-                semantic_logger.error(Fore.RED + '\nNameError: Variable \'{}\' on line {} column {} is not declared!'.
+                semantic_logger.error(Fore.RED + _('\nNameError: Variable \'{}\' on line {} column {} is not declared!').
                                       format(lexeme, line_error, column_error))
                 sys.exit()
         token_count += 1
-    print('DONE!')
-    semantic_logger.debug('DONE!')
+    semantic_logger.debug(_('DONE!'))

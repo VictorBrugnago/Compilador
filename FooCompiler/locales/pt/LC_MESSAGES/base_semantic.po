@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: FooCompiler\n"
+"POT-Creation-Date: 2019-10-02 02:56-0400\n"
+"PO-Revision-Date: 2019-10-02 03:00-0400\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"Last-Translator: \n"
+"Language-Team: Victor Brugnago\n"
+"Language: pt\n"
+"X-Generator: Poedit 2.2.3\n"
+
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\SemanticAnalyzer\AnalisadorSemantico.py:38
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\SemanticAnalyzer\AnalisadorSemantico.py:40
+msgid "TypeError: '{}' must be integer, not {} on line {} column {}"
+msgstr "TypeError: '{}' deve ser inteiro, não {} na linha {} coluna {}"
+
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\SemanticAnalyzer\AnalisadorSemantico.py:45
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\SemanticAnalyzer\AnalisadorSemantico.py:47
+msgid "Math Exception: Integer division by zero on line {} column {}"
+msgstr "Math Exception: Divisão por zero usando interio na linha {} coluna {}"
+
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\SemanticAnalyzer\AnalisadorSemantico.py:88
+msgid ""
+"\n"
+"Variable Declaration detected -> {} {}"
+msgstr ""
+"\n"
+"Declaração de Variável detectada -> {} {}"
+
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\SemanticAnalyzer\AnalisadorSemantico.py:91
+msgid "Checking if is already declared..."
+msgstr "Checando se já foi declarada..."
+
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\SemanticAnalyzer\AnalisadorSemantico.py:99
+msgid ""
+"\n"
+"Variable '{}' declared"
+msgstr ""
+"\n"
+"Variável '{}' declarada"
+
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\SemanticAnalyzer\AnalisadorSemantico.py:101
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\SemanticAnalyzer\AnalisadorSemantico.py:104
+msgid ""
+"\n"
+"ValueError: Variable '{}' on line {} column {} is already declared!"
+msgstr ""
+"\n"
+"ValueError: Variável '{}' na linha {} coluna {} já foi declarada!"
+
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\SemanticAnalyzer\AnalisadorSemantico.py:111
+msgid "Variable '{}' has value changed to '{}'"
+msgstr "Variável '{}' teve seu valor alterado para '{}'"
+
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\SemanticAnalyzer\AnalisadorSemantico.py:114
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\SemanticAnalyzer\AnalisadorSemantico.py:116
+msgid ""
+"\n"
+"NameError: Variable '{}' on line {} column {} is not declared!"
+msgstr ""
+"\n"
+"NameError: Variável '{}' na linha {} coluna {} não foi declarada!"
+
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\SemanticAnalyzer\AnalisadorSemantico.py:120
+msgid "DONE!"
+msgstr "CONCLUÍDO!"

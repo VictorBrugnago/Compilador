@@ -3,6 +3,7 @@ from Analyzers.SyntacticAnalyzer.AnalisadorSintatico import syntactic_analyzer
 from Analyzers.SemanticAnalyzer.AnalisadorSemantico import semantic_analyzer
 from colorama import Fore
 import colorama
+import gettext
 import logging
 import sys
 import os
@@ -15,12 +16,16 @@ all_flag = False
 lt_flag = False
 lp_flag = False
 ls_flag = False
+langBR = False
 
 # Source Code
 source_code_name = ''
 
 # Set colorama library init
 colorama.init(autoreset=True)
+
+if langBR is False:
+    _ = lambda s: s
 
 # Parameters
 parameters = sys.argv[1:]
@@ -68,36 +73,36 @@ else:
                 vsem_flag = True
             elif param == '-BR':
                 langBR = True
-                # br = gettext.translation('base', localedir='locales', languages=['pt'])
-                # br.install()
-                # _ = br.gettext
+                br = gettext.translation('base_main', localedir='locales', languages=['pt'])
+                br.install()
+                _ = br.gettext
     elif not str(parameters[0]).endswith('.foo'):
-        print('\n' + Fore.RED + 'Nonexistent file')
-        print(Fore.RED + 'File \"{}\" Not found!'.format(str(parameters[0])))
+        print('\n' + Fore.RED + _('Nonexistent file'))
+        print(Fore.RED + _('File \"{}\" Not found!').format(str(parameters[0])))
         sys.exit()
 
 # Creating a log folder
 if not os.path.isdir('logs'):
     os.makedirs('logs')
 
-print('Performing lexical analysis...')
-result_lexicon = lexical_analyser(source_code_name, vlex=vlex_flag, vall=all_flag)
+print(_('Performing lexical analysis...'))
+result_lexicon = lexical_analyser(source_code_name, vlex=vlex_flag, vall=all_flag, lang=langBR)
 
 if lt_flag is True:
-    print("List of detected Tokens\n")
+    print(_('List of detected Tokens\n'))
     for i in result_lexicon:
         print(i.split(',')[0].center(24), i.split(',')[1].center(24), i.split(',')[2].center(8), i.split(',')[3])
 
-print('\n\nPerforming syntactic analysis...')
-result_syntactic = syntactic_analyzer(result_lexicon, vsyn=vsyn_flag, vall=all_flag)
+print(_('\n\nPerforming syntactic analysis...'))
+result_syntactic = syntactic_analyzer(result_lexicon, vsyn=vsyn_flag, vall=all_flag, lang=langBR)
 
 if lp_flag is True:
-    print('List of production rules carried out\n')
+    print(_('List of production rules carried out\n'))
     for i in result_syntactic:
         print(i)
 
-print('\n\nPerforming semantic analysis...')
-result_semantic = semantic_analyzer(result_lexicon, vsem=vsem_flag, vall=all_flag)
+print(_('\n\nPerforming semantic analysis...'))
+result_semantic = semantic_analyzer(result_lexicon, vsem=vsem_flag, vall=all_flag, lang=langBR)
 
 if ls_flag is True:
     for i in result_syntactic:

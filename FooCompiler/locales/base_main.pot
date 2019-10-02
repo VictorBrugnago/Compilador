@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-10-02 02:26-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=cp1252\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\FooCompiler.py:80
+msgid "Nonexistent file"
+msgstr ""
+
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\FooCompiler.py:81
+msgid "File \"{}\" Not found!"
+msgstr ""
+
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\FooCompiler.py:88
+msgid "Performing lexical analysis..."
+msgstr ""
+
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\FooCompiler.py:92
+msgid ""
+"List of detected Tokens\n"
+msgstr ""
+
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\FooCompiler.py:96
+msgid ""
+"\n"
+"\n"
+"Performing syntactic analysis..."
+msgstr ""
+
+#:
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\FooCompiler.py:100
+msgid ""
+"List of production rules carried out\n"
+msgstr ""
+
+#:
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\FooCompiler.py:104
+msgid ""
+"\n"
+"\n"
+"Performing semantic analysis..."
+msgstr ""
+

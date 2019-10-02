@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: FooCompilerLexical\n"
+"POT-Creation-Date: 2019-10-02 02:48-0400\n"
+"PO-Revision-Date: 2019-10-02 02:52-0400\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"Last-Translator: \n"
+"Language-Team: Victor Brugnago\n"
+"Language: pt\n"
+"X-Generator: Poedit 2.2.3\n"
+
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\LexicalAnalyzer\AnalisadorLexico.py:51
+msgid ""
+"\n"
+"(transition def) Test Transition --> State: {}  |  Character: {}"
+msgstr ""
+"\n"
+"(transition def) Teste Transição --> Estado: {}  |  Caractere: {}"
+
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\LexicalAnalyzer\AnalisadorLexico.py:54
+msgid "(transition def) Next State: %s"
+msgstr "(transition def) Próximo Estado: %s"
+
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\LexicalAnalyzer\AnalisadorLexico.py:59
+msgid ""
+"\n"
+"(variable def) Test Variable --> Buffer: %s"
+msgstr ""
+"\n"
+"(variable def) Teste Variável --> Buffer: %s"
+
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\LexicalAnalyzer\AnalisadorLexico.py:70
+msgid "Lexicon Error"
+msgstr "Erro Léxico"
+
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\LexicalAnalyzer\AnalisadorLexico.py:71
+msgid "Character \"{}\" unexpected  -->  Line: {} | Column: {}"
+msgstr "Caractere \\\"{} \\\" inesperado  -->  Linha: {} | Coluna: {}"
+
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\LexicalAnalyzer\AnalisadorLexico.py:73
+msgid "Lexicon Error, Character \"{}\" unexpected  -->  Line: {} | Column: {}"
+msgstr "Erro Léxico, Caractere \"{}\" inesperado--> Linha: {} | Coluna: {}"
+
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\LexicalAnalyzer\AnalisadorLexico.py:113
+msgid ""
+"\n"
+"Character: {}  | Column: {}  |  Line: {}  |  Actual State (Before transition): {}"
+msgstr ""
+"\n"
+"Caractere: {}  | Coluna: {}  |  Linha: {}  |  Estado Atual (Antes da transição): {}"
+
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\LexicalAnalyzer\AnalisadorLexico.py:119
+msgid "Starting String..."
+msgstr "Iniciando  String..."
+
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\LexicalAnalyzer\AnalisadorLexico.py:124
+msgid "Ending String..."
+msgstr "Finalizando String..."
+
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\LexicalAnalyzer\AnalisadorLexico.py:137
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\LexicalAnalyzer\AnalisadorLexico.py:159
+msgid "Character: {}  |  Actual State (After transition): {}"
+msgstr "Caractere: {}  |  Estado Atual (Após a transição): {}"
+
+#: C:\Users\MSMegaron\PycharmProjects\Compilador\FooCompiler\Analyzers\LexicalAnalyzer\AnalisadorLexico.py:201
+msgid "DONE!"
+msgstr "CONCLUÍDO!"

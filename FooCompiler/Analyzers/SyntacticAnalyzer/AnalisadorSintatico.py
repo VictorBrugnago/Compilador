@@ -1,6 +1,7 @@
 from collections import deque
 from colorama import Fore
 import colorama
+import gettext
 import logging
 import csv
 import sys
@@ -32,17 +33,6 @@ handler = logging.StreamHandler()
 handler.setFormatter(logging.Formatter('%(message)s'))
 syntactic_logger.addHandler(handler)
 syntactic_logger.disabled = True
-
-
-def transition(non_terminal_word, terminal_word):
-    syntactic_logger.debug('\n(transition def) Test Transition --> Non Terminal: {}  |  Terminal: {}'.
-                           format(non_terminal_word, terminal_word))
-    if (non_terminal_word, terminal_word) in syntactic_state_dict:
-        syntactic_logger.debug('(transition def) Grammar id: %s',
-                               syntactic_state_dict[non_terminal_word, terminal_word])
-        return syntactic_state_dict[non_terminal_word, terminal_word]
-    else:
-        return 'error'
 
 
 # Reading the Production Rules file
@@ -84,6 +74,23 @@ for line_reserved_words in range(len(reserved_words_list)):
 
 
 def syntactic_analyzer(token_list, **syn_param):
+    def transition(non_terminal_word, terminal_word):
+        syntactic_logger.debug(_('\n(transition def) Test Transition --> Non Terminal: {}  |  Terminal: {}').
+                               format(non_terminal_word, terminal_word))
+        if (non_terminal_word, terminal_word) in syntactic_state_dict:
+            syntactic_logger.debug(_('(transition def) Grammar id: %s'),
+                                   syntactic_state_dict[non_terminal_word, terminal_word])
+            return syntactic_state_dict[non_terminal_word, terminal_word]
+        else:
+            return 'error'
+
+    if syn_param.get('lang') is False:
+        _ = lambda s: s
+
+    if syn_param.get('lang') is True:
+        br = gettext.translation('base_syntactic', localedir='locales', languages=['pt'])
+        br.install()
+        _ = br.gettext
 
     if syn_param.get('vsyn') is True or syn_param.get('vall') is True:
         file_handler = logging.FileHandler('logs/syntactic.log', 'w+')
@@ -104,47 +111,46 @@ def syntactic_analyzer(token_list, **syn_param):
     stack.append('<PROGRAM>')
 
     while queue and stack:
-        syntactic_logger.debug('\nUnstacking...')
+        syntactic_logger.debug(_('\nUnstacking...'))
         non_terminal_symb = stack[-1]
-        syntactic_logger.debug('NonTerminal symbol on top of stack: %s', non_terminal_symb)
-        syntactic_logger.debug('queue[0]: %s', queue[0])
+        syntactic_logger.debug(_('NonTerminal symbol on top of stack: %s'), non_terminal_symb)
 
         if non_terminal_symb.isupper():
-            syntactic_logger.debug('\nDequeuing...')
+            syntactic_logger.debug(_('\nDequeuing...'))
             terminal_symb = queue[0]
-            syntactic_logger.debug('Terminal symbol queued: %s', terminal_symb)
+            syntactic_logger.debug(_('Terminal symbol queued: %s'), terminal_symb)
 
             grammar = transition(non_terminal_symb, terminal_symb)  # Testing
             if grammar == 'error':
                 if reserved_words_dict.get(non_terminal_symb) is None:
-                    print(Fore.RED + 'SyntaxError: unexpected \'{}\', invalid character on line {} column {}'.format(
+                    print(Fore.RED + _('SyntaxError: unexpected \'{}\', invalid character on line {} column {}').format(
                         token_list[location_error].split(',')[1],
                         token_list[location_error].split(',')[2],
                         token_list[location_error].split(',')[3]
                     ))
-                    syntactic_logger.error('SyntaxError: unexpected \'{}\', invalid character on line {} column {}'.
+                    syntactic_logger.error(_('SyntaxError: unexpected \'{}\', invalid character on line {} column {}').
                                            format(token_list[location_error - 1].split(',')[1],
                                                   token_list[location_error].split(',')[2],
                                                   token_list[location_error].split(',')[3]
                                                   ))
                     sys.exit()
-                print(Fore.RED + 'SyntaxError: unexpected \'{}\', expecting \'{}\' on line {} column {}'.format(
+                print(Fore.RED + _('SyntaxError: unexpected \'{}\', expecting \'{}\' on line {} column {}').format(
                     token_list[location_error].split(',')[1],
                     reserved_words_dict.get(non_terminal_symb),
                     token_list[location_error].split(',')[2],
                     token_list[location_error].split(',')[3]
                 ))
-                syntactic_logger.error('SyntaxError: unexpected \'{}\', expecting \'{}\' on line {} column {}'.format(
-                    token_list[location_error].split(',')[1],
-                    reserved_words_dict.get(non_terminal_symb),
-                    token_list[location_error].split(',')[2],
-                    token_list[location_error].split(',')[3]
-                ))
+                syntactic_logger.error(_('SyntaxError: unexpected \'{}\', expecting \'{}\' on line {} column {}').
+                                       format(token_list[location_error].split(',')[1],
+                                              reserved_words_dict.get(non_terminal_symb),
+                                              token_list[location_error].split(',')[2],
+                                              token_list[location_error].split(',')[3]
+                                              ))
                 sys.exit()
             stack.pop()
 
-            syntactic_logger.debug('\nGrammar id: %s', grammar)
-            syntactic_logger.debug('Grammar: %s', grammar_state_dict.get(grammar))
+            syntactic_logger.debug(_('\nGrammar id: %s'), grammar)
+            syntactic_logger.debug(_('Grammar: %s'), grammar_state_dict.get(grammar))
             syntactic_result_list.append(non_terminal_symb + ' -> ' + ' '.join(grammar_state_dict.get(grammar)))
 
             grammar_count = len(grammar_state_dict.get(grammar)) - 1
@@ -153,18 +159,18 @@ def syntactic_analyzer(token_list, **syn_param):
                     stack.append(grammar_state_dict.get(grammar)[grammar_count])
                 grammar_count -= 1
         elif stack[-1] == queue[0]:
-            syntactic_logger.debug('Sentence recognized: {} -> {}'.format(non_terminal_symb, queue[0]))
+            syntactic_logger.debug(_('Sentence recognized: {} -> {}').format(non_terminal_symb, queue[0]))
             del queue[0]
             location_error += 1
             stack.pop()
         elif stack[-1] != queue[0]:
-            print(Fore.RED + 'SyntaxError: unexpected \'{}\', expecting \'{}\' on line {} column {}'.format(
+            print(Fore.RED + _('SyntaxError: unexpected \'{}\', expecting \'{}\' on line {} column {}').format(
                 token_list[location_error].split(',')[1],
                 reserved_words_dict.get(non_terminal_symb),
                 token_list[location_error].split(',')[2],
                 token_list[location_error].split(',')[3]
             ))
-            syntactic_logger.error('SyntaxError: unexpected \'{}\', expecting \'{}\' on line {} column {}'.format(
+            syntactic_logger.error(_('SyntaxError: unexpected \'{}\', expecting \'{}\' on line {} column {}').format(
                 token_list[location_error].split(',')[1],
                 reserved_words_dict.get(non_terminal_symb),
                 token_list[location_error].split(',')[2],
@@ -173,9 +179,8 @@ def syntactic_analyzer(token_list, **syn_param):
             sys.exit()
 
     if not queue and not stack:
-        print('DONE!')
         return syntactic_result_list
     else:
-        print(Fore.RED + 'Error --> Stack or Queue are not empty')
-        syntactic_logger.error('Error --> Stack or Queue are not empty')
+        print(Fore.RED + _('Error --> Stack or Queue are not empty'))
+        syntactic_logger.error(_('Error --> Stack or Queue are not empty'))
         sys.exit()

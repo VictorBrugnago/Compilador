@@ -1,923 +1,820 @@
 
-Unstacking...
-NonTerminal symbol on top of stack: <PROGRAM>
-queue[0]: startCode
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <PROGRAM>
 
-Dequeuing...
-Terminal symbol queued: startCode
+Desfileirando...
+Símbolo TERMINAL no começo da fila: startCode
 
-(transition def) Test Transition --> Non Terminal: <PROGRAM>  |  Terminal: startCode
-(transition def) Grammar id: 0
+(transition def) Teste Transição --> Não Terminal: <PROGRAM>  |  Terminal: startCode
+(transition def) Id Gramática: 0
 
-Grammar id: 0
-Grammar: ['startCode', 'tk_abre_bloco', '<VARIABLE_LIST>', '<COMMAND_LIST>', 'tk_fecha_bloco', 'endCode']
+Id Gramática: 0
+Gramática: ['startCode', 'tk_abre_bloco', '<VARIABLE_LIST>', '<COMMAND_LIST>', 'tk_fecha_bloco', 'endCode']
 
-Unstacking...
-NonTerminal symbol on top of stack: startCode
-queue[0]: startCode
-Sentence recognized: startCode -> startCode
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: startCode
+Sentença reconhecida: startCode -> startCode
 
-Unstacking...
-NonTerminal symbol on top of stack: tk_abre_bloco
-queue[0]: tk_abre_bloco
-Sentence recognized: tk_abre_bloco -> tk_abre_bloco
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: tk_abre_bloco
+Sentença reconhecida: tk_abre_bloco -> tk_abre_bloco
 
-Unstacking...
-NonTerminal symbol on top of stack: <VARIABLE_LIST>
-queue[0]: int
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <VARIABLE_LIST>
 
-Dequeuing...
-Terminal symbol queued: int
+Desfileirando...
+Símbolo TERMINAL no começo da fila: int
 
-(transition def) Test Transition --> Non Terminal: <VARIABLE_LIST>  |  Terminal: int
-(transition def) Grammar id: 1
+(transition def) Teste Transição --> Não Terminal: <VARIABLE_LIST>  |  Terminal: int
+(transition def) Id Gramática: 1
 
-Grammar id: 1
-Grammar: ['<VARIABLE>', '<VARIABLE_LIST>']
+Id Gramática: 1
+Gramática: ['<VARIABLE>', '<VARIABLE_LIST>']
 
-Unstacking...
-NonTerminal symbol on top of stack: <VARIABLE>
-queue[0]: int
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <VARIABLE>
 
-Dequeuing...
-Terminal symbol queued: int
+Desfileirando...
+Símbolo TERMINAL no começo da fila: int
 
-(transition def) Test Transition --> Non Terminal: <VARIABLE>  |  Terminal: int
-(transition def) Grammar id: 3
+(transition def) Teste Transição --> Não Terminal: <VARIABLE>  |  Terminal: int
+(transition def) Id Gramática: 3
 
-Grammar id: 3
-Grammar: ['<TYPE_VARIABLE>', '<ATRIB>', 'tk_final']
+Id Gramática: 3
+Gramática: ['<TYPE_VARIABLE>', '<ATRIB>', 'tk_final']
 
-Unstacking...
-NonTerminal symbol on top of stack: <TYPE_VARIABLE>
-queue[0]: int
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <TYPE_VARIABLE>
 
-Dequeuing...
-Terminal symbol queued: int
+Desfileirando...
+Símbolo TERMINAL no começo da fila: int
 
-(transition def) Test Transition --> Non Terminal: <TYPE_VARIABLE>  |  Terminal: int
-(transition def) Grammar id: 5
+(transition def) Teste Transição --> Não Terminal: <TYPE_VARIABLE>  |  Terminal: int
+(transition def) Id Gramática: 5
 
-Grammar id: 5
-Grammar: ['int']
+Id Gramática: 5
+Gramática: ['int']
 
-Unstacking...
-NonTerminal symbol on top of stack: int
-queue[0]: int
-Sentence recognized: int -> int
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: int
+Sentença reconhecida: int -> int
 
-Unstacking...
-NonTerminal symbol on top of stack: <ATRIB>
-queue[0]: char
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <ATRIB>
 
-Dequeuing...
-Terminal symbol queued: char
+Desfileirando...
+Símbolo TERMINAL no começo da fila: char
 
-(transition def) Test Transition --> Non Terminal: <ATRIB>  |  Terminal: char
-(transition def) Grammar id: 4
+(transition def) Teste Transição --> Não Terminal: <ATRIB>  |  Terminal: char
+(transition def) Id Gramática: 4
 
-Grammar id: 4
-Grammar: ['char', '<LOGIC>']
+Id Gramática: 4
+Gramática: ['char', '<LOGIC>']
 
-Unstacking...
-NonTerminal symbol on top of stack: char
-queue[0]: char
-Sentence recognized: char -> char
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: char
+Sentença reconhecida: char -> char
 
-Unstacking...
-NonTerminal symbol on top of stack: <LOGIC>
-queue[0]: tk_final
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <LOGIC>
 
-Dequeuing...
-Terminal symbol queued: tk_final
+Desfileirando...
+Símbolo TERMINAL no começo da fila: tk_final
 
-(transition def) Test Transition --> Non Terminal: <LOGIC>  |  Terminal: tk_final
-(transition def) Grammar id: 30
+(transition def) Teste Transição --> Não Terminal: <LOGIC>  |  Terminal: tk_final
+(transition def) Id Gramática: 30
 
-Grammar id: 30
-Grammar: ['î']
+Id Gramática: 30
+Gramática: ['î']
 
-Unstacking...
-NonTerminal symbol on top of stack: tk_final
-queue[0]: tk_final
-Sentence recognized: tk_final -> tk_final
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: tk_final
+Sentença reconhecida: tk_final -> tk_final
 
-Unstacking...
-NonTerminal symbol on top of stack: <VARIABLE_LIST>
-queue[0]: int
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <VARIABLE_LIST>
 
-Dequeuing...
-Terminal symbol queued: int
+Desfileirando...
+Símbolo TERMINAL no começo da fila: int
 
-(transition def) Test Transition --> Non Terminal: <VARIABLE_LIST>  |  Terminal: int
-(transition def) Grammar id: 1
+(transition def) Teste Transição --> Não Terminal: <VARIABLE_LIST>  |  Terminal: int
+(transition def) Id Gramática: 1
 
-Grammar id: 1
-Grammar: ['<VARIABLE>', '<VARIABLE_LIST>']
+Id Gramática: 1
+Gramática: ['<VARIABLE>', '<VARIABLE_LIST>']
 
-Unstacking...
-NonTerminal symbol on top of stack: <VARIABLE>
-queue[0]: int
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <VARIABLE>
 
-Dequeuing...
-Terminal symbol queued: int
+Desfileirando...
+Símbolo TERMINAL no começo da fila: int
 
-(transition def) Test Transition --> Non Terminal: <VARIABLE>  |  Terminal: int
-(transition def) Grammar id: 3
+(transition def) Teste Transição --> Não Terminal: <VARIABLE>  |  Terminal: int
+(transition def) Id Gramática: 3
 
-Grammar id: 3
-Grammar: ['<TYPE_VARIABLE>', '<ATRIB>', 'tk_final']
+Id Gramática: 3
+Gramática: ['<TYPE_VARIABLE>', '<ATRIB>', 'tk_final']
 
-Unstacking...
-NonTerminal symbol on top of stack: <TYPE_VARIABLE>
-queue[0]: int
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <TYPE_VARIABLE>
 
-Dequeuing...
-Terminal symbol queued: int
+Desfileirando...
+Símbolo TERMINAL no começo da fila: int
 
-(transition def) Test Transition --> Non Terminal: <TYPE_VARIABLE>  |  Terminal: int
-(transition def) Grammar id: 5
+(transition def) Teste Transição --> Não Terminal: <TYPE_VARIABLE>  |  Terminal: int
+(transition def) Id Gramática: 5
 
-Grammar id: 5
-Grammar: ['int']
+Id Gramática: 5
+Gramática: ['int']
 
-Unstacking...
-NonTerminal symbol on top of stack: int
-queue[0]: int
-Sentence recognized: int -> int
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: int
+Sentença reconhecida: int -> int
 
-Unstacking...
-NonTerminal symbol on top of stack: <ATRIB>
-queue[0]: char
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <ATRIB>
 
-Dequeuing...
-Terminal symbol queued: char
+Desfileirando...
+Símbolo TERMINAL no começo da fila: char
 
-(transition def) Test Transition --> Non Terminal: <ATRIB>  |  Terminal: char
-(transition def) Grammar id: 4
+(transition def) Teste Transição --> Não Terminal: <ATRIB>  |  Terminal: char
+(transition def) Id Gramática: 4
 
-Grammar id: 4
-Grammar: ['char', '<LOGIC>']
+Id Gramática: 4
+Gramática: ['char', '<LOGIC>']
 
-Unstacking...
-NonTerminal symbol on top of stack: char
-queue[0]: char
-Sentence recognized: char -> char
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: char
+Sentença reconhecida: char -> char
 
-Unstacking...
-NonTerminal symbol on top of stack: <LOGIC>
-queue[0]: tk_final
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <LOGIC>
 
-Dequeuing...
-Terminal symbol queued: tk_final
+Desfileirando...
+Símbolo TERMINAL no começo da fila: tk_final
 
-(transition def) Test Transition --> Non Terminal: <LOGIC>  |  Terminal: tk_final
-(transition def) Grammar id: 30
+(transition def) Teste Transição --> Não Terminal: <LOGIC>  |  Terminal: tk_final
+(transition def) Id Gramática: 30
 
-Grammar id: 30
-Grammar: ['î']
+Id Gramática: 30
+Gramática: ['î']
 
-Unstacking...
-NonTerminal symbol on top of stack: tk_final
-queue[0]: tk_final
-Sentence recognized: tk_final -> tk_final
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: tk_final
+Sentença reconhecida: tk_final -> tk_final
 
-Unstacking...
-NonTerminal symbol on top of stack: <VARIABLE_LIST>
-queue[0]: outputKey
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <VARIABLE_LIST>
 
-Dequeuing...
-Terminal symbol queued: outputKey
+Desfileirando...
+Símbolo TERMINAL no começo da fila: outputKey
 
-(transition def) Test Transition --> Non Terminal: <VARIABLE_LIST>  |  Terminal: outputKey
-(transition def) Grammar id: 2
+(transition def) Teste Transição --> Não Terminal: <VARIABLE_LIST>  |  Terminal: outputKey
+(transition def) Id Gramática: 2
 
-Grammar id: 2
-Grammar: ['î']
+Id Gramática: 2
+Gramática: ['î']
 
-Unstacking...
-NonTerminal symbol on top of stack: <COMMAND_LIST>
-queue[0]: outputKey
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <COMMAND_LIST>
 
-Dequeuing...
-Terminal symbol queued: outputKey
+Desfileirando...
+Símbolo TERMINAL no começo da fila: outputKey
 
-(transition def) Test Transition --> Non Terminal: <COMMAND_LIST>  |  Terminal: outputKey
-(transition def) Grammar id: 9
+(transition def) Teste Transição --> Não Terminal: <COMMAND_LIST>  |  Terminal: outputKey
+(transition def) Id Gramática: 9
 
-Grammar id: 9
-Grammar: ['<COMMAND>', '<COMMAND_LIST>']
+Id Gramática: 9
+Gramática: ['<COMMAND>', '<COMMAND_LIST>']
 
-Unstacking...
-NonTerminal symbol on top of stack: <COMMAND>
-queue[0]: outputKey
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <COMMAND>
 
-Dequeuing...
-Terminal symbol queued: outputKey
+Desfileirando...
+Símbolo TERMINAL no começo da fila: outputKey
 
-(transition def) Test Transition --> Non Terminal: <COMMAND>  |  Terminal: outputKey
-(transition def) Grammar id: 12
+(transition def) Teste Transição --> Não Terminal: <COMMAND>  |  Terminal: outputKey
+(transition def) Id Gramática: 12
 
-Grammar id: 12
-Grammar: ['<OUTPUT_CMD>']
+Id Gramática: 12
+Gramática: ['<OUTPUT_CMD>']
 
-Unstacking...
-NonTerminal symbol on top of stack: <OUTPUT_CMD>
-queue[0]: outputKey
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <OUTPUT_CMD>
 
-Dequeuing...
-Terminal symbol queued: outputKey
+Desfileirando...
+Símbolo TERMINAL no começo da fila: outputKey
 
-(transition def) Test Transition --> Non Terminal: <OUTPUT_CMD>  |  Terminal: outputKey
-(transition def) Grammar id: 17
+(transition def) Teste Transição --> Não Terminal: <OUTPUT_CMD>  |  Terminal: outputKey
+(transition def) Id Gramática: 17
 
-Grammar id: 17
-Grammar: ['outputKey', 'tk_abre_parenteses', '<SENTENCE>', 'tk_fecha_parenteses', 'tk_final']
+Id Gramática: 17
+Gramática: ['outputKey', 'tk_abre_parenteses', '<SENTENCE>', 'tk_fecha_parenteses', 'tk_final']
 
-Unstacking...
-NonTerminal symbol on top of stack: outputKey
-queue[0]: outputKey
-Sentence recognized: outputKey -> outputKey
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: outputKey
+Sentença reconhecida: outputKey -> outputKey
 
-Unstacking...
-NonTerminal symbol on top of stack: tk_abre_parenteses
-queue[0]: tk_abre_parenteses
-Sentence recognized: tk_abre_parenteses -> tk_abre_parenteses
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: tk_abre_parenteses
+Sentença reconhecida: tk_abre_parenteses -> tk_abre_parenteses
 
-Unstacking...
-NonTerminal symbol on top of stack: <SENTENCE>
-queue[0]: Str
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <SENTENCE>
 
-Dequeuing...
-Terminal symbol queued: Str
+Desfileirando...
+Símbolo TERMINAL no começo da fila: Str
 
-(transition def) Test Transition --> Non Terminal: <SENTENCE>  |  Terminal: Str
-(transition def) Grammar id: 8
+(transition def) Teste Transição --> Não Terminal: <SENTENCE>  |  Terminal: Str
+(transition def) Id Gramática: 8
 
-Grammar id: 8
-Grammar: ['Str']
+Id Gramática: 8
+Gramática: ['Str']
 
-Unstacking...
-NonTerminal symbol on top of stack: Str
-queue[0]: Str
-Sentence recognized: Str -> Str
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: Str
+Sentença reconhecida: Str -> Str
 
-Unstacking...
-NonTerminal symbol on top of stack: tk_fecha_parenteses
-queue[0]: tk_fecha_parenteses
-Sentence recognized: tk_fecha_parenteses -> tk_fecha_parenteses
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: tk_fecha_parenteses
+Sentença reconhecida: tk_fecha_parenteses -> tk_fecha_parenteses
 
-Unstacking...
-NonTerminal symbol on top of stack: tk_final
-queue[0]: tk_final
-Sentence recognized: tk_final -> tk_final
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: tk_final
+Sentença reconhecida: tk_final -> tk_final
 
-Unstacking...
-NonTerminal symbol on top of stack: <COMMAND_LIST>
-queue[0]: inputKey
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <COMMAND_LIST>
 
-Dequeuing...
-Terminal symbol queued: inputKey
+Desfileirando...
+Símbolo TERMINAL no começo da fila: inputKey
 
-(transition def) Test Transition --> Non Terminal: <COMMAND_LIST>  |  Terminal: inputKey
-(transition def) Grammar id: 9
+(transition def) Teste Transição --> Não Terminal: <COMMAND_LIST>  |  Terminal: inputKey
+(transition def) Id Gramática: 9
 
-Grammar id: 9
-Grammar: ['<COMMAND>', '<COMMAND_LIST>']
+Id Gramática: 9
+Gramática: ['<COMMAND>', '<COMMAND_LIST>']
 
-Unstacking...
-NonTerminal symbol on top of stack: <COMMAND>
-queue[0]: inputKey
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <COMMAND>
 
-Dequeuing...
-Terminal symbol queued: inputKey
+Desfileirando...
+Símbolo TERMINAL no começo da fila: inputKey
 
-(transition def) Test Transition --> Non Terminal: <COMMAND>  |  Terminal: inputKey
-(transition def) Grammar id: 11
+(transition def) Teste Transição --> Não Terminal: <COMMAND>  |  Terminal: inputKey
+(transition def) Id Gramática: 11
 
-Grammar id: 11
-Grammar: ['<INPUT_CMD>']
+Id Gramática: 11
+Gramática: ['<INPUT_CMD>']
 
-Unstacking...
-NonTerminal symbol on top of stack: <INPUT_CMD>
-queue[0]: inputKey
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <INPUT_CMD>
 
-Dequeuing...
-Terminal symbol queued: inputKey
+Desfileirando...
+Símbolo TERMINAL no começo da fila: inputKey
 
-(transition def) Test Transition --> Non Terminal: <INPUT_CMD>  |  Terminal: inputKey
-(transition def) Grammar id: 16
+(transition def) Teste Transição --> Não Terminal: <INPUT_CMD>  |  Terminal: inputKey
+(transition def) Id Gramática: 16
 
-Grammar id: 16
-Grammar: ['inputKey', 'tk_abre_parenteses', 'char', 'tk_fecha_parenteses', 'tk_final']
+Id Gramática: 16
+Gramática: ['inputKey', 'tk_abre_parenteses', 'char', 'tk_fecha_parenteses', 'tk_final']
 
-Unstacking...
-NonTerminal symbol on top of stack: inputKey
-queue[0]: inputKey
-Sentence recognized: inputKey -> inputKey
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: inputKey
+Sentença reconhecida: inputKey -> inputKey
 
-Unstacking...
-NonTerminal symbol on top of stack: tk_abre_parenteses
-queue[0]: tk_abre_parenteses
-Sentence recognized: tk_abre_parenteses -> tk_abre_parenteses
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: tk_abre_parenteses
+Sentença reconhecida: tk_abre_parenteses -> tk_abre_parenteses
 
-Unstacking...
-NonTerminal symbol on top of stack: char
-queue[0]: char
-Sentence recognized: char -> char
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: char
+Sentença reconhecida: char -> char
 
-Unstacking...
-NonTerminal symbol on top of stack: tk_fecha_parenteses
-queue[0]: tk_fecha_parenteses
-Sentence recognized: tk_fecha_parenteses -> tk_fecha_parenteses
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: tk_fecha_parenteses
+Sentença reconhecida: tk_fecha_parenteses -> tk_fecha_parenteses
 
-Unstacking...
-NonTerminal symbol on top of stack: tk_final
-queue[0]: tk_final
-Sentence recognized: tk_final -> tk_final
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: tk_final
+Sentença reconhecida: tk_final -> tk_final
 
-Unstacking...
-NonTerminal symbol on top of stack: <COMMAND_LIST>
-queue[0]: do
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <COMMAND_LIST>
 
-Dequeuing...
-Terminal symbol queued: do
+Desfileirando...
+Símbolo TERMINAL no começo da fila: do
 
-(transition def) Test Transition --> Non Terminal: <COMMAND_LIST>  |  Terminal: do
-(transition def) Grammar id: 9
+(transition def) Teste Transição --> Não Terminal: <COMMAND_LIST>  |  Terminal: do
+(transition def) Id Gramática: 9
 
-Grammar id: 9
-Grammar: ['<COMMAND>', '<COMMAND_LIST>']
+Id Gramática: 9
+Gramática: ['<COMMAND>', '<COMMAND_LIST>']
 
-Unstacking...
-NonTerminal symbol on top of stack: <COMMAND>
-queue[0]: do
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <COMMAND>
 
-Dequeuing...
-Terminal symbol queued: do
+Desfileirando...
+Símbolo TERMINAL no começo da fila: do
 
-(transition def) Test Transition --> Non Terminal: <COMMAND>  |  Terminal: do
-(transition def) Grammar id: 15
+(transition def) Teste Transição --> Não Terminal: <COMMAND>  |  Terminal: do
+(transition def) Id Gramática: 15
 
-Grammar id: 15
-Grammar: ['<LOOP_CMD>']
+Id Gramática: 15
+Gramática: ['<LOOP_CMD>']
 
-Unstacking...
-NonTerminal symbol on top of stack: <LOOP_CMD>
-queue[0]: do
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <LOOP_CMD>
 
-Dequeuing...
-Terminal symbol queued: do
+Desfileirando...
+Símbolo TERMINAL no começo da fila: do
 
-(transition def) Test Transition --> Non Terminal: <LOOP_CMD>  |  Terminal: do
-(transition def) Grammar id: 20
+(transition def) Teste Transição --> Não Terminal: <LOOP_CMD>  |  Terminal: do
+(transition def) Id Gramática: 20
 
-Grammar id: 20
-Grammar: ['<DO_LOOP>']
+Id Gramática: 20
+Gramática: ['<DO_LOOP>']
 
-Unstacking...
-NonTerminal symbol on top of stack: <DO_LOOP>
-queue[0]: do
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <DO_LOOP>
 
-Dequeuing...
-Terminal symbol queued: do
+Desfileirando...
+Símbolo TERMINAL no começo da fila: do
 
-(transition def) Test Transition --> Non Terminal: <DO_LOOP>  |  Terminal: do
-(transition def) Grammar id: 24
+(transition def) Teste Transição --> Não Terminal: <DO_LOOP>  |  Terminal: do
+(transition def) Id Gramática: 24
 
-Grammar id: 24
-Grammar: ['do', 'tk_abre_bloco', '<COMMAND_LIST>', 'until', 'tk_abre_parenteses', '<ID_LOGIC>', 'tk_fecha_parenteses', 'tk_final']
+Id Gramática: 24
+Gramática: ['do', 'tk_abre_bloco', '<COMMAND_LIST>', 'until', 'tk_abre_parenteses', '<ID_LOGIC>', 'tk_fecha_parenteses', 'tk_final']
 
-Unstacking...
-NonTerminal symbol on top of stack: do
-queue[0]: do
-Sentence recognized: do -> do
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: do
+Sentença reconhecida: do -> do
 
-Unstacking...
-NonTerminal symbol on top of stack: tk_abre_bloco
-queue[0]: tk_abre_bloco
-Sentence recognized: tk_abre_bloco -> tk_abre_bloco
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: tk_abre_bloco
+Sentença reconhecida: tk_abre_bloco -> tk_abre_bloco
 
-Unstacking...
-NonTerminal symbol on top of stack: <COMMAND_LIST>
-queue[0]: char
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <COMMAND_LIST>
 
-Dequeuing...
-Terminal symbol queued: char
+Desfileirando...
+Símbolo TERMINAL no começo da fila: char
 
-(transition def) Test Transition --> Non Terminal: <COMMAND_LIST>  |  Terminal: char
-(transition def) Grammar id: 9
+(transition def) Teste Transição --> Não Terminal: <COMMAND_LIST>  |  Terminal: char
+(transition def) Id Gramática: 9
 
-Grammar id: 9
-Grammar: ['<COMMAND>', '<COMMAND_LIST>']
+Id Gramática: 9
+Gramática: ['<COMMAND>', '<COMMAND_LIST>']
 
-Unstacking...
-NonTerminal symbol on top of stack: <COMMAND>
-queue[0]: char
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <COMMAND>
 
-Dequeuing...
-Terminal symbol queued: char
+Desfileirando...
+Símbolo TERMINAL no começo da fila: char
 
-(transition def) Test Transition --> Non Terminal: <COMMAND>  |  Terminal: char
-(transition def) Grammar id: 14
+(transition def) Teste Transição --> Não Terminal: <COMMAND>  |  Terminal: char
+(transition def) Id Gramática: 14
 
-Grammar id: 14
-Grammar: ['<MATH_CMD>']
+Id Gramática: 14
+Gramática: ['<MATH_CMD>']
 
-Unstacking...
-NonTerminal symbol on top of stack: <MATH_CMD>
-queue[0]: char
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <MATH_CMD>
 
-Dequeuing...
-Terminal symbol queued: char
+Desfileirando...
+Símbolo TERMINAL no começo da fila: char
 
-(transition def) Test Transition --> Non Terminal: <MATH_CMD>  |  Terminal: char
-(transition def) Grammar id: 19
+(transition def) Teste Transição --> Não Terminal: <MATH_CMD>  |  Terminal: char
+(transition def) Id Gramática: 19
 
-Grammar id: 19
-Grammar: ['char', 'tk_atrib', '<ID_ARITHMETIC>', 'tk_final']
+Id Gramática: 19
+Gramática: ['char', 'tk_atrib', '<ID_ARITHMETIC>', 'tk_final']
 
-Unstacking...
-NonTerminal symbol on top of stack: char
-queue[0]: char
-Sentence recognized: char -> char
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: char
+Sentença reconhecida: char -> char
 
-Unstacking...
-NonTerminal symbol on top of stack: tk_atrib
-queue[0]: tk_atrib
-Sentence recognized: tk_atrib -> tk_atrib
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: tk_atrib
+Sentença reconhecida: tk_atrib -> tk_atrib
 
-Unstacking...
-NonTerminal symbol on top of stack: <ID_ARITHMETIC>
-queue[0]: char
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <ID_ARITHMETIC>
 
-Dequeuing...
-Terminal symbol queued: char
+Desfileirando...
+Símbolo TERMINAL no começo da fila: char
 
-(transition def) Test Transition --> Non Terminal: <ID_ARITHMETIC>  |  Terminal: char
-(transition def) Grammar id: 32
+(transition def) Teste Transição --> Não Terminal: <ID_ARITHMETIC>  |  Terminal: char
+(transition def) Id Gramática: 32
 
-Grammar id: 32
-Grammar: ['char', '<ARITHMETIC>']
+Id Gramática: 32
+Gramática: ['char', '<ARITHMETIC>']
 
-Unstacking...
-NonTerminal symbol on top of stack: char
-queue[0]: char
-Sentence recognized: char -> char
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: char
+Sentença reconhecida: char -> char
 
-Unstacking...
-NonTerminal symbol on top of stack: <ARITHMETIC>
-queue[0]: tk_multiplicacao
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <ARITHMETIC>
 
-Dequeuing...
-Terminal symbol queued: tk_multiplicacao
+Desfileirando...
+Símbolo TERMINAL no começo da fila: tk_multiplicacao
 
-(transition def) Test Transition --> Non Terminal: <ARITHMETIC>  |  Terminal: tk_multiplicacao
-(transition def) Grammar id: 39
+(transition def) Teste Transição --> Não Terminal: <ARITHMETIC>  |  Terminal: tk_multiplicacao
+(transition def) Id Gramática: 39
 
-Grammar id: 39
-Grammar: ['tk_multiplicacao', '<ID_ARITHMETIC>']
+Id Gramática: 39
+Gramática: ['tk_multiplicacao', '<ID_ARITHMETIC>']
 
-Unstacking...
-NonTerminal symbol on top of stack: tk_multiplicacao
-queue[0]: tk_multiplicacao
-Sentence recognized: tk_multiplicacao -> tk_multiplicacao
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: tk_multiplicacao
+Sentença reconhecida: tk_multiplicacao -> tk_multiplicacao
 
-Unstacking...
-NonTerminal symbol on top of stack: <ID_ARITHMETIC>
-queue[0]: char
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <ID_ARITHMETIC>
 
-Dequeuing...
-Terminal symbol queued: char
+Desfileirando...
+Símbolo TERMINAL no começo da fila: char
 
-(transition def) Test Transition --> Non Terminal: <ID_ARITHMETIC>  |  Terminal: char
-(transition def) Grammar id: 32
+(transition def) Teste Transição --> Não Terminal: <ID_ARITHMETIC>  |  Terminal: char
+(transition def) Id Gramática: 32
 
-Grammar id: 32
-Grammar: ['char', '<ARITHMETIC>']
+Id Gramática: 32
+Gramática: ['char', '<ARITHMETIC>']
 
-Unstacking...
-NonTerminal symbol on top of stack: char
-queue[0]: char
-Sentence recognized: char -> char
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: char
+Sentença reconhecida: char -> char
 
-Unstacking...
-NonTerminal symbol on top of stack: <ARITHMETIC>
-queue[0]: tk_final
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <ARITHMETIC>
 
-Dequeuing...
-Terminal symbol queued: tk_final
+Desfileirando...
+Símbolo TERMINAL no começo da fila: tk_final
 
-(transition def) Test Transition --> Non Terminal: <ARITHMETIC>  |  Terminal: tk_final
-(transition def) Grammar id: 42
+(transition def) Teste Transição --> Não Terminal: <ARITHMETIC>  |  Terminal: tk_final
+(transition def) Id Gramática: 42
 
-Grammar id: 42
-Grammar: ['î']
+Id Gramática: 42
+Gramática: ['î']
 
-Unstacking...
-NonTerminal symbol on top of stack: tk_final
-queue[0]: tk_final
-Sentence recognized: tk_final -> tk_final
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: tk_final
+Sentença reconhecida: tk_final -> tk_final
 
-Unstacking...
-NonTerminal symbol on top of stack: <COMMAND_LIST>
-queue[0]: char
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <COMMAND_LIST>
 
-Dequeuing...
-Terminal symbol queued: char
+Desfileirando...
+Símbolo TERMINAL no começo da fila: char
 
-(transition def) Test Transition --> Non Terminal: <COMMAND_LIST>  |  Terminal: char
-(transition def) Grammar id: 9
+(transition def) Teste Transição --> Não Terminal: <COMMAND_LIST>  |  Terminal: char
+(transition def) Id Gramática: 9
 
-Grammar id: 9
-Grammar: ['<COMMAND>', '<COMMAND_LIST>']
+Id Gramática: 9
+Gramática: ['<COMMAND>', '<COMMAND_LIST>']
 
-Unstacking...
-NonTerminal symbol on top of stack: <COMMAND>
-queue[0]: char
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <COMMAND>
 
-Dequeuing...
-Terminal symbol queued: char
+Desfileirando...
+Símbolo TERMINAL no começo da fila: char
 
-(transition def) Test Transition --> Non Terminal: <COMMAND>  |  Terminal: char
-(transition def) Grammar id: 14
+(transition def) Teste Transição --> Não Terminal: <COMMAND>  |  Terminal: char
+(transition def) Id Gramática: 14
 
-Grammar id: 14
-Grammar: ['<MATH_CMD>']
+Id Gramática: 14
+Gramática: ['<MATH_CMD>']
 
-Unstacking...
-NonTerminal symbol on top of stack: <MATH_CMD>
-queue[0]: char
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <MATH_CMD>
 
-Dequeuing...
-Terminal symbol queued: char
+Desfileirando...
+Símbolo TERMINAL no começo da fila: char
 
-(transition def) Test Transition --> Non Terminal: <MATH_CMD>  |  Terminal: char
-(transition def) Grammar id: 19
+(transition def) Teste Transição --> Não Terminal: <MATH_CMD>  |  Terminal: char
+(transition def) Id Gramática: 19
 
-Grammar id: 19
-Grammar: ['char', 'tk_atrib', '<ID_ARITHMETIC>', 'tk_final']
+Id Gramática: 19
+Gramática: ['char', 'tk_atrib', '<ID_ARITHMETIC>', 'tk_final']
 
-Unstacking...
-NonTerminal symbol on top of stack: char
-queue[0]: char
-Sentence recognized: char -> char
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: char
+Sentença reconhecida: char -> char
 
-Unstacking...
-NonTerminal symbol on top of stack: tk_atrib
-queue[0]: tk_atrib
-Sentence recognized: tk_atrib -> tk_atrib
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: tk_atrib
+Sentença reconhecida: tk_atrib -> tk_atrib
 
-Unstacking...
-NonTerminal symbol on top of stack: <ID_ARITHMETIC>
-queue[0]: char
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <ID_ARITHMETIC>
 
-Dequeuing...
-Terminal symbol queued: char
+Desfileirando...
+Símbolo TERMINAL no começo da fila: char
 
-(transition def) Test Transition --> Non Terminal: <ID_ARITHMETIC>  |  Terminal: char
-(transition def) Grammar id: 32
+(transition def) Teste Transição --> Não Terminal: <ID_ARITHMETIC>  |  Terminal: char
+(transition def) Id Gramática: 32
 
-Grammar id: 32
-Grammar: ['char', '<ARITHMETIC>']
+Id Gramática: 32
+Gramática: ['char', '<ARITHMETIC>']
 
-Unstacking...
-NonTerminal symbol on top of stack: char
-queue[0]: char
-Sentence recognized: char -> char
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: char
+Sentença reconhecida: char -> char
 
-Unstacking...
-NonTerminal symbol on top of stack: <ARITHMETIC>
-queue[0]: tk_subtracao
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <ARITHMETIC>
 
-Dequeuing...
-Terminal symbol queued: tk_subtracao
+Desfileirando...
+Símbolo TERMINAL no começo da fila: tk_subtracao
 
-(transition def) Test Transition --> Non Terminal: <ARITHMETIC>  |  Terminal: tk_subtracao
-(transition def) Grammar id: 38
+(transition def) Teste Transição --> Não Terminal: <ARITHMETIC>  |  Terminal: tk_subtracao
+(transition def) Id Gramática: 38
 
-Grammar id: 38
-Grammar: ['tk_subtracao', '<ID_ARITHMETIC>']
+Id Gramática: 38
+Gramática: ['tk_subtracao', '<ID_ARITHMETIC>']
 
-Unstacking...
-NonTerminal symbol on top of stack: tk_subtracao
-queue[0]: tk_subtracao
-Sentence recognized: tk_subtracao -> tk_subtracao
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: tk_subtracao
+Sentença reconhecida: tk_subtracao -> tk_subtracao
 
-Unstacking...
-NonTerminal symbol on top of stack: <ID_ARITHMETIC>
-queue[0]: integer
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <ID_ARITHMETIC>
 
-Dequeuing...
-Terminal symbol queued: integer
+Desfileirando...
+Símbolo TERMINAL no começo da fila: integer
 
-(transition def) Test Transition --> Non Terminal: <ID_ARITHMETIC>  |  Terminal: integer
-(transition def) Grammar id: 31
+(transition def) Teste Transição --> Não Terminal: <ID_ARITHMETIC>  |  Terminal: integer
+(transition def) Id Gramática: 31
 
-Grammar id: 31
-Grammar: ['integer', '<ARITHMETIC>']
+Id Gramática: 31
+Gramática: ['integer', '<ARITHMETIC>']
 
-Unstacking...
-NonTerminal symbol on top of stack: integer
-queue[0]: integer
-Sentence recognized: integer -> integer
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: integer
+Sentença reconhecida: integer -> integer
 
-Unstacking...
-NonTerminal symbol on top of stack: <ARITHMETIC>
-queue[0]: tk_final
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <ARITHMETIC>
 
-Dequeuing...
-Terminal symbol queued: tk_final
+Desfileirando...
+Símbolo TERMINAL no começo da fila: tk_final
 
-(transition def) Test Transition --> Non Terminal: <ARITHMETIC>  |  Terminal: tk_final
-(transition def) Grammar id: 42
+(transition def) Teste Transição --> Não Terminal: <ARITHMETIC>  |  Terminal: tk_final
+(transition def) Id Gramática: 42
 
-Grammar id: 42
-Grammar: ['î']
+Id Gramática: 42
+Gramática: ['î']
 
-Unstacking...
-NonTerminal symbol on top of stack: tk_final
-queue[0]: tk_final
-Sentence recognized: tk_final -> tk_final
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: tk_final
+Sentença reconhecida: tk_final -> tk_final
 
-Unstacking...
-NonTerminal symbol on top of stack: <COMMAND_LIST>
-queue[0]: until
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <COMMAND_LIST>
 
-Dequeuing...
-Terminal symbol queued: until
+Desfileirando...
+Símbolo TERMINAL no começo da fila: until
 
-(transition def) Test Transition --> Non Terminal: <COMMAND_LIST>  |  Terminal: until
-(transition def) Grammar id: 10
+(transition def) Teste Transição --> Não Terminal: <COMMAND_LIST>  |  Terminal: until
+(transition def) Id Gramática: 10
 
-Grammar id: 10
-Grammar: ['î']
+Id Gramática: 10
+Gramática: ['î']
 
-Unstacking...
-NonTerminal symbol on top of stack: until
-queue[0]: until
-Sentence recognized: until -> until
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: until
+Sentença reconhecida: until -> until
 
-Unstacking...
-NonTerminal symbol on top of stack: tk_abre_parenteses
-queue[0]: tk_abre_parenteses
-Sentence recognized: tk_abre_parenteses -> tk_abre_parenteses
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: tk_abre_parenteses
+Sentença reconhecida: tk_abre_parenteses -> tk_abre_parenteses
 
-Unstacking...
-NonTerminal symbol on top of stack: <ID_LOGIC>
-queue[0]: char
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <ID_LOGIC>
 
-Dequeuing...
-Terminal symbol queued: char
+Desfileirando...
+Símbolo TERMINAL no começo da fila: char
 
-(transition def) Test Transition --> Non Terminal: <ID_LOGIC>  |  Terminal: char
-(transition def) Grammar id: 25
+(transition def) Teste Transição --> Não Terminal: <ID_LOGIC>  |  Terminal: char
+(transition def) Id Gramática: 25
 
-Grammar id: 25
-Grammar: ['char', '<LOGIC>']
+Id Gramática: 25
+Gramática: ['char', '<LOGIC>']
 
-Unstacking...
-NonTerminal symbol on top of stack: char
-queue[0]: char
-Sentence recognized: char -> char
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: char
+Sentença reconhecida: char -> char
 
-Unstacking...
-NonTerminal symbol on top of stack: <LOGIC>
-queue[0]: tk_menor_que
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <LOGIC>
 
-Dequeuing...
-Terminal symbol queued: tk_menor_que
+Desfileirando...
+Símbolo TERMINAL no começo da fila: tk_menor_que
 
-(transition def) Test Transition --> Non Terminal: <LOGIC>  |  Terminal: tk_menor_que
-(transition def) Grammar id: 28
+(transition def) Teste Transição --> Não Terminal: <LOGIC>  |  Terminal: tk_menor_que
+(transition def) Id Gramática: 28
 
-Grammar id: 28
-Grammar: ['tk_menor_que', '<ID_LOGIC>']
+Id Gramática: 28
+Gramática: ['tk_menor_que', '<ID_LOGIC>']
 
-Unstacking...
-NonTerminal symbol on top of stack: tk_menor_que
-queue[0]: tk_menor_que
-Sentence recognized: tk_menor_que -> tk_menor_que
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: tk_menor_que
+Sentença reconhecida: tk_menor_que -> tk_menor_que
 
-Unstacking...
-NonTerminal symbol on top of stack: <ID_LOGIC>
-queue[0]: integer
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <ID_LOGIC>
 
-Dequeuing...
-Terminal symbol queued: integer
+Desfileirando...
+Símbolo TERMINAL no começo da fila: integer
 
-(transition def) Test Transition --> Non Terminal: <ID_LOGIC>  |  Terminal: integer
-(transition def) Grammar id: 26
+(transition def) Teste Transição --> Não Terminal: <ID_LOGIC>  |  Terminal: integer
+(transition def) Id Gramática: 26
 
-Grammar id: 26
-Grammar: ['integer', '<LOGIC>']
+Id Gramática: 26
+Gramática: ['integer', '<LOGIC>']
 
-Unstacking...
-NonTerminal symbol on top of stack: integer
-queue[0]: integer
-Sentence recognized: integer -> integer
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: integer
+Sentença reconhecida: integer -> integer
 
-Unstacking...
-NonTerminal symbol on top of stack: <LOGIC>
-queue[0]: tk_fecha_parenteses
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <LOGIC>
 
-Dequeuing...
-Terminal symbol queued: tk_fecha_parenteses
+Desfileirando...
+Símbolo TERMINAL no começo da fila: tk_fecha_parenteses
 
-(transition def) Test Transition --> Non Terminal: <LOGIC>  |  Terminal: tk_fecha_parenteses
-(transition def) Grammar id: 30
+(transition def) Teste Transição --> Não Terminal: <LOGIC>  |  Terminal: tk_fecha_parenteses
+(transition def) Id Gramática: 30
 
-Grammar id: 30
-Grammar: ['î']
+Id Gramática: 30
+Gramática: ['î']
 
-Unstacking...
-NonTerminal symbol on top of stack: tk_fecha_parenteses
-queue[0]: tk_fecha_parenteses
-Sentence recognized: tk_fecha_parenteses -> tk_fecha_parenteses
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: tk_fecha_parenteses
+Sentença reconhecida: tk_fecha_parenteses -> tk_fecha_parenteses
 
-Unstacking...
-NonTerminal symbol on top of stack: tk_final
-queue[0]: tk_final
-Sentence recognized: tk_final -> tk_final
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: tk_final
+Sentença reconhecida: tk_final -> tk_final
 
-Unstacking...
-NonTerminal symbol on top of stack: <COMMAND_LIST>
-queue[0]: outputKey
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <COMMAND_LIST>
 
-Dequeuing...
-Terminal symbol queued: outputKey
+Desfileirando...
+Símbolo TERMINAL no começo da fila: outputKey
 
-(transition def) Test Transition --> Non Terminal: <COMMAND_LIST>  |  Terminal: outputKey
-(transition def) Grammar id: 9
+(transition def) Teste Transição --> Não Terminal: <COMMAND_LIST>  |  Terminal: outputKey
+(transition def) Id Gramática: 9
 
-Grammar id: 9
-Grammar: ['<COMMAND>', '<COMMAND_LIST>']
+Id Gramática: 9
+Gramática: ['<COMMAND>', '<COMMAND_LIST>']
 
-Unstacking...
-NonTerminal symbol on top of stack: <COMMAND>
-queue[0]: outputKey
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <COMMAND>
 
-Dequeuing...
-Terminal symbol queued: outputKey
+Desfileirando...
+Símbolo TERMINAL no começo da fila: outputKey
 
-(transition def) Test Transition --> Non Terminal: <COMMAND>  |  Terminal: outputKey
-(transition def) Grammar id: 12
+(transition def) Teste Transição --> Não Terminal: <COMMAND>  |  Terminal: outputKey
+(transition def) Id Gramática: 12
 
-Grammar id: 12
-Grammar: ['<OUTPUT_CMD>']
+Id Gramática: 12
+Gramática: ['<OUTPUT_CMD>']
 
-Unstacking...
-NonTerminal symbol on top of stack: <OUTPUT_CMD>
-queue[0]: outputKey
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <OUTPUT_CMD>
 
-Dequeuing...
-Terminal symbol queued: outputKey
+Desfileirando...
+Símbolo TERMINAL no começo da fila: outputKey
 
-(transition def) Test Transition --> Non Terminal: <OUTPUT_CMD>  |  Terminal: outputKey
-(transition def) Grammar id: 17
+(transition def) Teste Transição --> Não Terminal: <OUTPUT_CMD>  |  Terminal: outputKey
+(transition def) Id Gramática: 17
 
-Grammar id: 17
-Grammar: ['outputKey', 'tk_abre_parenteses', '<SENTENCE>', 'tk_fecha_parenteses', 'tk_final']
+Id Gramática: 17
+Gramática: ['outputKey', 'tk_abre_parenteses', '<SENTENCE>', 'tk_fecha_parenteses', 'tk_final']
 
-Unstacking...
-NonTerminal symbol on top of stack: outputKey
-queue[0]: outputKey
-Sentence recognized: outputKey -> outputKey
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: outputKey
+Sentença reconhecida: outputKey -> outputKey
 
-Unstacking...
-NonTerminal symbol on top of stack: tk_abre_parenteses
-queue[0]: tk_abre_parenteses
-Sentence recognized: tk_abre_parenteses -> tk_abre_parenteses
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: tk_abre_parenteses
+Sentença reconhecida: tk_abre_parenteses -> tk_abre_parenteses
 
-Unstacking...
-NonTerminal symbol on top of stack: <SENTENCE>
-queue[0]: Str
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <SENTENCE>
 
-Dequeuing...
-Terminal symbol queued: Str
+Desfileirando...
+Símbolo TERMINAL no começo da fila: Str
 
-(transition def) Test Transition --> Non Terminal: <SENTENCE>  |  Terminal: Str
-(transition def) Grammar id: 8
+(transition def) Teste Transição --> Não Terminal: <SENTENCE>  |  Terminal: Str
+(transition def) Id Gramática: 8
 
-Grammar id: 8
-Grammar: ['Str']
+Id Gramática: 8
+Gramática: ['Str']
 
-Unstacking...
-NonTerminal symbol on top of stack: Str
-queue[0]: Str
-Sentence recognized: Str -> Str
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: Str
+Sentença reconhecida: Str -> Str
 
-Unstacking...
-NonTerminal symbol on top of stack: tk_fecha_parenteses
-queue[0]: tk_fecha_parenteses
-Sentence recognized: tk_fecha_parenteses -> tk_fecha_parenteses
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: tk_fecha_parenteses
+Sentença reconhecida: tk_fecha_parenteses -> tk_fecha_parenteses
 
-Unstacking...
-NonTerminal symbol on top of stack: tk_final
-queue[0]: tk_final
-Sentence recognized: tk_final -> tk_final
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: tk_final
+Sentença reconhecida: tk_final -> tk_final
 
-Unstacking...
-NonTerminal symbol on top of stack: <COMMAND_LIST>
-queue[0]: outputKey
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <COMMAND_LIST>
 
-Dequeuing...
-Terminal symbol queued: outputKey
+Desfileirando...
+Símbolo TERMINAL no começo da fila: outputKey
 
-(transition def) Test Transition --> Non Terminal: <COMMAND_LIST>  |  Terminal: outputKey
-(transition def) Grammar id: 9
+(transition def) Teste Transição --> Não Terminal: <COMMAND_LIST>  |  Terminal: outputKey
+(transition def) Id Gramática: 9
 
-Grammar id: 9
-Grammar: ['<COMMAND>', '<COMMAND_LIST>']
+Id Gramática: 9
+Gramática: ['<COMMAND>', '<COMMAND_LIST>']
 
-Unstacking...
-NonTerminal symbol on top of stack: <COMMAND>
-queue[0]: outputKey
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <COMMAND>
 
-Dequeuing...
-Terminal symbol queued: outputKey
+Desfileirando...
+Símbolo TERMINAL no começo da fila: outputKey
 
-(transition def) Test Transition --> Non Terminal: <COMMAND>  |  Terminal: outputKey
-(transition def) Grammar id: 12
+(transition def) Teste Transição --> Não Terminal: <COMMAND>  |  Terminal: outputKey
+(transition def) Id Gramática: 12
 
-Grammar id: 12
-Grammar: ['<OUTPUT_CMD>']
+Id Gramática: 12
+Gramática: ['<OUTPUT_CMD>']
 
-Unstacking...
-NonTerminal symbol on top of stack: <OUTPUT_CMD>
-queue[0]: outputKey
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <OUTPUT_CMD>
 
-Dequeuing...
-Terminal symbol queued: outputKey
+Desfileirando...
+Símbolo TERMINAL no começo da fila: outputKey
 
-(transition def) Test Transition --> Non Terminal: <OUTPUT_CMD>  |  Terminal: outputKey
-(transition def) Grammar id: 17
+(transition def) Teste Transição --> Não Terminal: <OUTPUT_CMD>  |  Terminal: outputKey
+(transition def) Id Gramática: 17
 
-Grammar id: 17
-Grammar: ['outputKey', 'tk_abre_parenteses', '<SENTENCE>', 'tk_fecha_parenteses', 'tk_final']
+Id Gramática: 17
+Gramática: ['outputKey', 'tk_abre_parenteses', '<SENTENCE>', 'tk_fecha_parenteses', 'tk_final']
 
-Unstacking...
-NonTerminal symbol on top of stack: outputKey
-queue[0]: outputKey
-Sentence recognized: outputKey -> outputKey
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: outputKey
+Sentença reconhecida: outputKey -> outputKey
 
-Unstacking...
-NonTerminal symbol on top of stack: tk_abre_parenteses
-queue[0]: tk_abre_parenteses
-Sentence recognized: tk_abre_parenteses -> tk_abre_parenteses
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: tk_abre_parenteses
+Sentença reconhecida: tk_abre_parenteses -> tk_abre_parenteses
 
-Unstacking...
-NonTerminal symbol on top of stack: <SENTENCE>
-queue[0]: char
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <SENTENCE>
 
-Dequeuing...
-Terminal symbol queued: char
+Desfileirando...
+Símbolo TERMINAL no começo da fila: char
 
-(transition def) Test Transition --> Non Terminal: <SENTENCE>  |  Terminal: char
-(transition def) Grammar id: 6
+(transition def) Teste Transição --> Não Terminal: <SENTENCE>  |  Terminal: char
+(transition def) Id Gramática: 6
 
-Grammar id: 6
-Grammar: ['char']
+Id Gramática: 6
+Gramática: ['char']
 
-Unstacking...
-NonTerminal symbol on top of stack: char
-queue[0]: char
-Sentence recognized: char -> char
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: char
+Sentença reconhecida: char -> char
 
-Unstacking...
-NonTerminal symbol on top of stack: tk_fecha_parenteses
-queue[0]: tk_fecha_parenteses
-Sentence recognized: tk_fecha_parenteses -> tk_fecha_parenteses
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: tk_fecha_parenteses
+Sentença reconhecida: tk_fecha_parenteses -> tk_fecha_parenteses
 
-Unstacking...
-NonTerminal symbol on top of stack: tk_final
-queue[0]: tk_final
-Sentence recognized: tk_final -> tk_final
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: tk_final
+Sentença reconhecida: tk_final -> tk_final
 
-Unstacking...
-NonTerminal symbol on top of stack: <COMMAND_LIST>
-queue[0]: tk_fecha_bloco
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: <COMMAND_LIST>
 
-Dequeuing...
-Terminal symbol queued: tk_fecha_bloco
+Desfileirando...
+Símbolo TERMINAL no começo da fila: tk_fecha_bloco
 
-(transition def) Test Transition --> Non Terminal: <COMMAND_LIST>  |  Terminal: tk_fecha_bloco
-(transition def) Grammar id: 10
+(transition def) Teste Transição --> Não Terminal: <COMMAND_LIST>  |  Terminal: tk_fecha_bloco
+(transition def) Id Gramática: 10
 
-Grammar id: 10
-Grammar: ['î']
+Id Gramática: 10
+Gramática: ['î']
 
-Unstacking...
-NonTerminal symbol on top of stack: tk_fecha_bloco
-queue[0]: tk_fecha_bloco
-Sentence recognized: tk_fecha_bloco -> tk_fecha_bloco
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: tk_fecha_bloco
+Sentença reconhecida: tk_fecha_bloco -> tk_fecha_bloco
 
-Unstacking...
-NonTerminal symbol on top of stack: endCode
-queue[0]: endCode
-Sentence recognized: endCode -> endCode
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: endCode
+Sentença reconhecida: endCode -> endCode
 
-Unstacking...
-NonTerminal symbol on top of stack: $
-queue[0]: $
-Sentence recognized: $ -> $
+Desempilhando...
+Símbolo NÃO TERMINAL no topo da pilha: $
+Sentença reconhecida: $ -> $
