@@ -50,7 +50,7 @@ else:
         print('  -tudo\tDisplays a detailed output of the compiler')
         print('  -vlex\tDisplays a detailed output of the lexicon analyzer')
         print('  -vsyn\tDisplays a detailed output of the syntactic analyzer')
-        print('  -vsem\tDisplays a detailed output of the syntactic analyzer')
+        print('  -vsem\tDisplays a detailed output of the semantic analyzer')
         print('  -BR \tIt chooses the language of the outputs for Brazilian Portuguese, by default is English. -BR -> '
               'Brazilian Portuguese')
         sys.exit()
