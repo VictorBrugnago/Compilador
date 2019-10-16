@@ -1,5 +1,5 @@
-startCode,, startCode,, 1,, 1
-tk_abre_bloco,, {,, 1,, 11
+startCode, startCode, 1, 1
+tk_abre_bloco, {, 1, 11
 int, int, 2, 5
 char, num, 2, 9
 tk_final, ;, 2, 12
