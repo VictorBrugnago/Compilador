@@ -1,9 +1,15 @@
 startCode {
-    int num;
+    int num << 2;
     int fatorial;
 
     outputKey("Entre com um numero: ");
     inputKey(num);
+
+    if (num > 2) {
+        outputKey(num);
+    } else {
+        outputKey("O valor eh 2");
+    };
 
     do {
         fatorial << fatorial * num;
