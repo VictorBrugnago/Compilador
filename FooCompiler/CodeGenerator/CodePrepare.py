@@ -94,7 +94,6 @@ def intermediate_code(tokens_list, start, loop, pre_code, **flags):
                 else_statement = False
             pre_code = pre_code + list
             loop_counter += 1
-            print('\n\nListIF - IF')
 
         elif 'else' == token_readed:
             else_statement = True
