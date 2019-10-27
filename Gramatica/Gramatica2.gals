@@ -117,7 +117,7 @@ tk_menor_que        : "<"
 <ELSE>             ::= else tk_abre_bloco <COMMAND_LIST> tk_fecha_bloco | î;
 
 // Loop
-<DO_LOOP>          ::= do tk_abre_bloco <COMMAND_LIST> until tk_abre_parenteses <ID_LOGIC> tk_fecha_parenteses tk_final;
+<DO_LOOP>          ::= do tk_abre_bloco <COMMAND_LIST> tk_fecha_bloco until tk_abre_parenteses <ID_LOGIC> tk_fecha_parenteses tk_final;
 
 // Logica
 <ID_LOGIC>        ::= char <LOGIC> | integer <LOGIC>;
