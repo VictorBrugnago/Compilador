@@ -1,5 +1,5 @@
 startCode {
-    int num << 2;
+    int num;
     int fatorial;
 
     outputKey("Entre com um numero: ");
@@ -14,7 +14,7 @@ startCode {
     do {
         fatorial << fatorial * num;
         num << num - 1;
-    until(num < 1);
+    } until(num < 1);
 
     outputKey("O fatorial eh: ");
     outputKey(fatorial);
