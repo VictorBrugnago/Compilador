@@ -2,9 +2,7 @@ startCode, startCode, 1, 1
 tk_abre_bloco, {, 1, 11
 int, int, 2, 5
 char, num, 2, 9
-tk_atrib, <<, 2, 13
-integer, 2, 2, 16
-tk_final, ;, 2, 17
+tk_final, ;, 2, 12
 int, int, 3, 5
 char, fatorial, 3, 9
 tk_final, ;, 3, 17
