@@ -67,8 +67,8 @@ def lexical_analyser(source_code_name, **lex_param):
 
     def error_informer(level, char_error, line_error, column_error, **exits):
         if level == 'EL':
-            print('\n' + Fore.RED + _('Lexicon Error'))
-            print(Fore.RED + _('Character \"{}\" unexpected  -->  Line: {} | Column: {}').
+            print('\n' + Fore.LIGHTRED_EX + _('Lexicon Error'))
+            print(Fore.LIGHTRED_EX + _('Character \"{}\" unexpected  -->  Line: {} | Column: {}').
                   format(char_error, str(line_error), str(column_error)))
             lexical_logger.error(_('Lexicon Error, Character \"{}\" unexpected  -->  Line: {} | Column: {}').
                                  format(char_error, str(line_error), str(column_error)))

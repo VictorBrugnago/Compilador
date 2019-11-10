@@ -123,7 +123,7 @@ def syntactic_analyzer(token_list, **syn_param):
             grammar = transition(non_terminal_symb, terminal_symb)  # Testing
             if grammar == 'error':
                 if reserved_words_dict.get(non_terminal_symb) is None:
-                    print(Fore.RED + _('SyntaxError: unexpected \'{}\', invalid character on line {} column {}').format(
+                    print(Fore.LIGHTRED_EX + _('SyntaxError: unexpected \'{}\', invalid character on line {} column {}').format(
                         token_list[location_error].split(',')[1],
                         token_list[location_error].split(',')[2],
                         token_list[location_error].split(',')[3]
@@ -134,7 +134,7 @@ def syntactic_analyzer(token_list, **syn_param):
                                                   token_list[location_error].split(',')[3]
                                                   ))
                     sys.exit()
-                print(Fore.RED + _('SyntaxError: unexpected \'{}\', expecting \'{}\' on line {} column {}').format(
+                print(Fore.LIGHTRED_EX + _('SyntaxError: unexpected \'{}\', expecting \'{}\' on line {} column {}').format(
                     token_list[location_error].split(',')[1],
                     ''.join(reserved_words_dict.get(non_terminal_symb)),
                     token_list[location_error].split(',')[2],
@@ -164,7 +164,7 @@ def syntactic_analyzer(token_list, **syn_param):
             location_error += 1
             stack.pop()
         elif stack[-1] != queue[0]:
-            print(Fore.RED + _('SyntaxError: unexpected \'{}\', expecting \'{}\' on line {} column {}').format(
+            print(Fore.LIGHTRED_EX + _('SyntaxError: unexpected \'{}\', expecting \'{}\' on line {} column {}').format(
                 token_list[location_error].split(',')[1],
                 ''.join(reserved_words_dict.get(non_terminal_symb)),
                 token_list[location_error].split(',')[2],
@@ -181,6 +181,6 @@ def syntactic_analyzer(token_list, **syn_param):
     if not queue and not stack:
         return syntactic_result_list
     else:
-        print(Fore.RED + _('Error --> Stack or Queue are not empty'))
+        print(Fore.LIGHTRED_EX + _('Error --> Stack or Queue are not empty'))
         syntactic_logger.error(_('Error --> Stack or Queue are not empty'))
         sys.exit()

@@ -35,16 +35,16 @@ def semantic_analyzer(token_list_param, **sem_param):
 
             if kwargs.get('atrib') is True:
                 if token_read != 'integer':
-                    print(Fore.RED + _('TypeError: \'{}\' must be integer, not {} on line {} column {}').
+                    print(Fore.LIGHTRED_EX + _('TypeError: \'{}\' must be integer, not {} on line {} column {}').
                           format(kwargs.get('var'), token_read, line_value_error, column_value_error))
-                    semantic_logger.error(Fore.RED + _('TypeError: \'{}\' must be integer, not {} on line {} column {}').
+                    semantic_logger.error(Fore.LIGHTRED_EX + _('TypeError: \'{}\' must be integer, not {} on line {} column {}').
                                           format(kwargs.get('var'), token_read, line_value_error, column_value_error))
                     sys.exit()
             if lexeme_read == '/' and (next_lexeme_read == '0' or (next_lexeme_read in variables_dict.keys() and
                                                                    variables_dict[next_lexeme_read] == '0')):
-                print(Fore.RED + _('Math Exception: Integer division by zero on line {} column {}').
+                print(Fore.LIGHTRED_EX + _('Math Exception: Integer division by zero on line {} column {}').
                       format(line_value_error, column_value_error))
-                semantic_logger.error(Fore.RED + _('Math Exception: Integer division by zero on line {} column {}').
+                semantic_logger.error(Fore.LIGHTRED_EX + _('Math Exception: Integer division by zero on line {} column {}').
                                       format(line_value_error, column_value_error))
                 sys.exit()
             if token_read == 'char' and variables_dict[lexeme_read]:
@@ -98,10 +98,10 @@ def semantic_analyzer(token_list_param, **sem_param):
 
                     semantic_logger.debug(_('\nVariable \'{}\' declared').format(lexeme))
                 else:
-                    print(Fore.RED + _('\nValueError: Variable \'{}\' on line {} column {} is already declared!').
+                    print(Fore.LIGHTRED_EX + _('\nValueError: Variable \'{}\' on line {} column {} is already declared!').
                           format(lexeme, line_error, column_error))
                     semantic_logger.error(
-                        Fore.RED + _('\nValueError: Variable \'{}\' on line {} column {} is already declared!').
+                        Fore.LIGHTRED_EX + _('\nValueError: Variable \'{}\' on line {} column {} is already declared!').
                         format(lexeme, line_error, column_error))
                     sys.exit()
 
@@ -111,9 +111,9 @@ def semantic_analyzer(token_list_param, **sem_param):
                     semantic_logger.debug(_('Variable \'{}\' has value changed to \'{}\'').
                                           format(lexeme, variables_dict[lexeme]))
             else:
-                print(Fore.RED + _('\nNameError: Variable \'{}\' on line {} column {} is not declared!').
+                print(Fore.LIGHTRED_EX + _('\nNameError: Variable \'{}\' on line {} column {} is not declared!').
                       format(lexeme, line_error, column_error))
-                semantic_logger.error(Fore.RED + _('\nNameError: Variable \'{}\' on line {} column {} is not declared!').
+                semantic_logger.error(Fore.LIGHTRED_EX + _('\nNameError: Variable \'{}\' on line {} column {} is not declared!').
                                       format(lexeme, line_error, column_error))
                 sys.exit()
         token_count += 1
