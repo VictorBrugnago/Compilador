@@ -6,6 +6,7 @@ import os
 # Set colorama library init
 colorama.init(autoreset=True)
 
+
 def logical_symbols(symb):
     logic_identifiers = {'>': '<=', '<': '>=', '>=': '<', '<=': '>', '!=': '==', '==': '!='}
 
