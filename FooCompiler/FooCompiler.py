@@ -1,6 +1,7 @@
 from Analyzers.LexicalAnalyzer.AnalisadorLexico import lexical_analyser
 from Analyzers.SyntacticAnalyzer.AnalisadorSintatico import syntactic_analyzer
 from Analyzers.SemanticAnalyzer.AnalisadorSemantico import semantic_analyzer
+from CodeGenerator.CodePrepare import intermediate_code
 from colorama import Fore
 import colorama
 import gettext
@@ -16,10 +17,16 @@ all_flag = False
 lt_flag = False
 lp_flag = False
 ls_flag = False
+oi_flag = False
 langBR = False
 
-# Source Code
+# Lists
+pre_code = []
+
+# Source Code and Output Name
 source_code_name = ''
+output_name = ''
+
 
 # Set colorama library init
 colorama.init(autoreset=True)
@@ -47,6 +54,7 @@ else:
         print('  -lt\tGenerates a listing of the detected tokens, the result is shown in the terminal')
         print('  -lp\tGenerates a listing of the productions performed, the result is shown in the terminal')
         print('  -ls\tShows all steps performed on detected variables, the result is shown in the terminal')
+        print('  -oi\tCreate the Intermediate Code file')
         print('  -tudo\tDisplays a detailed output of the compiler')
         print('  -vlex\tDisplays a detailed output of the lexicon analyzer')
         print('  -vsyn\tDisplays a detailed output of the syntactic analyzer')
@@ -56,29 +64,36 @@ else:
         sys.exit()
     elif str(parameters[0]).endswith('.foo'):
         source_code_name = parameters[0]
-        for param in parameters[1:]:
-            if param == '-lt':
-                lt_flag = True
-            elif param == '-lp':
-                lp_flag = True
-            elif param == '-ls':
-                ls_flag = True
-            elif param == '-tudo':
-                all_flag = True
-            elif param == '-vlex':
-                vlex_flag = True
-            elif param == '-vsyn':
-                vsyn_flag = True
-            elif param == '-vsem':
-                vsem_flag = True
-            elif param == '-BR':
-                langBR = True
-                br = gettext.translation('base_main', localedir='locales', languages=['pt'])
-                br.install()
-                _ = br.gettext
+        if len(parameters) < 2:
+            print('\n' + Fore.LIGHTRED_EX + _('Output name not specified!'))
+            sys.exit()
+        elif parameters[1]:
+            output_name = str(parameters[1])
+            for param in parameters[2:]:
+                if param == '-lt':
+                    lt_flag = True
+                elif param == '-lp':
+                    lp_flag = True
+                elif param == '-ls':
+                    ls_flag = True
+                elif param == '-oi':
+                    oi_flag = True
+                elif param == '-tudo':
+                    all_flag = True
+                elif param == '-vlex':
+                    vlex_flag = True
+                elif param == '-vsyn':
+                    vsyn_flag = True
+                elif param == '-vsem':
+                    vsem_flag = True
+                elif param == '-BR':
+                    langBR = True
+                    br = gettext.translation('base_main', localedir='locales', languages=['pt'])
+                    br.install()
+                    _ = br.gettext
     elif not str(parameters[0]).endswith('.foo'):
-        print('\n' + Fore.RED + _('Nonexistent file'))
-        print(Fore.RED + _('File \"{}\" Not found!').format(str(parameters[0])))
+        print('\n' + Fore.LIGHTRED_EX + _('Nonexistent file'))
+        print(Fore.LIGHTRED_EX + _('File \"{}\" Not found!').format(str(parameters[0])))
         sys.exit()
 
 # Creating a log folder
@@ -107,3 +122,7 @@ result_semantic = semantic_analyzer(result_lexicon, vsem=vsem_flag, vall=all_fla
 if ls_flag is True:
     for i in result_syntactic:
         print(i)
+
+print('\n\nGenerating code...')
+intermediate_code_result = intermediate_code(result_lexicon, 0, 0, pre_code, oi_flag, output_name)
+print('\tIntermediate Code:\t\t' + Fore.LIGHTGREEN_EX + 'OK!')
