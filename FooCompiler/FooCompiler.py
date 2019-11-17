@@ -2,6 +2,7 @@ from Analyzers.LexicalAnalyzer.AnalisadorLexico import lexical_analyser
 from Analyzers.SyntacticAnalyzer.AnalisadorSintatico import syntactic_analyzer
 from Analyzers.SemanticAnalyzer.AnalisadorSemantico import semantic_analyzer
 from CodeGenerator.CodePrepare import intermediate_code
+from CodeGenerator.AssemblyCreator import assembly_creation
 from colorama import Fore
 import colorama
 import gettext
@@ -126,3 +127,4 @@ if ls_flag is True:
 print('\n\nGenerating code...')
 intermediate_code_result = intermediate_code(result_lexicon, 0, 0, pre_code, oi_flag, output_name)
 print('\tIntermediate Code:\t\t' + Fore.LIGHTGREEN_EX + 'OK!')
+assembly_creation(intermediate_code_result, output_name)
