@@ -1,0 +1,131 @@
+#Options
+GenerateScanner = true
+GenerateParser = true
+Language = Java
+ScannerName = Lexico
+ParserName = Sintatico
+SemanticName = Semantico
+ScannerCaseSensitive = true
+ScannerTable = Full
+Input = Stream
+Parser = LL
+#RegularDefinitions
+// Espacos
+E: [\s\t\n]
+
+// Letras
+S: [a-zA-Z]
+A: [\0-\33 \35-\255]
+
+// Numeros
+I: [0-9]
+#Tokens
+         : {E}*
+char     : {S}({S} | {I})*
+integer  : {I}*
+Str	: \" ({A})* \"
+
+//Palavras Reservadas
+startCode = char: "startCode"
+endCode   = char: "endCode"
+inputKey  = char: "inputKey"
+outputKey = char: "outputKey"
+if        = char: "if"
+else      = char: "else"
+do        = char: "do"
+until     = char: "until"
+while     = char: "while"
+int       = char: "int"
+
+// Pontuacoes
+tk_abre_parenteses  : "("
+tk_fecha_parenteses : ")"
+tk_abre_bloco       : "{"
+tk_fecha_bloco      : "}"
+tk_final            : ";"
+tk_atrib            : "<<"
+tk_igual            : "=="
+
+// Aritmetica
+tk_soma             : "+"
+tk_subtracao        : "-"
+tk_multiplicacao    : "*"
+tk_divisao          : "/"
+tk_maior_que        : ">"
+tk_menor_que        : "<"
+#NonTerminals
+<PROGRAM>
+
+// Variaveis
+<VARIABLE_LIST>
+<VARIABLE>
+<ATRIB>
+<TYPE_VARIABLE>
+
+// Sentenca Output e Input
+<SENTENCE>
+
+// Lista de Comandos
+<COMMAND_LIST>
+<COMMAND>
+
+// Comandos
+<INPUT_CMD>
+<OUTPUT_CMD>
+<CONDITIONAL_CMD>
+<MATH_CMD>
+<LOOP_CMD>
+
+// Condicionais
+<IF>
+<ELSE>
+
+// Loop
+<DO_LOOP>
+<WHILE_LOOP>
+
+// Matematica - Aritmetica
+<ARITHMETIC>
+<ID_ARITHMETIC>
+
+// Logica
+<LOGIC>
+<ID_LOGIC>
+#Grammar
+<PROGRAM>         ::= startCode tk_abre_bloco <VARIABLE_LIST> <COMMAND_LIST> tk_fecha_bloco endCode;
+
+// Variavel
+<VARIABLE_LIST>  ::= <VARIABLE> <VARIABLE_LIST> | î;
+<VARIABLE>        ::= <TYPE_VARIABLE> <ATRIB> tk_final;
+<ATRIB>          ::= char <LOGIC>;
+<TYPE_VARIABLE>  ::= int;
+
+// Sentenca Output e Inpup
+<SENTENCE>        ::= char | integer | Str;
+
+//Lista de Comandos
+<COMMAND_LIST>   ::= <COMMAND> <COMMAND_LIST> | î;
+<COMMAND>         ::= <INPUT_CMD> | <OUTPUT_CMD> | <CONDITIONAL_CMD> | <MATH_CMD> | <LOOP_CMD>;
+
+// Comandos
+<INPUT_CMD>       ::= inputKey tk_abre_parenteses char tk_fecha_parenteses tk_final;
+<OUTPUT_CMD>      ::= outputKey tk_abre_parenteses <SENTENCE> tk_fecha_parenteses tk_final;
+<CONDITIONAL_CMD> ::= <IF> <ELSE> tk_final;
+<MATH_CMD>         ::= char tk_atrib <ID_ARITHMETIC> tk_final;
+<LOOP_CMD>         ::= <DO_LOOP> | <WHILE_LOOP>;
+
+// Condicionais
+<IF>               ::= if tk_abre_parenteses <ID_LOGIC> tk_fecha_parenteses tk_abre_bloco <COMMAND_LIST> tk_fecha_bloco;
+<ELSE>             ::= else tk_abre_bloco <COMMAND_LIST> tk_fecha_bloco | î;
+
+// Loop
+<DO_LOOP>          ::= do tk_abre_bloco <COMMAND_LIST> tk_fecha_bloco until tk_abre_parenteses <ID_LOGIC> tk_fecha_parenteses tk_final;
+<WHILE_LOOP>      ::= while tk_abre_parenteses <ID_LOGIC> tk_fecha_parenteses tk_abre_bloco <COMMAND_LIST> tk_fecha_bloco tk_final;
+
+// Logica
+<ID_LOGIC>        ::= char <LOGIC> | integer <LOGIC>;
+<LOGIC>           ::= tk_maior_que <ID_LOGIC> | tk_menor_que <ID_LOGIC> | tk_igual <ID_LOGIC> | î;
+
+//Aritmeticas
+<ID_ARITHMETIC>   ::= integer <ARITHMETIC> | char <ARITHMETIC> | tk_subtracao <ID_ARITHMETIC> | tk_maior_que <ID_ARITHMETIC> | tk_abre_parenteses <ID_ARITHMETIC> tk_fecha_parenteses <ARITHMETIC> | tk_final;
+<ARITHMETIC>      ::= tk_soma <ID_ARITHMETIC> | tk_subtracao <ID_ARITHMETIC> | tk_multiplicacao <ID_ARITHMETIC> | tk_divisao <ID_ARITHMETIC> | tk_abre_parenteses <ID_ARITHMETIC> tk_fecha_parenteses <ARITHMETIC> | î;
