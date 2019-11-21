@@ -1,0 +1,17 @@
+startCode {
+    int num;
+    int fatorial;
+
+    outputKey("Entre com um numero: ");
+    inputKey(num);
+
+    if (num > 5) {
+        outputKey("Realizando conta 2 + 2 e salvando no fatorial...");
+        fatorial << 2 + 2;
+    } else {
+        outputKey("O valor eh menor ou igual a 5");
+    };
+    outputKey("O resultado de fatorial eh: ");
+    outputKey(fatorial);
+    outputKey("Fim do programa");
+}endCode
