@@ -147,8 +147,8 @@ def assembly_creation(pre_code, output):
                 for code_line in code:
                     ic_file.write(code_line)
                     ic_file.write('\n')
-            print('\tCreating Assembly File:\t' + Fore.LIGHTGREEN_EX + 'DONE!')
+            print('\tCreating Assembly File:\t\t' + Fore.LIGHTGREEN_EX + 'DONE!')
         except IOError:
-            print('\tCreating Assembly File:\t' + Fore.RED + 'ERROR!')
+            print('\tCreating Assembly File:\t\t' + Fore.RED + 'ERROR!')
     elif output is False:
-        print('\tCreating Assembly File:\t' + Fore.LIGHTYELLOW_EX + 'Not Specified!')
+        print('\tCreating Assembly File:\t\t' + Fore.LIGHTYELLOW_EX + 'Not Specified!')

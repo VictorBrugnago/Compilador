@@ -1,9 +1,0 @@
-INT num
-INT fatorial
-WRITE "Entre com um numero: "
-READ num
-IF num <= 2 GOTO _L1
-WRITE "O Valor eh maior que 2: "
-WRITE num
-_L1:
-WRITE "Fim do programa"
