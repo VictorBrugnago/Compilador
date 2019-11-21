@@ -1,0 +1,44 @@
+startCode,startCode,1,1
+tk_abre_bloco,{,1,11
+int,int,2,5
+char,num,2,9
+tk_final,;,2,12
+int,int,3,5
+char,fatorial,3,9
+tk_final,;,3,17
+outputKey,outputKey,5,5
+tk_abre_parenteses,(,5,14
+Str,"Entre com um numero: ",5,15
+tk_fecha_parenteses,),5,38
+tk_final,;,5,39
+inputKey,inputKey,6,5
+tk_abre_parenteses,(,6,13
+char,num,6,14
+tk_fecha_parenteses,),6,17
+tk_final,;,6,18
+if,if,8,5
+tk_abre_parenteses,(,8,8
+char,num,8,9
+tk_maior_que,>,8,13
+integer,2,8,15
+tk_fecha_parenteses,),8,16
+tk_abre_bloco,{,8,18
+outputKey,outputKey,9,9
+tk_abre_parenteses,(,9,18
+Str,"O Valor eh maior que 2: ",9,19
+tk_fecha_parenteses,),9,45
+tk_final,;,9,46
+outputKey,outputKey,10,9
+tk_abre_parenteses,(,10,18
+char,num,10,19
+tk_fecha_parenteses,),10,22
+tk_final,;,10,23
+tk_fecha_bloco,},11,5
+tk_final,;,11,6
+outputKey,outputKey,12,5
+tk_abre_parenteses,(,12,14
+Str,"Fim do programa",12,15
+tk_fecha_parenteses,),12,32
+tk_final,;,12,33
+tk_fecha_bloco,},13,1
+endCode,endCode,13,2

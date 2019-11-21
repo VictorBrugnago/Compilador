@@ -1,4 +1,5 @@
-from CodeGenerator.PostfixAlgorithm import infix_2_postfix
+from PostfixAlgorithm import infix_2_postfix
+from collections import deque
 from colorama import Fore
 import colorama
 import os
@@ -54,8 +55,12 @@ def intermediate_code(tokens_list, start, loop, pre_code, *output, **flags):
     # Counters
     loop_counter = loop
     line = start
+    label_stack = deque()
 
     # Checking Flags
+    count_if = 0
+    count_else = 0
+    is_multiple_If_else = False
     if_statement = flags.get('if_statement_flag')
     else_statement = flags.get('else_statement_flag')
     do_statement = flags.get('do_statement_flag')
@@ -67,11 +72,11 @@ def intermediate_code(tokens_list, start, loop, pre_code, *output, **flags):
 
         if 'inputKey' == token_readed:
             pre_code.append('READ ' + tokens_list[line + 2].split(',')[1])
-            # print('READ ' + tokens_list[line + 2].split(',')[1])
+            print('READ ' + tokens_list[line + 2].split(',')[1])
 
         elif 'outputKey' == token_readed:
             pre_code.append('WRITE ' + tokens_list[line + 2].split(',')[1])
-            # print('WRITE ' + tokens_list[line + 2].split(',')[1])
+            print('WRITE ' + tokens_list[line + 2].split(',')[1])
 
         elif 'tk_atrib' == token_readed:
             reverse_polish_notation = [str(infix_2_postfix(make_expression(tokens_list, line))),
@@ -80,39 +85,64 @@ def intermediate_code(tokens_list, start, loop, pre_code, *output, **flags):
 
         elif 'int' == token_readed:
             pre_code.append('INT ' + tokens_list[line + 1].split(',')[1])
-            # print('INT ' + tokens_list[line + 1].split(',')[1])
+            print('INT ' + tokens_list[line + 1].split(',')[1])
 
         elif 'if' == token_readed:
+            # If Controller
             if_statement = True
+            count_if += 1
+
+            # Labels Controller
+            loop_counter += 1
+            else_label = loop_counter
+
+            # If Printer
             pre_code.append('IF ' + tokens_list[line + 2].split(',')[1] + ' ' +
                             logical_symbols(tokens_list[line + 3].split(',')[1]) + ' ' +
-                            tokens_list[line + 4].split(',')[1] + ' GOTO _L' + str(loop_counter + 1))
-            # print('IF ' + tokens_list[line + 2].split(',')[1] + ' ' +
-            #       logical_symbols(tokens_list[line + 3].split(',')[1]) + ' ' +
-            #       tokens_list[line + 4].split(',')[1] + ' GOTO _L' + str(loop_counter + 1))
-            list = []
-            line, sd = intermediate_code(tokens_list, line + 5, loop_counter, pre_code,
-                                         if_statement_flag=if_statement, else_statement_flag=else_statement,
-                                         while_statement=while_statement)
-            if sd:
-                pre_code.append('_L' + str(sd) + ':')
-                # print('_L' + str(sd) + ':')
-                loop_counter = sd
-                if_statement = False
-                else_statement = False
-            pre_code = pre_code + list
-            loop_counter += 1
+                            tokens_list[line + 4].split(',')[1] + ' GOTO _L' + str(else_label))
+            print('IF ' + tokens_list[line + 2].split(',')[1] + ' ' +
+                  logical_symbols(tokens_list[line + 3].split(',')[1]) + ' ' +
+                  tokens_list[line + 4].split(',')[1] + ' GOTO _L' + str(else_label))
+            label_stack.append(else_label)
+
+            # label_stack.append(if_exit)
+            # list = []
+            # line, sd = intermediate_code(tokens_list, line + 5, loop_counter, pre_code,
+            #                              if_statement_flag=if_statement, else_statement_flag=else_statement,
+            #                              while_statement=while_statement)
+            # if sd:
+            #     pre_code.append('_L' + str(sd) + ':')
+            #     # print('_L' + str(sd) + ':')
+            #     loop_counter = sd
+            #     if_statement = False
+            #     else_statement = False
+            # pre_code = pre_code + list
+            # loop_counter += 1
 
         elif 'else' == token_readed:
+            # Else Controller
             else_statement = True
-            pre_code.append('GOTO _L' + str(loop_counter + 2))
-            # print('GOTO _L' + str(loop_counter + 2))
-            pre_code.append('_L' + str(loop_counter + 1) + ':')
-            # print('_L' + str(loop_counter + 1) + ':')
-            line, sd = intermediate_code(tokens_list, line + 1, (loop_counter + 2),
-                                         pre_code, if_statement_flag=if_statement, else_statement_flag=else_statement,
-                                         while_statement=while_statement)
-            return line, (loop_counter + 2)
+            count_else += 1
+            count_if -= 1
+
+            # Label Controller
+            if is_multiple_If_else is False:
+                loop_counter += 1
+                if_exit = loop_counter
+                else_label = label_stack.popleft()
+
+            # Label Printer
+            pre_code.append('GOTO _L' + str(if_exit))
+            print('GOTO _L' + str(if_exit))
+            label_stack.append(if_exit)
+            pre_code.append('_L' + str(else_label) + ':')
+            print('_L' + str(else_label) + ':')
+            is_multiple_If_else = False
+
+            # line, sd = intermediate_code(tokens_list, line + 1, (loop_counter + 2),
+            #                              pre_code, if_statement_flag=if_statement, else_statement_flag=else_statement,
+            #                              while_statement=while_statement)
+            # return line, (loop_counter + 2)
 
         elif 'while' == token_readed:
             while_statement = True
@@ -127,48 +157,60 @@ def intermediate_code(tokens_list, start, loop, pre_code, *output, **flags):
             loop_counter += 2
             while_statement = False
 
-        elif 'tk_fecha_bloco' in token_readed and if_statement is True:
+        elif 'tk_fecha_bloco' in token_readed and (count_if > 0 and if_statement is True):
             # if if_statement is True and tokens_list[line + 1].split(',')[1] == 'else':
             if tokens_list[line + 1].split(',')[1] == 'else':
                 if_statement = False
+
+                if count_else >= 1:
+                    is_multiple_If_else = True
+                    loop_counter += 1
+                    if_exit = loop_counter
+                    label_stack.appendleft(if_exit)
                 continue
             if tokens_list[line + 1].split(',')[1] != 'else':
+                count_if -= 1
+                if_exit = label_stack.pop()
+                pre_code.append('_L' + str(if_exit) + ':')
+                print('_L' + str(if_exit) + ':')
+                is_multiple_If_else = False
+
                 # if_statement = False
                 # flags['if_statement_flag'] = False
                 # else_statement = False # Possible to remove
-                return line + 1, (loop_counter + 1)
+                # return line + 1, (loop_counter + 1)
 
         elif 'tk_fecha_bloco' in token_readed and while_statement is True:
             while_statement = False
             return line + 1, None
 
-        elif 'tk_fecha_bloco' in token_readed and else_statement is True:
+        elif 'tk_fecha_bloco' in token_readed and (count_else > 0 and is_multiple_If_else is False):
+            count_else -= 1
+            if_exit = label_stack.pop()
+            pre_code.append('_L' + str(if_exit) + ':')
+            print('_L' + str(if_exit) + ':')
+
             # else_statement = False
-            return line + 1, None
+            # return line + 1, None
         line += 1
-    # for i in pre_code:
-    #     print(i)
-    # with open(os.path.join(os.path.dirname(__file__), 'Intermediate Code.ic'), 'w+', encoding='utf-8') as ic_file:
-    #     for pre_code_line in pre_code:
-    #         ic_file.write(pre_code_line)
-    #         ic_file.write('\n')
-    if output[0] is True:
-        try:
-            with open(os.path.join(os.path.dirname(__file__), output[1] + '.ic'),
-                      'w+', encoding='utf-8') as ic_file:
-                for pre_code_line in pre_code:
-                    ic_file.write(pre_code_line)
-                    ic_file.write('\n')
-            print('\tCreating Intermediate File:\t' + Fore.LIGHTGREEN_EX + 'DONE!')
-        except IOError:
-            print('\tCreating Intermediate File:\t' + Fore.RED + 'ERROR!')
-    elif output[0] is False:
-        print('\tCreating Intermediate File:\t' + Fore.LIGHTYELLOW_EX + 'Not Specified!')
-    return pre_code
+
+    # if output[0] is True:
+    #     try:
+    #         with open(os.path.join(os.path.dirname(__file__), output[1] + '.ic'),
+    #                   'w+', encoding='utf-8') as ic_file:
+    #             for pre_code_line in pre_code:
+    #                 ic_file.write(pre_code_line)
+    #                 ic_file.write('\n')
+    #         print('\tCreating Intermediate File:\t' + Fore.LIGHTGREEN_EX + 'DONE!')
+    #     except IOError:
+    #         print('\tCreating Intermediate File:\t' + Fore.RED + 'ERROR!')
+    # elif output[0] is False:
+    #     print('\tCreating Intermediate File:\t' + Fore.LIGHTYELLOW_EX + 'Not Specified!')
+    # return pre_code
 
 
-# ss = []
-#
-# with open('./TokensListsTesters/TokensResultLexicalWhile.txt', 'r') as file:
-#     tokens = file.readlines()
-# intermediate_code(tokens, 0, 0, ss)
+ss = []
+
+with open('./TokensListsTesters/NumberMultipleIF_Else.txt', 'r') as file:
+    tokens = file.readlines()
+intermediate_code(tokens, 0, 0, ss)

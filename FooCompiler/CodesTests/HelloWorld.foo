@@ -1,0 +1,3 @@
+startCode {
+    outputKey("Hello World");
+}endCode

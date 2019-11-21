@@ -1,0 +1,15 @@
+startCode {
+    int num;
+    int fatorial;
+
+    outputKey("Entre com um numero: ");
+    inputKey(num);
+
+    if (num > 2) {
+        outputKey("O Valor eh maior que 2: ");
+        outputKey(num);
+    } else {
+        outputKey("O valor eh menor  ou igual a 2");
+    };
+    outputKey("Fim do programa");
+}endCode
