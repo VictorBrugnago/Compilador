@@ -2,19 +2,30 @@ startCode {
     int num;
     int fatorial;
 
+    fatorial << 1;
+
     outputKey("Entre com um numero: ");
     inputKey(num);
 
-    if (num > 2) {
-        outputKey(num);
+    if (num == 5) {
+        outputKey("O numero eh 5");
     } else {
-        outputKey("O valor eh 2");
+        outputKey("O numero nao eh igual a 5");
+
+        if (num > 5) {
+            outputKey("O numero eh maior que 5");
+        } else {
+            if (num < 5) {
+                outputKey("O numero eh menor que 5");
+            };
+        };
     };
 
-    do {
-        fatorial << fatorial * num;
+    outputKey("Realizando o fatorial...");
+    while (num > 1) {
+        fatorial << num * fatorial;
         num << num - 1;
-    } until(num < 1);
+    };
 
     outputKey("O fatorial eh: ");
     outputKey(fatorial);
