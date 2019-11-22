@@ -1,0 +1,16 @@
+INT num
+INT fatorial
+WRITE "Entre com um numero: "
+READ num
+IF num <= 5 GOTO _L1
+WRITE "Realizando conta ((2 * 2) + 5) + 12 e salvando no fatorial..."
+t1 := 2 2 *
+t2 := t1 5 +
+fatorial := t2 12 +
+GOTO _L2
+_L1:
+WRITE "O valor eh menor ou igual a 5"
+_L2:
+WRITE "O resultado de fatorial eh: "
+WRITE fatorial
+WRITE "Fim do programa"
