@@ -143,12 +143,13 @@ def assembly_creation(pre_code, output):
 
     if output:
         try:
-            with open(os.path.join(os.path.dirname(__file__), output + '.asm'), 'w+', encoding='utf-8') as ic_file:
+            with open(output + '.asm', 'w+', encoding='utf-8') as ic_file:
                 for code_line in code:
                     ic_file.write(code_line)
                     ic_file.write('\n')
             print('\tCreating Assembly File:\t\t' + Fore.LIGHTGREEN_EX + 'DONE!')
-        except IOError:
+        except IOError as ioerror:
             print('\tCreating Assembly File:\t\t' + Fore.RED + 'ERROR!')
+            print('ERROR: ', ioerror)
     elif output is False:
         print('\tCreating Assembly File:\t\t' + Fore.LIGHTYELLOW_EX + 'Not Specified!')
