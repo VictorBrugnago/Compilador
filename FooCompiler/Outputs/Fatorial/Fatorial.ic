@@ -1,0 +1,27 @@
+INT num
+INT fatorial
+fatorial := 1
+WRITE "Entre com um numero: "
+READ num
+IF num != 5 GOTO _L1
+WRITE "O numero eh 5"
+GOTO _L2
+_L1:
+WRITE "O numero nao eh igual a 5"
+IF num <= 5 GOTO _L3
+WRITE "O numero eh maior que 5"
+GOTO _L4
+_L3:
+IF num >= 5 GOTO _L5
+WRITE "O numero eh menor que 5"
+_L5:
+_L4:
+_L2:
+WRITE "Realizando o fatorial..."
+_L6: IF num <= 1 GOTO _L7
+fatorial := num fatorial *
+num := num 1 -
+GOTO _L6
+_L7:
+WRITE "O fatorial eh: "
+WRITE fatorial
