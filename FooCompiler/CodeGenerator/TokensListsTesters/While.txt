@@ -1,0 +1,26 @@
+startCode,startCode,1,1
+tk_abre_bloco,{,1,11
+int,int,2,5
+char,num,2,9
+tk_final,;,2,12
+while,while,4,5
+tk_abre_parenteses,(,4,11
+char,num,4,12
+tk_maior_que,>,4,16
+integer,0,4,18
+tk_fecha_parenteses,),4,19
+tk_abre_bloco,{,4,21
+outputKey,outputKey,5,9
+tk_abre_parenteses,(,5,18
+Str,"Olar",5,19
+tk_fecha_parenteses,),5,25
+tk_final,;,5,26
+tk_fecha_bloco,},6,5
+tk_final,;,6,6
+outputKey,outputKey,8,5
+tk_abre_parenteses,(,8,14
+Str,"Fim do programa",8,15
+tk_fecha_parenteses,),8,32
+tk_final,;,8,33
+tk_fecha_bloco,},9,1
+endCode,endCode,9,2
