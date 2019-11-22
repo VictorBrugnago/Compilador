@@ -107,8 +107,7 @@ result_lexicon = lexical_analyser(source_code_name, vlex=vlex_flag, vall=all_fla
 if lt_flag is True:
     print(_('List of detected Tokens\n'))
     for i in result_lexicon:
-        print(i)
-        # print(i.split(',')[0].center(24), i.split(',')[1].center(24), i.split(',')[2].center(8), i.split(',')[3])
+        print(i.split(',')[0].center(24), i.split(',')[1].center(24), i.split(',')[2].center(8), i.split(',')[3])
 
 print(_('\n\nPerforming syntactic analysis...'))
 result_syntactic = syntactic_analyzer(result_lexicon, vsyn=vsyn_flag, vall=all_flag, lang=langBR)
