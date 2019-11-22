@@ -1,13 +1,14 @@
 
-Declaração de Variável detectada -> int num
-Checando se já foi declarada...
+Variable Declaration detected -> int num
+Checking if is already declared...
 
-Variável 'num' declarada
+Variable 'num' declared
 
-Declaração de Variável detectada -> int fatorial
-Checando se já foi declarada...
+Variable Declaration detected -> int fatorial
+Checking if is already declared...
 
-Variável 'fatorial' declarada
-Variável 'fatorial' teve seu valor alterado para 'fatorial * num'
-Variável 'num' teve seu valor alterado para 'num - 1'
-CONCLUÍDO!
+Variable 'fatorial' declared
+Variable 'fatorial' has value changed to '1'
+Variable 'fatorial' has value changed to 'num * 1'
+Variable 'num' has value changed to 'num - 1'
+DONE!
