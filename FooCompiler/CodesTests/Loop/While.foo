@@ -1,0 +1,14 @@
+startCode {
+    int num;
+
+    outputKey("Entre com um valor: ");
+    inputKey(num);
+
+    while (num > 0) {
+        outputKey("Olar");
+        outputKey(num);
+        num << num - 1;
+    };
+
+    outputKey("Fim do programa");
+}endCode
