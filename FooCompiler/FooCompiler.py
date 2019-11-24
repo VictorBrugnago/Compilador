@@ -1,7 +1,7 @@
 from Analyzers.LexicalAnalyzer.AnalisadorLexico import lexical_analyser
 from Analyzers.SyntacticAnalyzer.AnalisadorSintatico import syntactic_analyzer
 from Analyzers.SemanticAnalyzer.AnalisadorSemantico import semantic_analyzer
-from CodeGenerator.CodePrepare2 import intermediate_code
+from CodeGenerator.CodePrepare import intermediate_code
 from CodeGenerator.AssemblyCreator import assembly_creation
 from colorama import Fore
 import colorama
