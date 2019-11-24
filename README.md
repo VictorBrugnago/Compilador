@@ -8,7 +8,7 @@ The Foo Language Compiler is a small and simple compiler created by a Computer E
 
 You can:
   - Declare integer variables, only (yet)
-  - Using DO-WHILE statement as loop command
+  - Using WHILE statement as loop command
   - Can run each step (Lexical, Syntactic and Semantic) separately
 
 ## Using
@@ -27,7 +27,7 @@ startCode {
 
 ### Variable Declaration
 
-You can only declare integer variables. Other types will be implemented in future updates.
+You can only declare **integer** variables. Other types will be implemented in future updates.
 ```
 startCode {
     int var1;
@@ -36,6 +36,7 @@ startCode {
 }
 ```
 The variables **HAS TO BE** declared **AFTER** *startCode* statement and **BEFORE** any command.
+Unfortunately, you can't declare variable and assign a value, you need to declare the variable and then, on another line, assign it a value.
 
 ### Variable Assignment
 
@@ -44,7 +45,7 @@ To assign a value to a variable you need to use the *<<* symbol.
 startCode {
     int var1;
     int var2;
-    
+
     var2 << var1 + 2;
     [...]
 }endCode
@@ -66,15 +67,18 @@ startCode {
 
 The following is a list of available logical operators:
 
-| Symbol | Action          |    
+| Symbol | Action          |
 |--------|-----------------|
-| +      | Addition        |
-| -      | Subtraction     |
-| *      | Multiplication  |
-| /      | Division        |
-| <      | Is less than    |
-| >      | Is more than    |
-| ==     | Equals          |
+| +      | Addition                       |
+| -      | Subtraction                    |
+| *      | Multiplication                 |
+| /      | Division                       |
+| <      | Is less than                   |
+| <=     | Is less than or equal to       |
+| >      | Is greater than                |
+| >=     | Is greater than or equal to    |
+| <>     | Is not equal to                |
+| ==     | Is equals to                   |
 
 ### Strings
 
@@ -118,7 +122,7 @@ To do a *if else* statement, just type *if ([SOME LOGIC HERE]) { [SOME COMMAND H
     [...]
 ```
 
-### Loop (Do-Until)
+### Loop (While)
 
 An Do-Until statement -> *do { [SOME COMMAND HERE] } until { [SOME LOGIC HERE] };*
 ```
@@ -126,10 +130,10 @@ An Do-Until statement -> *do { [SOME COMMAND HERE] } until { [SOME LOGIC HERE] }
     int var1;
     int var2;
     int num << 2;
-    do {
+    while (num > 0) {
         var1 << var2 * num;
         num << num - 1;
-    until(num < 1);
+    };
     [...]
 ```
 
@@ -141,7 +145,7 @@ Install the dependencies and and run the compiler.
 
 ```sh
 $ pip3 install colorama
-$ python3 FooCompiler.py [SOURCE_CODE.foo]
+$ python3 FooCompiler.py [SOURCE_CODE.foo] [FILENAME_OUTPUT or PATH\FILENAME_OUTPUT] [parameters]
 ```
 
 Also, the compiler has some parameters:
@@ -151,18 +155,19 @@ Also, the compiler has some parameters:
 |    -lt    | Display a list of generated tokens (**lexical**)                   |
 |    -lp    | Display a list of productions performed (**syntactic**)            |
 |    -ls    | Display all steps performed on detected variables (**semantic**)   |
+|    -oi    | Create the Intermediate Code file (**Code Generation**)   |
 |    -tudo  | Displays a detailed output of the compiler                         |
 |    -vlex  | Displays a detailed output of the lexicon analyzer                 |
 |    -vsyn  | Displays a detailed output of the syntactic analyzer               |
 |    -vsem  | Displays a detailed output of the syntactic analyzer               |
 |    -BR    | Change the language of the outputs for Brazilian Portuguese        |
 
-## Todos
+## To-Do's
 
  - Add more types
  - Add new statements
  - Improve compiler performance
- - Create a simple IDE or spellchecker for Notepad++
+ - Create a simple IDE or spellchecker
 
 License
 ----
