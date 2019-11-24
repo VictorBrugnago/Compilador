@@ -1,0 +1,27 @@
+INT num
+WRITE "Entre com um numero inteiro para ser testado: "
+READ num
+IF num < 7 GOTO _L1
+WRITE "O valor inserido eh maior ou igual a 7"
+GOTO _L2
+_L1:
+IF num > 7 GOTO _L3
+WRITE "O valor inserido eh menor ou igual a 7"
+_L3:
+_L2:
+IF num <> 7 GOTO _L4
+WRITE "O valor inserido igual a 7"
+GOTO _L5
+_L4:
+IF num == 7 GOTO _L6
+WRITE "O valor inserido eh diferente de 7"
+_L6:
+_L5:
+IF num <= 7 GOTO _L7
+WRITE "O valor inserido eh maior que 7"
+GOTO _L8
+_L7:
+IF num >= 7 GOTO _L9
+WRITE "O valor inserido eh menor que 7"
+_L9:
+_L8:
