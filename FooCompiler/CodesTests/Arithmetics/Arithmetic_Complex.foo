@@ -6,8 +6,8 @@ startCode {
     inputKey(num);
 
     if (num > 5) {
-        outputKey("Realizando conta ((2 * 2) + 5) + 12 e salvando no fatorial...");
-        fatorial << ((2 * 2) + 5) + 12;
+        outputKey("Realizando conta ((2 * 2) + (6/2)) + 12 e salvando no fatorial...");
+        fatorial << ((2* 2) + (6/2)) +12;
     } else {
         outputKey("O valor eh menor ou igual a 5");
     };
