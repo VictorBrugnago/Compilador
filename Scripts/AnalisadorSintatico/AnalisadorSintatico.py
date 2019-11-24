@@ -67,13 +67,13 @@ def transition(non_terminal_word, terminal_word):
 
 
 # Reading the Production Rules file
-with open('Production_Rules.config', newline='', encoding='utf-8') as config:
+with open('Production_Rules_old.config', newline='', encoding='utf-8') as config:
     buff_reader_config = csv.reader(config, delimiter=',', skipinitialspace=True)
     for line in buff_reader_config:
         productions_list.append(line)
 
 # Reading the Syntactic file
-with open('Syntactic_Table.config', newline='') as config:
+with open('Syntactic_Table_old.config', newline='') as config:
     buff_reader_config = csv.reader(config, delimiter=',', skipinitialspace=True)
     for line in buff_reader_config:
         syntactic_list.append(line)
