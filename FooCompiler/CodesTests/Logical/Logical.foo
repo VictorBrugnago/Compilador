@@ -1,0 +1,31 @@
+startCode {
+    int num;
+
+    outputKey("Entre com um numero inteiro para ser testado: ");
+    inputKey(num);
+
+    if (num >= 7) {
+        outputKey("O valor inserido eh maior ou igual a 7");
+    } else {
+            if (num <= 7){
+                outputKey("O valor inserido eh menor ou igual a 7");
+            };
+    };
+
+    if (num == 7) {
+        outputKey("O valor inserido igual a 7");
+    } else {
+            if (num <> 7){
+                outputKey("O valor inserido eh diferente de 7");
+            };
+    };
+
+    if (num > 7) {
+        outputKey("O valor inserido eh maior que 7");
+    } else {
+            if (num < 7) {
+                outputKey("O valor inserido eh menor que 7");
+            };
+    };
+
+}endCode
