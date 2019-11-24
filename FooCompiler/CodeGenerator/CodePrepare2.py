@@ -9,7 +9,7 @@ colorama.init(autoreset=True)
 
 
 def logical_symbols(symb):
-    logic_identifiers = {'>': '<=', '<': '>=', '>=': '<', '<=': '>', '!=': '==', '==': '!='}
+    logic_identifiers = {'>': '<=', '<': '>=', '>=': '<', '<=': '>', '<>': '==', '==': '<>'}
 
     return logic_identifiers[symb]
 

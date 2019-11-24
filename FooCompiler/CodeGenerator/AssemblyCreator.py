@@ -104,7 +104,7 @@ def assembly_creation(pre_code, output):
                 main.append(f'jg {pc_line.split()[5].strip()}')
             elif '==' in pc_line:
                 main.append(f'je {pc_line.split()[5].strip()}')
-            elif '!=' in pc_line:
+            elif '<>' in pc_line:
                 main.append(f'jne {pc_line.split()[5].strip()}')
 
         elif 'GOTO' in pc_line.split()[0]:
@@ -131,7 +131,7 @@ def assembly_creation(pre_code, output):
                     main.append(f'jg {pc_line.split()[6].strip()}')
                 elif '==' in pc_line:
                     main.append(f'je {pc_line.split()[6].strip()}')
-                elif '!=' in pc_line:
+                elif '<>' in pc_line:
                     main.append(f'jne {pc_line.split()[6].strip()}')
 
             else:
