@@ -41,7 +41,7 @@ parameters = sys.argv[1:]
 # Checking Parameters
 if not parameters:
     print('No parameters detected!')
-    print('Type -> python3 FooCompiler.py [filename].foo [parameters]')
+    print(r'Type -> python3 FooCompiler.py [filename].foo [filename_output or path\filename_output] [parameters]')
     print('For help, type -> python3 FooCompiler.py -h')
     sys.exit()
 else:
