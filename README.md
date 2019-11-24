@@ -1,4 +1,4 @@
-# The Foo Language Compiler
+# The *FooLanguage* Compiler
 
 The Foo Language Compiler is a small and simple compiler created by a Computer Engineering Student.
 
