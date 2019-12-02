@@ -14,6 +14,7 @@ import os
 vlex_flag = False
 vsyn_flag = False
 vsem_flag = False
+vasm_flag = False
 all_flag = False
 lt_flag = False
 lp_flag = False
@@ -60,6 +61,7 @@ else:
         print('  -vlex\tDisplays a detailed output of the lexicon analyzer')
         print('  -vsyn\tDisplays a detailed output of the syntactic analyzer')
         print('  -vsem\tDisplays a detailed output of the semantic analyzer')
+        print('  -lgc\tDisplays a detailed output of the assembly generation')
         print('  -BR \tIt chooses the language of the outputs for Brazilian Portuguese, by default is English. -BR -> '
               'Brazilian Portuguese')
         sys.exit()
@@ -87,6 +89,8 @@ else:
                     vsyn_flag = True
                 elif param == '-vsem':
                     vsem_flag = True
+                elif param == '-lgc':
+                    vasm_flag = True
                 elif param == '-BR':
                     langBR = True
                     br = gettext.translation('base_main', localedir='locales', languages=['pt'])
@@ -127,4 +131,4 @@ if ls_flag is True:
 print('\n\nGenerating code...')
 intermediate_code_result = intermediate_code(result_lexicon, 0, 0, pre_code, oi_flag, output_name)
 print('\tIntermediate Code:\t\t' + Fore.LIGHTGREEN_EX + 'OK!')
-assembly_creation(intermediate_code_result, output_name)
+assembly_creation(intermediate_code_result, output_name, vasm=vasm_flag, vall=all_flag)
