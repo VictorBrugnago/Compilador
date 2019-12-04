@@ -124,7 +124,7 @@ To do a *if else* statement, just type *if ([SOME LOGIC HERE]) { [SOME COMMAND H
 
 ### Loop (While)
 
-An Do-Until statement -> *do { [SOME COMMAND HERE] } until { [SOME LOGIC HERE] };*
+An while statement -> *while ([SOME LOGIC HERE]) { [SOME COMMAND HERE] };*
 ```
 [...]
     int var1;
@@ -155,11 +155,12 @@ Also, the compiler has some parameters:
 |    -lt    | Display a list of generated tokens (**lexical**)                   |
 |    -lp    | Display a list of productions performed (**syntactic**)            |
 |    -ls    | Display all steps performed on detected variables (**semantic**)   |
-|    -oi    | Create the Intermediate Code file (**Code Generation**)   |
+|    -oi    | Create the Intermediate Code file (**Code Generation**)            |
 |    -tudo  | Displays a detailed output of the compiler                         |
 |    -vlex  | Displays a detailed output of the lexicon analyzer                 |
 |    -vsyn  | Displays a detailed output of the syntactic analyzer               |
 |    -vsem  | Displays a detailed output of the syntactic analyzer               |
+|    -lgc   | tDisplays a detailed output of the assembly generation             |
 |    -BR    | Change the language of the outputs for Brazilian Portuguese        |
 
 ## To-Do's
